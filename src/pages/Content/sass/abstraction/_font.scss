@@ -1,0 +1,194 @@
+@import "../constants/variable";
+
+
+
+.heading1 {
+    @include fontStyle(
+      $fontFamily: $font_Inter,
+      $size: $font64,
+      $weight: $semiBoldFont,
+      $color: $primaryBlue,
+      $lineHeight: $lineHeight96
+    );
+    @include wordSpaceBreak;
+  }
+
+  .heading2 {
+    @include fontStyle(
+      $fontFamily: $font_Inter,
+      $size: $font48,
+      $weight: $semiBoldFont,
+      $color: $primaryBlue,
+      $lineHeight: $lineHeight72
+    );
+    @include wordSpaceBreak;
+  }
+
+  .heading3 {
+    @include fontStyle(
+      $fontFamily: $font_Inter,
+      $size: $font36,
+      $weight: $semiBoldFont,
+      $color: $primaryBlue,
+      $lineHeight: $lineHeight54
+    );
+    @include wordSpaceBreak;
+  }
+
+  .heading4 {
+    @include fontStyle(
+      $fontFamily: $font_Inter,
+      $size: $font24,
+      $weight: $semiBoldFont,
+      $color: $primaryBlue,
+      $lineHeight: $lineHeight36
+    );
+    @include wordSpaceBreak;
+  }
+
+  .heading5 {
+    @include fontStyle(
+      $fontFamily: $font_Inter,
+      $size: $font18,
+      $weight: $semiBoldFont,
+      $color: $primaryBlue,
+      $lineHeight: $lineHeight27
+    );
+    @include wordSpaceBreak;
+  }
+
+  .heading6 {
+    @include fontStyle(
+      $fontFamily: $font_Inter,
+      $size: $font16,
+      $weight: $semiBoldFont,
+      $color: $primaryBlue,
+      $lineHeight: $lineHeight24
+    );
+    @include wordSpaceBreak;
+  }
+
+  .heading7 {
+    @include fontStyle(
+      $fontFamily: $font_Inter,
+      $size: $font14,
+      $weight: $regularFont,
+      $color: $primaryBlue,
+      $lineHeight: $lineHeight21
+    );
+
+    &.boldFont {
+      font-weight: $semiBoldFont;
+    }
+    @include wordSpaceBreak;
+  }
+
+  .subheading {
+    @include fontStyle(
+      $fontFamily: $font_Inter,
+      $size: $font16,
+      $weight: $regularFont,
+      $color: $primaryBlue,
+      $lineHeight: $lineHeight24
+    );
+    @include wordSpaceBreak;
+  }
+
+  .paragraph {
+    @include fontStyle(
+      $fontFamily: $font_Inter,
+      $size: $font14,
+      $weight: $regularFont,
+      $color: $primaryBlue,
+      $lineHeight: $lineHeight21
+    );
+    &.italic {
+      font-style: italic;
+    }
+
+    &.boldFont {
+      font-weight: $semiBoldFont;
+      color: $gray70;
+    }
+    @include wordSpaceBreak;
+  }
+
+  .supportText {
+    @include fontStyle(
+      $fontFamily: $font_Inter,
+      $size: $font12,
+      $weight: $regularFont,
+      $color: $primaryBlue,
+      $lineHeight: $lineHeight18
+    );
+    @include wordSpaceBreak;
+
+    &.medium {
+      font-weight: $mediumFont;
+    }
+  }
+
+  .supportTextGray {
+    @include fontStyle(
+      $fontFamily: $font_Inter,
+      $size: $font12,
+      $weight: $regularFont,
+      $color: $gray50,
+      $lineHeight: $lineHeight18
+    );
+    @include wordSpaceBreak;
+
+    &.warning {
+      color: $red;
+    }
+    &.success {
+      color: $color_success_text;
+    }
+  }
+
+  .supportTextSemiBold {
+    @include fontStyle(
+      $fontFamily: $font_Inter,
+      $size: $font12,
+      $weight: $semiBoldFont,
+      $color: $primaryBlue,
+      $lineHeight: $lineHeight18
+    );
+    @include wordSpaceBreak;
+  }
+
+  .supportTextMedium {
+    @include fontStyle(
+      $fontFamily: $font_Inter,
+      $size: $font12,
+      $weight: $mediumFont,
+      $color: $gray2,
+      $lineHeight: $lineHeight18
+    );
+    @include wordSpaceBreak;
+  }
+
+  .metadata {
+    @include fontStyle(
+      $fontFamily: $font_Inter,
+      $size: $font10,
+      $weight: $mediumFont,
+      $color: $primaryBlue,
+      $lineHeight: $lineHeight16
+    );
+     &.warning {
+      color: $red !important;;
+    }
+    @include wordSpaceBreak;
+  }
+
+  .label {
+    @include fontStyle(
+      $fontFamily: $font_Inter,
+      $size: $font16,
+      $weight: $semiBoldFont,
+      $color: $label,
+      $lineHeight: $lineHeight24
+    );
+    cursor: default;
+  }

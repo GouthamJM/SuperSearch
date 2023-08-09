@@ -1,0 +1,26 @@
+.flexCentered {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: wrap;
+    -webkit-flex-flow: wrap;
+    align-items: center;
+    &:before,
+    &:after {
+      width: 0;
+    }
+
+    &.justifyContentEnd {
+      justify-content: flex-end;
+    }
+  }
+
+.flexNotCentered {
+    display: flex;
+    display: -webkit-flex;
+    flex-flow: wrap;
+    -webkit-flex-flow: wrap;
+    &:before,
+    &:after {
+      width: 0;
+    }
+}

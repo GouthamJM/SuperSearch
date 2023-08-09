@@ -1,0 +1,18 @@
+@import "../constants/variable";
+
+.homePage{
+    position: fixed;
+    bottom:16px;
+    right:16px;
+    z-index: 99;
+    border-radius: 2rem;
+    .homeContainer{
+        height: 100%;
+        background: $MgreyLight1;
+        border-radius: 2rem;
+        box-shadow: $shadow;
+    }
+}
+
+
+

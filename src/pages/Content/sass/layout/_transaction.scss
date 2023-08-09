@@ -1,0 +1,10 @@
+@import "../constants/variable";
+
+
+.transactionContainer{
+    height: 100%;
+    min-height: 600px;
+    background: $MgreyLight1;
+    border-radius: 2rem;
+    box-shadow: $shadow;
+}

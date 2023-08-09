@@ -1,0 +1,28 @@
+@import "../constants/variable";
+
+
+.neumorphic__input {
+
+  
+    .neumorphic__input__field {
+      width: 100%;
+      height: 4rem;
+      border: none;
+      border-radius: 1rem;
+      @include fontStyle(
+        $fontFamily: $font_Inter,
+        $size: $font14,
+        $weight: $regularFont,
+        $color: $primaryBlue,
+        $lineHeight: $lineHeight21
+      );
+      padding-left: 1rem;
+      box-shadow: $inner-shadow;
+      background: none;
+      font-family: inherit;
+  
+      &::placeholder { color:$MgreyLight3; }
+      &:focus { outline: none; box-shadow: $shadow; }
+    }
+    
+  }

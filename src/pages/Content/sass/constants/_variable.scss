@@ -1,0 +1,445 @@
+$font_Inter: "Inter", sans-serif;
+
+$lightFont: 300;
+$regularFont: 400;
+$mediumFont: 500;
+$semiBoldFont: 600;
+$boldFont: 700;
+
+$black: #000000;
+$white: #ffffff;
+$ivory: #f5f9e9;
+$white100: #d4e5fb;
+
+//High Fid Wireframe Colours
+$gray1: #ededed;
+$gray2: #bababa;
+$gray3: #070606;
+$gray4: #e6e6e6;
+$gray5: #858585;
+$gray6: #cfcfcf;
+$gray7: #a6a6a6;
+$gray8: #c4c4c4;
+$gray9: #fbfcfc;
+$gray10: #e6ebec;
+$gray11: #fafafa;
+$gray12: #f5f6f6;
+$gray13: #e1e1e1;
+$gray20: #ccd6d9;
+$gray30: #b3c2c6;
+$gray40: #99aeb3;
+$gray50: #80999f;
+$gray60: #67858c;
+$gray70: #4d7179;
+$gray80: #345d66;
+$gray90: #1a4853;
+$gray100: #f4f8f9;
+$gray200: #fbfdfe;
+$gray800: #b0bb93;
+$gray201: #f9fbf2;
+
+$grey100: #013440;
+
+//Prime Colours
+
+$primaryBlue: #013440;
+
+$green: #00d2ad;
+$dark_green: #545c3c;
+$green_4F5834: #4f5834;
+$prime_green: #00d2ad;
+$dark_caribbean: #00a386;
+$mid_green: #c6cdb1;
+$label: #4f5834;
+$ash_green: #9fab7c;
+$metadata_green: #b0b79b;
+$border_green: #e6e8df;
+$darker_green: #005b4b;
+$gantt_bg: #fcfcfc;
+$gantt_bg2: #f4f6f7;
+$ganttLine: #e3e3e3;
+$green2: #01cca3;
+
+$red: #eb5757;
+$yellow: #f2c94c;
+$blue: #2d9cdb;
+$blue100: #2f80ed;
+$golden: #c98504;
+$goldenrod: #bdb13e;
+$beige: #f8f5d9;
+$bright_cyan: #33dbbd;
+$light_grayish_yellow: #d3d9be;
+$dark_cyan: #00a88a;
+$deep_sea: #007e68;
+$mid_black: #002a23;
+$marshmallow: #f7faed;
+$mid_spring: #ccf6ef;
+$freezy_breezy: #99edde;
+$aqua_deep: #005445;
+$whitesmoke: #f3f5f5;
+$deathworld_forest: #5b682f;
+$cyprus: #005140;
+$offgreen: #e5faf7;
+$mild_green: #90a751;
+$pantone: #c2cba8;
+$green_pea: #015139;
+$azure: #effffe;
+$text_blue: #4a80c1;
+$pirate_gold: #c98505;
+$delta_ivory: #fff2d8;
+$dark_yellow: #fce762;
+$oslo_grey: #7c7d7d;
+$elf_green: #067e68;
+$orange: #e18435;
+$light_orange: #ffd7b6;
+$downy_green: #66e4ce;
+
+//background colors
+$background1: #f5f9e9;
+$background2: #edf4d9;
+$background3: #020202;
+$background4: #ecede8;
+$background5: #fbfdfe;
+$background6: #fcfdf9;
+$background7: #fbfdf7;
+$background8: #f3f7f8;
+$background9: #585858;
+$background10: #eef3de;
+$background11: #fbeaca;
+$background12: #e4e9d3;
+$background13: #fefefd;
+$background14: #edf1de;
+$background15: #919191;
+$background16: #e7ecd8;
+$background_EFF5DA: #eff5da;
+$background_FBFDF6: #fbfdf6;
+$background_757575: #757575;
+$background_light_green: #e9f1cf;
+$background_light_blue: #e5f1ff;
+$background17: #e4e7e7;
+
+//Tag Colors
+
+$cerulean: #c2ecf6;
+$porcelain_rose: #f8bebc;
+$lavender_pink: #edc0eb;
+$amethyst: #cfcdf9;
+$greasy_green: #ccdf8e;
+$sea_cabbage: #97e0ba;
+$chipmunk: #f2d7a3;
+$banana_brick: #faf09b;
+$blue_azure: #b9d8fd;
+$jira_blue: #0052cc;
+$namara_grey: #cfd0d0;
+$sand_orange: #ffc28e;
+
+//snackbar colors
+$color_info_text: #0494fd;
+$color_success_text: #02b57f;
+$color_error_text: #eb5757;
+$color_warning_text: #f2994a;
+$color_secondary_shade: #e4e9d3;
+
+$color_info_bg: #ecf7ff;
+$color_success_bg: #e6fbf7;
+$color_error_bg: #fdefef;
+$color_warning_bg: #fef5ed;
+
+$color_F2F7FA: #f2f7fa;
+
+$header_linear_gradient: linear-gradient(
+    360deg,
+    #f5f9e9 0%,
+    #f6fbe7 7.13%,
+    #f8ffe5 12.18%,
+    rgba(248, 255, 229, 0.880208) 19.02%,
+    rgba(248, 255, 229, 0.74353) 26.45%,
+    rgba(248, 255, 229, 0.554697) 34.47%,
+    rgba(248, 255, 229, 0) 57.06%
+  ),
+  linear-gradient(
+    90deg,
+    rgba(0, 210, 173, 0.4) 0%,
+    rgba(248, 255, 229, 0.4) 27.08%,
+    rgba(252, 231, 98, 0.4) 100%
+  );
+
+$banner_bg: linear-gradient(268.43deg, #e5faf7 33.59%, #ffffff 128.08%);
+
+$light_surface: #fdfcf5;
+
+$font64: 64px;
+$font48: 48px;
+$font36: 36px;
+$font24: 24px;
+$font20: 20px;
+$font18: 18px;
+$font16: 16px;
+$font14: 14px;
+$font13: 13px;
+$font12: 12px;
+$font10: 10px;
+$font8: 8px;
+
+$lineHeight96: 96px;
+$lineHeight72: 72px;
+$lineHeight64: 64px;
+$lineHeight58: 58px;
+$lineHeight54: 54px;
+$lineHeight40: 40px;
+$lineHeight36: 36px;
+$lineHeight32: 32px;
+$lineHeight30: 30px;
+$lineHeight27: 27px;
+$lineHeight24: 24px;
+$lineHeight22: 22px;
+$lineHeight21: 21px;
+$lineHeight20: 20px;
+$lineHeight18: 18px;
+$lineHeight16: 16px;
+$lineHeight14: 14px;
+
+@mixin fontStyle(
+  $fontFamily: null,
+  $size: null,
+  $weight: null,
+  $color: null,
+  $lineHeight: null,
+  $margin: null,
+  $padding: null
+) {
+  @if $fontFamily != null {
+    font-family: $fontFamily;
+  }
+  @if $size != null {
+    font-size: $size;
+  }
+  @if $weight != null {
+    font-weight: $weight;
+  }
+  @if $color != null {
+    color: $color;
+  }
+  @if $lineHeight != null {
+    line-height: $lineHeight;
+  }
+  @if $margin != null {
+    margin: $margin;
+  }
+  @if $padding != null {
+    padding: $padding;
+  }
+
+  &.linkText {
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin transitionForAll($time: 0.3s, $transProp: ease) {
+  -webkit-transition: all $time $transProp;
+  -moz-transition: all $time $transProp;
+  -o-transition: all $time $transProp;
+  transition: all $time $transProp;
+  transition: all $time $transProp;
+}
+
+// @keyframes shake {
+//   0% {
+//     margin-left: 0rem;
+//   }
+//   25% {
+//     margin-left: 0.25rem;
+//   }
+//   75% {
+//     margin-left: -0.25rem;
+//   }
+//   100% {
+//     margin-left: 0rem;
+//   }
+// }
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(-142px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+@mixin linkColor {
+  color: $green;
+  font-weight: $mediumFont;
+}
+
+@mixin wordSpaceBreak {
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+@mixin cardLayout(
+  $pt: 24px,
+  $pr: 24px,
+  $pb: 24px,
+  $pl: 24px,
+  $background: $background1
+) {
+  background: $background;
+  padding-top: $pt;
+  padding-right: $pr;
+  padding-bottom: $pb;
+  padding-left: $pl;
+  border-radius: 16px;
+  height: 100%;
+}
+
+@mixin gridCentered {
+  display: grid;
+  place-items: center;
+}
+
+@mixin rightTickList {
+  ul {
+    padding: 0;
+    li {
+      position: relative;
+      padding: 0;
+      padding-left: 28px;
+      color: $black;
+      font-weight: $regularFont;
+      margin-bottom: 16px;
+      &::before {
+        content: "";
+        background: url(https://ds-storage.sgp1.cdn.digitaloceanspaces.com/amby/assets/img/check_circle_green_icon.svg);
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        top: 3px;
+        left: 0;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+// mixin to hide scroll bar in chrome,safari,IE 10+ and firefox
+
+@mixin hideScrollbar {
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+//placeholder mixin
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin numberedList {
+  ul {
+    padding: 0;
+    counter-reset: item;
+    li {
+      position: relative;
+      padding: 0 0 0 34px;
+      color: $primaryBlue;
+      font-weight: $regularFont;
+      margin-bottom: 22px;
+      list-style-type: none;
+      counter-increment: item;
+      &::before {
+        content: counter(item);
+        background: $bright_cyan;
+        color: $white;
+        text-align: center;
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        font-size: $font12;
+        font-weight: $mediumFont;
+        line-height: $lineHeight20;
+        position: absolute;
+        top: 2px;
+        left: 0px;
+      }
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+@mixin scrollBarColor($color: $light_grayish_yellow) {
+  &::-webkit-scrollbar {
+    position: relative;
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 25px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    border: 4px solid $color;
+    cursor: pointer;
+  }
+}
+
+@mixin tabHeader {
+  text-align: left;
+  border-bottom: 1px solid $gray4;
+  .tabHeaderList {
+    padding: 16px 24px 0 24px;
+    li {
+      font-weight: $regularFont;
+      font-size: $font14;
+      line-height: $lineHeight21;
+      padding: 0;
+      padding-bottom: 8px;
+      margin-right: 24px;
+      cursor: pointer;
+      &.active {
+        font-weight: $semiBoldFont;
+        color: $green;
+        border-bottom: 2px solid $green;
+      }
+      &:hover {
+        border-bottom: 2px solid $green;
+      }
+    }
+  }
+}
+
+
+
+$MprimaryLight:#8abdff; 
+$Mprimary: #6d5dfc;
+$MprimaryDark: #5b0eeb;
+
+$Mwhite: #FFFFFF;
+$MgreyLight1: #E4EBF5;
+$MgreyLight2: #c8d0e7;
+$MgreyLight3: #bec8e4;
+$MgreyDark: #9baacf;
+
+$shadow: .3rem .3rem .6rem $MgreyLight2, 
+-.2rem -.2rem .5rem $Mwhite;
+
+$inner-shadow: inset .2rem .2rem .5rem $MgreyLight2, 
+inset -.2rem -.2rem .5rem $Mwhite;
