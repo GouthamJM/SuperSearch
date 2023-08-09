@@ -14,7 +14,7 @@ export default function Home() {
   const [search, setSearch] = React.useState('');
 
   const onStateSubmit = () => {
-    console.log({ chain, search });
+    updateSearchForm(chain, search);
     updateStep(allStates.transaction);
   };
   return (

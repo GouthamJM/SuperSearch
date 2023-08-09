@@ -61178,10 +61178,7 @@ function Home() {
   const [chain, setChain] = react__WEBPACK_IMPORTED_MODULE_0___default().useState('eth-mainnet');
   const [search, setSearch] = react__WEBPACK_IMPORTED_MODULE_0___default().useState('');
   const onStateSubmit = () => {
-    console.log({
-      chain,
-      search
-    });
+    updateSearchForm(chain, search);
     updateStep(_InjectMaster__WEBPACK_IMPORTED_MODULE_4__.allStates.transaction);
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -70932,7 +70929,7 @@ const SWRConfig = swr_internal__WEBPACK_IMPORTED_MODULE_2__.OBJECT.definePropert
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("d1709912fa51c4698995")
+/******/ 		__webpack_require__.h = () => ("fc27287047dc0e83b37d")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
