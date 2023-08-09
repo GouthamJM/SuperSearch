@@ -61172,9 +61172,16 @@ var _s = __webpack_require__.$Refresh$.signature();
 function Home() {
   _s();
   const {
-    updateStep
+    updateStep,
+    updateSearchForm
   } = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.useGlobalContext)();
+  const [chain, setChain] = react__WEBPACK_IMPORTED_MODULE_0___default().useState('eth-mainnet');
+  const [search, setSearch] = react__WEBPACK_IMPORTED_MODULE_0___default().useState('');
   const onStateSubmit = () => {
+    console.log({
+      chain,
+      search
+    });
     updateStep(_InjectMaster__WEBPACK_IMPORTED_MODULE_4__.allStates.transaction);
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -61184,21 +61191,29 @@ function Home() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Title__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pb-2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    className: "pb-4"
+    className: "pb-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
     className: "align-items-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
     md: 8,
     className: "pr-0"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Input__WEBPACK_IMPORTED_MODULE_1__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Input__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    value: search,
+    onChange: e => setSearch(e.target.value)
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
     md: 4
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Dropdown__WEBPACK_IMPORTED_MODULE_5__["default"], null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Dropdown__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    value: chain,
+    onChange: e => {
+      setChain(e.target.value);
+    }
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
     className: "align-items-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Button__WEBPACK_IMPORTED_MODULE_2__.ButtonP, {
     onClick: onStateSubmit
   }, "Search"))))));
 }
-_s(Home, "CyDm83gQyhbMHXQPDDal+A1SDdY=", false, function () {
+_s(Home, "hmD0jMDdk7dKE2RLyFobLEqx1No=", false, function () {
   return [_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.useGlobalContext];
 });
 _c = Home;
@@ -61270,13 +61285,13 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.
 
 function Transaction() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "transactionContainer"
+    className: "transactionContainer px-2 py-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pb-2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Title__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pb-2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    className: "pb-4"
+    className: "pb-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
     className: "align-items-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -61362,9 +61377,9 @@ function ButtonS(props) {
     children,
     ...rest
   } = props;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", _extends({
-    className: "neuomorphicBtn neuomorphicBtn__secondary"
-  }, rest), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, children));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_1__["default"], _extends({}, rest, {
+    variant: "secondary"
+  }), children);
 }
 _c2 = ButtonS;
 
@@ -61425,29 +61440,25 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
 
 var _s = __webpack_require__.$Refresh$.signature();
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
 
-function Dropdown() {
+function Dropdown(props) {
   _s();
-  const [chain, setChain] = react__WEBPACK_IMPORTED_MODULE_0___default().useState('eth-mainnet');
   const {
     chainsList: {
       chainsWithoutTestNets
     }
   } = (0,_hooks_swr_useChains__WEBPACK_IMPORTED_MODULE_1__.useChains)();
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_2__["default"].Select, {
-    "aria-label": "Select chain",
-    value: chain,
-    onChange: e => {
-      setChain(e.target.value);
-    }
-  }, chainsWithoutTestNets?.map(_item => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_2__["default"].Select, _extends({
+    "aria-label": "Select chain"
+  }, props), chainsWithoutTestNets?.map(_item => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
     value: _item.name,
     key: _item.name
   }, _item.label)));
 }
-_s(Dropdown, "iFVakagDyO8LXtaVcBxMY9ItfNk=", false, function () {
+_s(Dropdown, "sjj0/s3Z1YoEjX0twBk2Tkmxe8I=", false, function () {
   return [_hooks_swr_useChains__WEBPACK_IMPORTED_MODULE_1__.useChains];
 });
 _c = Dropdown;
@@ -61506,13 +61517,14 @@ __webpack_require__.r(__webpack_exports__);
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
 
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
-function Input() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_1__["default"].Group, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_1__["default"].Control, {
+function Input(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_1__["default"].Group, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_1__["default"].Control, _extends({
     type: "text",
     placeholder: "Vitalik.eth"
-  })));
+  }, props))));
 }
 _c = Input;
 var _c;
@@ -61652,11 +61664,16 @@ const allStates = {
   transaction: 'transaction'
 };
 const initValue = {
-  steps: allStates.home
+  steps: allStates.home,
+  searchForm: {
+    search: '',
+    chain: ''
+  }
 };
 const actions = {
   resetStep: 'resetStep',
-  updateStep: 'updateStep'
+  updateStep: 'updateStep',
+  updateSearchForm: 'updateSearchForm'
 };
 const GlobalContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(initValue);
 const reducer = (state, action) => {
@@ -61670,6 +61687,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         steps: action.payload
+      };
+    case actions.updateSearchForm:
+      return {
+        ...state,
+        searchForm: action.payload
       };
     default:
       return state;
@@ -61691,6 +61713,15 @@ function useGlobalReducer() {
         type: actions.resetStep,
         payload: step
       });
+    },
+    updateSearchForm: (search, chain) => {
+      dispatch({
+        type: actions.updateSearchForm,
+        payload: {
+          search,
+          chain
+        }
+      });
     }
   };
   return globalState;
@@ -61701,16 +61732,17 @@ function useGlobalContext() {
   const {
     state,
     updateStep,
-    resetStep
+    resetStep,
+    updateSearchForm
   } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(GlobalContext);
-  console.log(state, updateStep, resetStep, 'state, updateStep, resetStep');
   return {
     state,
     updateStep,
-    resetStep
+    resetStep,
+    updateSearchForm
   };
 }
-_s2(useGlobalContext, "3JYnZSaocggFmHHyePwXtWmQd60=");
+_s2(useGlobalContext, "k8hYpT/8z5QHqzSmnMCKuhdzPwY=");
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -70900,7 +70932,7 @@ const SWRConfig = swr_internal__WEBPACK_IMPORTED_MODULE_2__.OBJECT.definePropert
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("d9469ce7a48a48518c7f")
+/******/ 		__webpack_require__.h = () => ("d1709912fa51c4698995")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

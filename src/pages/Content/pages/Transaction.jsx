@@ -6,12 +6,12 @@ import Dropdown from '../components/Dropdown';
 import { Container, Row, Col } from 'react-bootstrap';
 export default function Transaction() {
   return (
-    <div className="transactionContainer">
+    <div className="transactionContainer px-2 py-4">
       <div className="pb-2">
         <Title />
       </div>
       <div className="pb-2">
-        <Container className="pb-4">
+        <Container className="pb-3">
           <Row className="align-items-center">
             <Col md={8} className="pr-0">
               <Input />

@@ -13,9 +13,9 @@ function ButtonP(props) {
 function ButtonS(props) {
   let { children, ...rest } = props;
   return (
-    <div className="neuomorphicBtn neuomorphicBtn__secondary" {...rest}>
-      <p>{children}</p>
-    </div>
+    <Button {...rest} variant="secondary">
+      {children}
+    </Button>
   );
 }
 

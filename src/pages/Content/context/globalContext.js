@@ -7,11 +7,16 @@ export const allStates = {
 };
 const initValue = {
   steps: allStates.home,
+  searchForm: {
+    search: '',
+    chain: '',
+  },
 };
 
 const actions = {
   resetStep: 'resetStep',
   updateStep: 'updateStep',
+  updateSearchForm: 'updateSearchForm',
 };
 export const GlobalContext = createContext(initValue);
 
@@ -21,6 +26,8 @@ const reducer = (state, action) => {
       return { ...state, steps: allStates.home };
     case actions.updateStep:
       return { ...state, steps: action.payload };
+    case actions.updateSearchForm:
+      return { ...state, searchForm: action.payload };
     default:
       return state;
   }
@@ -35,12 +42,15 @@ export function useGlobalReducer() {
     resetStep: (step) => {
       dispatch({ type: actions.resetStep, payload: step });
     },
+    updateSearchForm: (search, chain) => {
+      dispatch({ type: actions.updateSearchForm, payload: { search, chain } });
+    },
   };
   return globalState;
 }
 
 export function useGlobalContext() {
-  const { state, updateStep, resetStep } = useContext(GlobalContext);
-  console.log(state, updateStep, resetStep, 'state, updateStep, resetStep');
-  return { state, updateStep, resetStep };
+  const { state, updateStep, resetStep, updateSearchForm } =
+    useContext(GlobalContext);
+  return { state, updateStep, resetStep, updateSearchForm };
 }

@@ -8,9 +8,13 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../components/Title';
 
 export default function Home() {
-  const { updateStep } = useGlobalContext();
+  const { updateStep, updateSearchForm } = useGlobalContext();
+
+  const [chain, setChain] = React.useState('eth-mainnet');
+  const [search, setSearch] = React.useState('');
 
   const onStateSubmit = () => {
+    console.log({ chain, search });
     updateStep(allStates.transaction);
   };
   return (
@@ -19,13 +23,21 @@ export default function Home() {
         <Title />
       </div>
       <div className="pb-2">
-        <Container className="pb-4">
+        <Container className="pb-3">
           <Row className="align-items-center">
             <Col md={8} className="pr-0">
-              <Input />
+              <Input
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
             </Col>
             <Col md={4}>
-              <Dropdown />
+              <Dropdown
+                value={chain}
+                onChange={(e) => {
+                  setChain(e.target.value);
+                }}
+              />
             </Col>
           </Row>
         </Container>
