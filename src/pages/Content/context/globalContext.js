@@ -9,7 +9,7 @@ const initValue = {
   steps: allStates.home,
   searchForm: {
     search: '',
-    chain: '',
+    chain: 'eth-mainnet',
   },
 };
 
@@ -17,6 +17,7 @@ const actions = {
   resetStep: 'resetStep',
   updateStep: 'updateStep',
   updateSearchForm: 'updateSearchForm',
+  resetSearchForm: 'resetSearchForm',
 };
 export const GlobalContext = createContext(initValue);
 
@@ -28,6 +29,8 @@ const reducer = (state, action) => {
       return { ...state, steps: action.payload };
     case actions.updateSearchForm:
       return { ...state, searchForm: action.payload };
+    case actions.resetSearchForm:
+      return { ...state, searchForm: initValue.searchForm };
     default:
       return state;
   }

@@ -61173,12 +61173,13 @@ function Home() {
   _s();
   const {
     updateStep,
-    updateSearchForm
+    updateSearchForm,
+    state
   } = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.useGlobalContext)();
-  const [chain, setChain] = react__WEBPACK_IMPORTED_MODULE_0___default().useState('eth-mainnet');
-  const [search, setSearch] = react__WEBPACK_IMPORTED_MODULE_0___default().useState('');
+  const [chain, setChain] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(state.searchForm.chain);
+  const [search, setSearch] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(state.searchForm.search);
   const onStateSubmit = () => {
-    updateSearchForm(chain, search);
+    updateSearchForm(search, chain);
     updateStep(_InjectMaster__WEBPACK_IMPORTED_MODULE_4__.allStates.transaction);
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -61210,7 +61211,7 @@ function Home() {
     onClick: onStateSubmit
   }, "Search"))))));
 }
-_s(Home, "hmD0jMDdk7dKE2RLyFobLEqx1No=", false, function () {
+_s(Home, "W3mLMt5Oj7f24+d93FYGSHf4m+Y=", false, function () {
   return [_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.useGlobalContext];
 });
 _c = Home;
@@ -61267,12 +61268,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Title__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Title */ "./src/pages/Content/components/Title.jsx");
 /* harmony import */ var _components_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Button */ "./src/pages/Content/components/Button.jsx");
 /* harmony import */ var _components_Dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Dropdown */ "./src/pages/Content/components/Dropdown.jsx");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Container.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Row.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Row.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var _context_globalContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../context/globalContext */ "./src/pages/Content/context/globalContext.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
+
+var _s = __webpack_require__.$Refresh$.signature();
 
 
 
@@ -61281,25 +61285,47 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.
 
 
 function Transaction() {
+  _s();
+  const {
+    updateStep,
+    updateSearchForm,
+    state
+  } = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_5__.useGlobalContext)();
+  const [chain, setChain] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(state.searchForm.chain);
+  const [search, setSearch] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(state.searchForm.search);
+  const onStateSubmit = () => {
+    updateSearchForm(search, chain);
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionContainer px-2 py-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pb-2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Title__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pb-2"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    className: "pb-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    className: "align-items-center"
+    className: "pb-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    className: "align-items-center"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
     md: 8,
     className: "pr-0"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Input__WEBPACK_IMPORTED_MODULE_1__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Input__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    value: search,
+    onChange: e => setSearch(e.target.value)
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
     md: 4
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"], null)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    value: chain,
+    onChange: e => {
+      setChain(e.target.value);
+    }
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
     className: "align-items-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Button__WEBPACK_IMPORTED_MODULE_3__.ButtonP, null, "Search"))))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Button__WEBPACK_IMPORTED_MODULE_3__.ButtonP, null, "Search"))))));
 }
+_s(Transaction, "W3mLMt5Oj7f24+d93FYGSHf4m+Y=", false, function () {
+  return [_context_globalContext__WEBPACK_IMPORTED_MODULE_5__.useGlobalContext];
+});
 _c = Transaction;
 var _c;
 __webpack_require__.$Refresh$.register(_c, "Transaction");
@@ -61664,13 +61690,14 @@ const initValue = {
   steps: allStates.home,
   searchForm: {
     search: '',
-    chain: ''
+    chain: 'eth-mainnet'
   }
 };
 const actions = {
   resetStep: 'resetStep',
   updateStep: 'updateStep',
-  updateSearchForm: 'updateSearchForm'
+  updateSearchForm: 'updateSearchForm',
+  resetSearchForm: 'resetSearchForm'
 };
 const GlobalContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(initValue);
 const reducer = (state, action) => {
@@ -61689,6 +61716,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         searchForm: action.payload
+      };
+    case actions.resetSearchForm:
+      return {
+        ...state,
+        searchForm: initValue.searchForm
       };
     default:
       return state;
@@ -70929,7 +70961,7 @@ const SWRConfig = swr_internal__WEBPACK_IMPORTED_MODULE_2__.OBJECT.definePropert
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("fc27287047dc0e83b37d")
+/******/ 		__webpack_require__.h = () => ("5cdc04e33b426615d5bb")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

@@ -8,13 +8,13 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Title from '../components/Title';
 
 export default function Home() {
-  const { updateStep, updateSearchForm } = useGlobalContext();
+  const { updateStep, updateSearchForm, state } = useGlobalContext();
 
-  const [chain, setChain] = React.useState('eth-mainnet');
-  const [search, setSearch] = React.useState('');
+  const [chain, setChain] = React.useState(state.searchForm.chain);
+  const [search, setSearch] = React.useState(state.searchForm.search);
 
   const onStateSubmit = () => {
-    updateSearchForm(chain, search);
+    updateSearchForm(search, chain);
     updateStep(allStates.transaction);
   };
   return (
