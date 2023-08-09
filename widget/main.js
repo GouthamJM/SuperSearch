@@ -61430,23 +61430,24 @@ var _s = __webpack_require__.$Refresh$.signature();
 
 function Dropdown() {
   _s();
+  const [chain, setChain] = react__WEBPACK_IMPORTED_MODULE_0___default().useState('eth-mainnet');
   const {
     chainsList: {
       chainsWithoutTestNets
     }
   } = (0,_hooks_swr_useChains__WEBPACK_IMPORTED_MODULE_1__.useChains)();
-  console.log(chainsWithoutTestNets, 'chainsWithoutTestNets');
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_2__["default"].Select, {
-    "aria-label": "Default select example"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", null, "Open this select menu"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
-    value: "1"
-  }, "One"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
-    value: "2"
-  }, "Two"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
-    value: "3"
-  }, "Three"));
+    "aria-label": "Select chain",
+    value: chain,
+    onChange: e => {
+      setChain(e.target.value);
+    }
+  }, chainsWithoutTestNets?.map(_item => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+    value: _item.name,
+    key: _item.name
+  }, _item.label)));
 }
-_s(Dropdown, "sjj0/s3Z1YoEjX0twBk2Tkmxe8I=", false, function () {
+_s(Dropdown, "iFVakagDyO8LXtaVcBxMY9ItfNk=", false, function () {
   return [_hooks_swr_useChains__WEBPACK_IMPORTED_MODULE_1__.useChains];
 });
 _c = Dropdown;
@@ -70899,7 +70900,7 @@ const SWRConfig = swr_internal__WEBPACK_IMPORTED_MODULE_2__.OBJECT.definePropert
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("8817307a6af47e33cc09")
+/******/ 		__webpack_require__.h = () => ("d9469ce7a48a48518c7f")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
