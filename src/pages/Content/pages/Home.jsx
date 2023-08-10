@@ -1,6 +1,6 @@
 import React from 'react';
 import Input from '../components/Input';
-import { ButtonP } from '../components/Button';
+import { ButtonL, ButtonP } from '../components/Button';
 import { useGlobalContext } from '../context/globalContext';
 import { allStates } from '../InjectMaster';
 import Dropdown from '../components/Dropdown';
@@ -33,18 +33,21 @@ export default function Home() {
             </Col>
             <Col md={4}>
               <Dropdown
-                value={chain}
-                onChange={(e) => {
-                  setChain(e.target.value);
+                value={chain.name}
+                onChange={(item) => {
+                  setChain(item);
                 }}
               />
             </Col>
           </Row>
         </Container>
         <Container>
-          <Row className="align-items-center">
-            <Col>
+          <Row className="align-items-center justify-content-start">
+            <Col md="auto">
               <ButtonP onClick={onStateSubmit}>Search</ButtonP>
+            </Col>
+            <Col md="auto">
+              <ButtonL onClick={() => setSearch('')}>Clear</ButtonL>
             </Col>
           </Row>
         </Container>

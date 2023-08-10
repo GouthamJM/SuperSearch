@@ -9,7 +9,21 @@ const initValue = {
   steps: allStates.home,
   searchForm: {
     search: '',
-    chain: 'eth-mainnet',
+    chain: {
+      name: 'eth-mainnet',
+      chain_id: '1',
+      is_testnet: false,
+      db_schema_name: 'chain_eth_mainnet',
+      label: 'Ethereum Mainnet',
+      category_label: 'Ethereum',
+      logo_url: 'https://www.datocms-assets.com/86369/1669653891-eth.svg',
+      black_logo_url:
+        'https://www.datocms-assets.com/86369/1669619544-ethereum.png',
+      white_logo_url:
+        'https://www.datocms-assets.com/86369/1669619533-ethereum.png',
+      is_appchain: false,
+      appchain_of: null,
+    },
   },
 };
 

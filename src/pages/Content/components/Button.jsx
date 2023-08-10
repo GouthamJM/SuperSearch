@@ -19,4 +19,13 @@ function ButtonS(props) {
   );
 }
 
-export { ButtonP, ButtonS };
+function ButtonL(props) {
+  let { children, ...rest } = props;
+  return (
+    <Button {...rest} variant="light">
+      {children}
+    </Button>
+  );
+}
+
+export { ButtonP, ButtonS, ButtonL };

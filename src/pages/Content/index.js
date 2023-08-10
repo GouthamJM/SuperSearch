@@ -1,6 +1,7 @@
 import { InjectMaster } from './InjectMaster';
 import ReactDOM from 'react-dom';
 import React from 'react';
+
 document.addEventListener(
   'DOMContentLoaded',
   function () {
