@@ -1,41 +1,50 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useGlobalContext } from '../context/globalContext';
-import TransactionDetail from './TransactionDetail';
-import { useTransactionDetail } from '../hooks/swr/useTransactionDetail';
 import Header from './Header';
+import WalletDetail from './WalletDetail';
+import { useWalletBalance } from '../hooks/swr/useWalletBalance';
+// import { useWalletPortfolioGraph } from '../hooks/swr/useWalletPortfolioGraph';
 
-export default function Transaction() {
+export default function Wallet() {
   const { state } = useGlobalContext();
 
-  const { transactionDetail, transactionDeailLoader } = useTransactionDetail(
+  const { walletBalance, walletBalanceLoader } = useWalletBalance(
     state.searchForm.chain.chain_id,
     state.searchForm.search
   );
 
+  /*
+  const { walletPortfolioGraph, walletPortfolioLoader } =
+    useWalletPortfolioGraph(
+      state.searchForm.chain.chain_id,
+      state.searchForm.search
+    );
+  */
+  console.log(walletBalance, 'walletBalance');
   return (
     <div className="transactionContainer px-2 py-4">
       <div className="pb-2">
-        <Header type="transaction" />
+        <Header type="wallet" />
       </div>
-      {transactionDeailLoader ? (
+      {walletBalanceLoader ? (
         <p>Loading...</p>
       ) : (
         <>
-          {transactionDetail ? (
+          {walletBalance ? (
             <div>
               <Container>
                 <Row>
                   <Col md="auto">
                     <div className="bg-light bg-gradient px-2 py-4 rounded">
-                      <TransactionDetail {...transactionDetail} />
+                      <WalletDetail {...walletBalance} />
                     </div>
                   </Col>
                 </Row>
               </Container>
             </div>
           ) : (
-            <div className="heading5">No transaction found</div>
+            <div className="heading5">No account wallet address found</div>
           )}
         </>
       )}

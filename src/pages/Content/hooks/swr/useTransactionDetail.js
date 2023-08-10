@@ -1,6 +1,5 @@
 import useSWR from 'swr';
 import { getTransactionDetail } from '.';
-import { multiply } from 'lodash';
 
 /*
 {
@@ -40,7 +39,6 @@ function useTransactionDetail(chain_id, txn_hash) {
     revalidateIfStale: false,
     shouldRetryOnError: false,
     revalidateOnFocus: false,
-    refreshInterval: multiply(60, 1000),
   });
 
   return { transactionDetail: data, transactionDeailLoader: isValidating };

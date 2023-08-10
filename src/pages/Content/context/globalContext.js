@@ -1,12 +1,12 @@
 import { useContext } from 'react';
 import { createContext, useReducer } from 'react';
 
-export const allStates = {
+export const allPages = {
   home: 'home',
   transaction: 'transaction',
 };
 const initValue = {
-  steps: allStates.home,
+  steps: allPages.home,
   searchForm: {
     search: '',
     chain: {
@@ -24,6 +24,7 @@ const initValue = {
       is_appchain: false,
       appchain_of: null,
     },
+    searchType: '',
   },
 };
 
@@ -38,7 +39,7 @@ export const GlobalContext = createContext(initValue);
 const reducer = (state, action) => {
   switch (action.type) {
     case actions.resetStep:
-      return { ...state, steps: allStates.home };
+      return { ...state, steps: allPages.home };
     case actions.updateStep:
       return { ...state, steps: action.payload };
     case actions.updateSearchForm:
@@ -59,8 +60,11 @@ export function useGlobalReducer() {
     resetStep: (step) => {
       dispatch({ type: actions.resetStep, payload: step });
     },
-    updateSearchForm: (search, chain) => {
-      dispatch({ type: actions.updateSearchForm, payload: { search, chain } });
+    updateSearchForm: (search, chain, searchType) => {
+      dispatch({
+        type: actions.updateSearchForm,
+        payload: { search, chain, searchType },
+      });
     },
 
     resetSearchForm: () => {

@@ -1,22 +1,26 @@
 import React from 'react';
-import Home from './Pages/Home';
+import Home from './pages/Home';
 import { useMemo } from 'react';
-import Transaction from './Pages/Transaction';
+import Transaction from './pages/Transaction';
 import { GlobalContext, useGlobalReducer } from './context/globalContext';
+import Wallet from './pages/Wallet';
 
-export const allStates = {
+export const allPages = {
   home: 'home',
   transaction: 'transaction',
+  wallet: 'wallet',
 };
 
 function InjectMaster() {
   const globalState = useGlobalReducer();
   const steps = useMemo(() => {
     switch (globalState.state.steps) {
-      case allStates.home:
+      case allPages.home:
         return <Home />;
-      case allStates.transaction:
+      case allPages.transaction:
         return <Transaction />;
+      case allPages.wallet:
+        return <Wallet />;
       default:
         return <Home />;
     }

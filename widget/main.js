@@ -82643,13 +82643,14 @@ if (false) {} else {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "InjectMaster": () => (/* binding */ InjectMaster),
-/* harmony export */   "allStates": () => (/* binding */ allStates)
+/* harmony export */   "allPages": () => (/* binding */ allPages)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Pages_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Pages/Home */ "./src/pages/Content/Pages/Home.jsx");
-/* harmony import */ var _Pages_Transaction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Pages/Transaction */ "./src/pages/Content/Pages/Transaction.jsx");
+/* harmony import */ var _pages_Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pages/Home */ "./src/pages/Content/pages/Home.jsx");
+/* harmony import */ var _pages_Transaction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/Transaction */ "./src/pages/Content/pages/Transaction.jsx");
 /* harmony import */ var _context_globalContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./context/globalContext */ "./src/pages/Content/context/globalContext.js");
+/* harmony import */ var _pages_Wallet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/Wallet */ "./src/pages/Content/pages/Wallet.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
@@ -82660,21 +82661,25 @@ var _s = __webpack_require__.$Refresh$.signature();
 
 
 
-const allStates = {
+
+const allPages = {
   home: 'home',
-  transaction: 'transaction'
+  transaction: 'transaction',
+  wallet: 'wallet'
 };
 function InjectMaster() {
   _s();
   const globalState = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.useGlobalReducer)();
   const steps = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => {
     switch (globalState.state.steps) {
-      case allStates.home:
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Pages_Home__WEBPACK_IMPORTED_MODULE_1__["default"], null);
-      case allStates.transaction:
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Pages_Transaction__WEBPACK_IMPORTED_MODULE_2__["default"], null);
+      case allPages.home:
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_pages_Home__WEBPACK_IMPORTED_MODULE_1__["default"], null);
+      case allPages.transaction:
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_pages_Transaction__WEBPACK_IMPORTED_MODULE_2__["default"], null);
+      case allPages.wallet:
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_pages_Wallet__WEBPACK_IMPORTED_MODULE_4__["default"], null);
       default:
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Pages_Home__WEBPACK_IMPORTED_MODULE_1__["default"], null);
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_pages_Home__WEBPACK_IMPORTED_MODULE_1__["default"], null);
     }
   }, [globalState.state.steps]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.GlobalContext.Provider, {
@@ -82690,492 +82695,6 @@ _c = InjectMaster;
 
 var _c;
 __webpack_require__.$Refresh$.register(_c, "InjectMaster");
-
-const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
-const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
-	$ReactRefreshModuleId$
-);
-
-function $ReactRefreshModuleRuntime$(exports) {
-	if (true) {
-		let errorOverlay;
-		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
-			errorOverlay = __react_refresh_error_overlay__;
-		}
-		let testMode;
-		if (typeof __react_refresh_test__ !== 'undefined') {
-			testMode = __react_refresh_test__;
-		}
-		return __react_refresh_utils__.executeRuntime(
-			exports,
-			$ReactRefreshModuleId$,
-			module.hot,
-			errorOverlay,
-			testMode
-		);
-	}
-}
-
-if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
-	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
-} else {
-	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
-}
-
-/***/ }),
-
-/***/ "./src/pages/Content/Pages/Home.jsx":
-/*!******************************************!*\
-  !*** ./src/pages/Content/Pages/Home.jsx ***!
-  \******************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Home)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Input */ "./src/pages/Content/components/Input.jsx");
-/* harmony import */ var _components_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Button */ "./src/pages/Content/components/Button.jsx");
-/* harmony import */ var _context_globalContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../context/globalContext */ "./src/pages/Content/context/globalContext.js");
-/* harmony import */ var _InjectMaster__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../InjectMaster */ "./src/pages/Content/InjectMaster.jsx");
-/* harmony import */ var _components_Dropdown__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Dropdown */ "./src/pages/Content/components/Dropdown.jsx");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Container.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Row.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Col.js");
-/* harmony import */ var _components_Title__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Title */ "./src/pages/Content/components/Title.jsx");
-/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
-/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
-__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
-
-var _s = __webpack_require__.$Refresh$.signature();
-
-
-
-
-
-
-
-
-function Home() {
-  _s();
-  const {
-    updateStep,
-    updateSearchForm,
-    state
-  } = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.useGlobalContext)();
-  const [chain, setChain] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(state.searchForm.chain);
-  const [search, setSearch] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(state.searchForm.search);
-  const onStateSubmit = () => {
-    updateSearchForm(search, chain);
-    updateStep(_InjectMaster__WEBPACK_IMPORTED_MODULE_4__.allStates.transaction);
-  };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "homeContainer px-2 py-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "pb-2"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Title__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "pb-2"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    className: "pb-3"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    className: "align-items-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    md: 8,
-    className: "pr-0"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Input__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    value: search,
-    onChange: e => setSearch(e.target.value)
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    md: 4
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Dropdown__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    value: chain.name,
-    onChange: item => {
-      setChain(item);
-    }
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    className: "align-items-center justify-content-start"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    md: "auto"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Button__WEBPACK_IMPORTED_MODULE_2__.ButtonP, {
-    onClick: onStateSubmit
-  }, "Search")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    md: "auto"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Button__WEBPACK_IMPORTED_MODULE_2__.ButtonL, {
-    onClick: () => setSearch('')
-  }, "Clear"))))));
-}
-_s(Home, "W3mLMt5Oj7f24+d93FYGSHf4m+Y=", false, function () {
-  return [_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.useGlobalContext];
-});
-_c = Home;
-var _c;
-__webpack_require__.$Refresh$.register(_c, "Home");
-
-const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
-const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
-	$ReactRefreshModuleId$
-);
-
-function $ReactRefreshModuleRuntime$(exports) {
-	if (true) {
-		let errorOverlay;
-		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
-			errorOverlay = __react_refresh_error_overlay__;
-		}
-		let testMode;
-		if (typeof __react_refresh_test__ !== 'undefined') {
-			testMode = __react_refresh_test__;
-		}
-		return __react_refresh_utils__.executeRuntime(
-			exports,
-			$ReactRefreshModuleId$,
-			module.hot,
-			errorOverlay,
-			testMode
-		);
-	}
-}
-
-if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
-	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
-} else {
-	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
-}
-
-/***/ }),
-
-/***/ "./src/pages/Content/Pages/Transaction.jsx":
-/*!*************************************************!*\
-  !*** ./src/pages/Content/Pages/Transaction.jsx ***!
-  \*************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Transaction)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Input */ "./src/pages/Content/components/Input.jsx");
-/* harmony import */ var _components_Title__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Title */ "./src/pages/Content/components/Title.jsx");
-/* harmony import */ var _components_Button__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/Button */ "./src/pages/Content/components/Button.jsx");
-/* harmony import */ var _components_Dropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Dropdown */ "./src/pages/Content/components/Dropdown.jsx");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Container.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Row.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Col.js");
-/* harmony import */ var _context_globalContext__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../context/globalContext */ "./src/pages/Content/context/globalContext.js");
-/* harmony import */ var _TransactionDetail__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./TransactionDetail */ "./src/pages/Content/Pages/TransactionDetail.jsx");
-/* harmony import */ var _hooks_swr_useTransactionDetail__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../hooks/swr/useTransactionDetail */ "./src/pages/Content/hooks/swr/useTransactionDetail.js");
-/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
-/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
-__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
-
-var _s = __webpack_require__.$Refresh$.signature();
-
-
-
-
-
-
-
-
-
-function Transaction() {
-  _s();
-  const {
-    updateSearchForm,
-    state,
-    resetStep,
-    resetSearchForm
-  } = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_5__.useGlobalContext)();
-  const [chain, setChain] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(state.searchForm.chain);
-  const [search, setSearch] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(state.searchForm.search);
-  const {
-    transactionDetail,
-    transactionDeailLoader
-  } = (0,_hooks_swr_useTransactionDetail__WEBPACK_IMPORTED_MODULE_7__.useTransactionDetail)(state.searchForm.chain.chain_id, state.searchForm.search);
-  const onStateSubmit = () => {
-    updateSearchForm(search, chain);
-  };
-  const onGoBack = () => {
-    resetStep();
-    resetSearchForm();
-  };
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "transactionContainer px-2 py-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "pb-2"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Title__WEBPACK_IMPORTED_MODULE_2__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "pb-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    className: "pb-3"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    className: "align-items-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    md: 8,
-    className: "pr-0"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Input__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    value: search,
-    onChange: e => setSearch(e.target.value)
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    md: 4
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Dropdown__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    value: chain.name,
-    onChange: item => {
-      setChain(item);
-    }
-  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    className: "align-items-center justify-content-between"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    md: "auto"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    md: "auto"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Button__WEBPACK_IMPORTED_MODULE_3__.ButtonP, {
-    onClick: onStateSubmit
-  }, "Search")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    md: "auto"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Button__WEBPACK_IMPORTED_MODULE_3__.ButtonL, {
-    onClick: () => setSearch('')
-  }, "Clear")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    md: "auto"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Button__WEBPACK_IMPORTED_MODULE_3__.ButtonP, {
-    onClick: onGoBack
-  }, "Go Back"))))), transactionDeailLoader ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Loading...") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, transactionDetail ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
-    md: "auto"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "bg-light bg-gradient px-2 py-4 rounded"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_TransactionDetail__WEBPACK_IMPORTED_MODULE_6__["default"], transactionDetail)))))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "heading5"
-  }, "Not Found")));
-}
-_s(Transaction, "zSngPlBC5/FX9utHQ/7gaP2G+yQ=", false, function () {
-  return [_context_globalContext__WEBPACK_IMPORTED_MODULE_5__.useGlobalContext, _hooks_swr_useTransactionDetail__WEBPACK_IMPORTED_MODULE_7__.useTransactionDetail];
-});
-_c = Transaction;
-var _c;
-__webpack_require__.$Refresh$.register(_c, "Transaction");
-
-const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
-const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
-	$ReactRefreshModuleId$
-);
-
-function $ReactRefreshModuleRuntime$(exports) {
-	if (true) {
-		let errorOverlay;
-		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
-			errorOverlay = __react_refresh_error_overlay__;
-		}
-		let testMode;
-		if (typeof __react_refresh_test__ !== 'undefined') {
-			testMode = __react_refresh_test__;
-		}
-		return __react_refresh_utils__.executeRuntime(
-			exports,
-			$ReactRefreshModuleId$,
-			module.hot,
-			errorOverlay,
-			testMode
-		);
-	}
-}
-
-if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
-	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
-} else {
-	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
-}
-
-/***/ }),
-
-/***/ "./src/pages/Content/Pages/TransactionDetail.jsx":
-/*!*******************************************************!*\
-  !*** ./src/pages/Content/Pages/TransactionDetail.jsx ***!
-  \*******************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ TransactionPage),
-/* harmony export */   "formatDate": () => (/* binding */ formatDate),
-/* harmony export */   "formatDateTime": () => (/* binding */ formatDateTime),
-/* harmony export */   "gasValueWeiToGwei": () => (/* binding */ gasValueWeiToGwei),
-/* harmony export */   "getPercentage": () => (/* binding */ getPercentage),
-/* harmony export */   "getTokenFormattedNumber": () => (/* binding */ getTokenFormattedNumber)
-/* harmony export */ });
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Container.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Row.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Col.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/.pnpm/moment@2.29.4/node_modules/moment/moment.js");
-/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ethers */ "./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/utils/units.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash */ "./node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_2__);
-/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
-/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
-__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
-
-
-
-
-
-
-/*
-{
-    "block_signed_at": "2023-08-09T12:45:59Z",
-    "block_height": 17877434,
-    "tx_hash": "0x39151af6ba02ac5e3169ff145111137c0186d7b802608e174ea460d4246cbea1",
-    "tx_offset": 177,
-    "successful": true,
-    "from_address": "0x199d5ed7f45f4ee35960cf22eade2076e95b253f",
-    "from_address_label": null,
-    "to_address": "0x87b3f3c934a13c779e100a5d6e6d7ef577e86671",
-    "to_address_label": null,
-    "value": "35345563466541400",
-    "value_quote": 65.92058041395804,
-    "pretty_value_quote": "$65.92",
-    "gas_metadata": {
-        "contract_decimals": 18,
-        "contract_name": "Ether",
-        "contract_ticker_symbol": "ETH",
-        "contract_address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
-        "supports_erc": null,
-        "logo_url": "https://www.datocms-assets.com/86369/1669653891-eth.svg"
-    },
-    "gas_offered": 21000,
-    "gas_spent": 21000,
-    "gas_price": 27601378543,
-    "fees_paid": "579628949403000",
-    "gas_quote": 1.0810261040412639,
-    "pretty_gas_quote": "$1.08",
-    "gas_quote_rate": 1865.03125,
-    "log_events": []
-}
-*/
-
-const gasValueWeiToGwei = weiValue => {
-  return (0,ethers__WEBPACK_IMPORTED_MODULE_3__.formatUnits)(weiValue, 'gwei');
-};
-const getTokenFormattedNumber = (value, decimals = 18, roundOff = true, fractions = 0) => {
-  const _decimals = decimals || 18;
-  const _value = value || 0;
-  const _expoValue = Math.pow(10, _decimals);
-  let _calculated = _value / _expoValue;
-  if (!roundOff) {
-    return Number(_calculated);
-  }
-  let _decimalFixed = fractions;
-  if (fractions == 0) {
-    _decimalFixed = 2;
-    if (_calculated < 100) {
-      _decimalFixed = 6;
-    }
-  }
-  const expo = Math.pow(10, _decimalFixed);
-  _calculated = Math.floor(_calculated * expo) / expo;
-  return Number(_calculated.toFixed(_decimalFixed));
-};
-const formatDateTime = str => {
-  return moment__WEBPACK_IMPORTED_MODULE_1___default().unix(str).format('MMM DD, YYYY h:mm A');
-};
-const formatDate = (str, isWithTime = false, isWithSuffix = false) => {
-  return moment__WEBPACK_IMPORTED_MODULE_1___default()(str).format(`${isWithTime && isWithSuffix ? 'MMM DD, YYYY h:mm A' : isWithTime ? 'ddd DD MMM YYYY, HH:mm:ss' : 'MMM DD, YYYY'}`);
-};
-const getPercentage = (numerator, denominator, options = {
-  decimal: 2
-}) => {
-  if (denominator === 0) return 0;
-  return Number(((0,lodash__WEBPACK_IMPORTED_MODULE_2__.divide)(numerator, denominator) * 100).toFixed(options.decimal));
-};
-function TransactionPage({
-  block_height,
-  block_signed_at,
-  value,
-  tx_hash,
-  successful,
-  from_address,
-  to_address,
-  pretty_value_quote,
-  gas_offered,
-  gas_spent,
-  gas_price,
-  fees_paid,
-  pretty_gas_quote,
-  gas_metadata,
-  from_address_label
-}) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    md: "4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "heading6"
-  }, "Tx Hash:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "paragraph"
-  }, tx_hash))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    md: "4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "heading6"
-  }, "Status:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "paragraph"
-  }, successful ? 'Success' : 'Failed'))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    md: "4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "heading6"
-  }, "Block:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "paragraph"
-  }, block_height))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    md: "4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "heading6"
-  }, "Time Stamp:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "paragraph"
-  }, formatDate(block_signed_at, true)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    md: "4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "heading6"
-  }, "From:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "paragraph"
-  }, from_address, from_address_label ? `(${from_address_label})` : ''))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    md: "4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "heading6"
-  }, "To:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "paragraph"
-  }, to_address))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    md: "4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "heading6"
-  }, "Value:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "paragraph"
-  }, getTokenFormattedNumber(Number(value), gas_metadata.contract_decimals), ' ', gas_metadata.contract_ticker_symbol, " (", pretty_value_quote, ")"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    md: "4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "heading6"
-  }, "Transaction Fee:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "paragraph"
-  }, getTokenFormattedNumber(fees_paid, gas_metadata.contract_decimals, false), ' ', gas_metadata.contract_ticker_symbol, " (", pretty_gas_quote, ")"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    md: "4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "heading6"
-  }, "Gas Price:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "paragraph"
-  }, gasValueWeiToGwei(gas_price), " Gwei"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
-    md: "4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "heading6"
-  }, " Gas Limit & Usage:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "paragraph"
-  }, gas_offered, " | ", gas_spent, " (", getPercentage(gas_spent, gas_offered), "%)"))));
-}
-_c = TransactionPage;
-var _c;
-__webpack_require__.$Refresh$.register(_c, "TransactionPage");
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -83316,44 +82835,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap/Form */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Form.js");
-/* harmony import */ var _hooks_swr_useChains__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../hooks/swr/useChains */ "./src/pages/Content/hooks/swr/useChains.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils */ "./src/pages/Content/utils/index.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
 
-var _s = __webpack_require__.$Refresh$.signature();
 function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 
 
 function Dropdown(props) {
-  _s();
   const {
     onChange,
     ...rest
   } = props;
-  const {
-    chainsList: {
-      chainsWithoutTestNets
-    }
-  } = (0,_hooks_swr_useChains__WEBPACK_IMPORTED_MODULE_1__.useChains)();
-  console.log(chainsWithoutTestNets, 'chainsList');
   const chainSelect = e => {
-    const _chain = chainsWithoutTestNets.find(_item => _item.name === e.target.value);
+    const _chain = _utils__WEBPACK_IMPORTED_MODULE_1__.chainServices.getAllChainsData().find(_item => _item.name === e.target.value);
     onChange?.(_chain);
   };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Form__WEBPACK_IMPORTED_MODULE_2__["default"].Select, _extends({
     "aria-label": "Select chain"
   }, rest, {
     onChange: chainSelect
-  }), chainsWithoutTestNets?.map(_item => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
+  }), _utils__WEBPACK_IMPORTED_MODULE_1__.chainServices.getAllChainsData()?.map(_item => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("option", {
     value: _item.name,
     key: _item.name
   }, _item.label)));
 }
-_s(Dropdown, "sjj0/s3Z1YoEjX0twBk2Tkmxe8I=", false, function () {
-  return [_hooks_swr_useChains__WEBPACK_IMPORTED_MODULE_1__.useChains];
-});
 _c = Dropdown;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Dropdown);
 var _c;
@@ -83528,64 +83036,6 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 
 /***/ }),
 
-/***/ "./src/pages/Content/constants/index.js":
-/*!**********************************************!*\
-  !*** ./src/pages/Content/constants/index.js ***!
-  \**********************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "ALLOWED_CHAINS_ID": () => (/* binding */ ALLOWED_CHAINS_ID)
-/* harmony export */ });
-/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
-/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
-__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
-
-const CHAINS_ID = {
-  ethereum: '1',
-  matic: '137',
-  optimism: '10',
-  base: '8453',
-  zora: '7777777',
-  covalent: '1131378225'
-};
-const ALLOWED_CHAINS_ID = [CHAINS_ID.ethereum, CHAINS_ID.matic, CHAINS_ID.optimism, CHAINS_ID.base, CHAINS_ID.zora, CHAINS_ID.covalent];
-
-const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
-const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
-	$ReactRefreshModuleId$
-);
-
-function $ReactRefreshModuleRuntime$(exports) {
-	if (true) {
-		let errorOverlay;
-		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
-			errorOverlay = __react_refresh_error_overlay__;
-		}
-		let testMode;
-		if (typeof __react_refresh_test__ !== 'undefined') {
-			testMode = __react_refresh_test__;
-		}
-		return __react_refresh_utils__.executeRuntime(
-			exports,
-			$ReactRefreshModuleId$,
-			module.hot,
-			errorOverlay,
-			testMode
-		);
-	}
-}
-
-if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
-	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
-} else {
-	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
-}
-
-/***/ }),
-
 /***/ "./src/pages/Content/context/globalContext.js":
 /*!****************************************************!*\
   !*** ./src/pages/Content/context/globalContext.js ***!
@@ -83596,7 +83046,7 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "GlobalContext": () => (/* binding */ GlobalContext),
-/* harmony export */   "allStates": () => (/* binding */ allStates),
+/* harmony export */   "allPages": () => (/* binding */ allPages),
 /* harmony export */   "useGlobalContext": () => (/* binding */ useGlobalContext),
 /* harmony export */   "useGlobalReducer": () => (/* binding */ useGlobalReducer)
 /* harmony export */ });
@@ -83610,12 +83060,12 @@ var _s = __webpack_require__.$Refresh$.signature(),
   _s2 = __webpack_require__.$Refresh$.signature();
 
 
-const allStates = {
+const allPages = {
   home: 'home',
   transaction: 'transaction'
 };
 const initValue = {
-  steps: allStates.home,
+  steps: allPages.home,
   searchForm: {
     search: '',
     chain: {
@@ -83630,7 +83080,8 @@ const initValue = {
       white_logo_url: 'https://www.datocms-assets.com/86369/1669619533-ethereum.png',
       is_appchain: false,
       appchain_of: null
-    }
+    },
+    searchType: ''
   }
 };
 const actions = {
@@ -83645,7 +83096,7 @@ const reducer = (state, action) => {
     case actions.resetStep:
       return {
         ...state,
-        steps: allStates.home
+        steps: allPages.home
       };
     case actions.updateStep:
       return {
@@ -83683,12 +83134,13 @@ function useGlobalReducer() {
         payload: step
       });
     },
-    updateSearchForm: (search, chain) => {
+    updateSearchForm: (search, chain, searchType) => {
       dispatch({
         type: actions.updateSearchForm,
         payload: {
           search,
-          chain
+          chain,
+          searchType
         }
       });
     },
@@ -83763,8 +83215,12 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "getAllChains": () => (/* binding */ getAllChains),
+/* harmony export */   "getAllWalletApprovals": () => (/* binding */ getAllWalletApprovals),
 /* harmony export */   "getTransactionDetail": () => (/* binding */ getTransactionDetail),
-/* harmony export */   "getTransactionHistory": () => (/* binding */ getTransactionHistory)
+/* harmony export */   "getTransactionHistory": () => (/* binding */ getTransactionHistory),
+/* harmony export */   "getWalletBalance": () => (/* binding */ getWalletBalance),
+/* harmony export */   "getWalletNFTs": () => (/* binding */ getWalletNFTs),
+/* harmony export */   "getWalletPortfolioGraph": () => (/* binding */ getWalletPortfolioGraph)
 /* harmony export */ });
 /* harmony import */ var _utils_globalApiServices__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/globalApiServices */ "./src/pages/Content/utils/globalApiServices.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
@@ -83789,7 +83245,10 @@ const getTransactionDetail = ({
     reject(err);
   }));
 };
-const getTransactionHistory = (chain_id, wallet_address) => {
+const getTransactionHistory = ({
+  chain_id,
+  wallet_address
+}) => {
   return new Promise((resolve, reject) => (0,_utils_globalApiServices__WEBPACK_IMPORTED_MODULE_0__.globalGetService)(`/${chain_id}/address/${wallet_address}/transactions_v2/`).then(res => {
     console.log(res, 'res');
     resolve(res);
@@ -83797,103 +83256,48 @@ const getTransactionHistory = (chain_id, wallet_address) => {
     reject(err);
   }));
 };
-
-
-const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
-const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
-	$ReactRefreshModuleId$
-);
-
-function $ReactRefreshModuleRuntime$(exports) {
-	if (true) {
-		let errorOverlay;
-		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
-			errorOverlay = __react_refresh_error_overlay__;
-		}
-		let testMode;
-		if (typeof __react_refresh_test__ !== 'undefined') {
-			testMode = __react_refresh_test__;
-		}
-		return __react_refresh_utils__.executeRuntime(
-			exports,
-			$ReactRefreshModuleId$,
-			module.hot,
-			errorOverlay,
-			testMode
-		);
-	}
-}
-
-if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
-	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
-} else {
-	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
-}
-
-/***/ }),
-
-/***/ "./src/pages/Content/hooks/swr/useChains.js":
-/*!**************************************************!*\
-  !*** ./src/pages/Content/hooks/swr/useChains.js ***!
-  \**************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "useChains": () => (/* binding */ useChains)
-/* harmony export */ });
-/* harmony import */ var swr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swr */ "./node_modules/.pnpm/swr@2.2.0_react@18.2.0/node_modules/swr/core/dist/index.mjs");
-/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! . */ "./src/pages/Content/hooks/swr/index.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash */ "./node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../constants */ "./src/pages/Content/constants/index.js");
-/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
-/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
-__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
-
-var _s = __webpack_require__.$Refresh$.signature();
-
-
-
-
-
-function useChains() {
-  _s();
-  const {
-    data
-  } = (0,swr__WEBPACK_IMPORTED_MODULE_0__["default"])({}, ___WEBPACK_IMPORTED_MODULE_1__.getAllChains, {
-    revalidateIfStale: false,
-    shouldRetryOnError: false,
-    revalidateOnFocus: false,
-    refreshInterval: (0,lodash__WEBPACK_IMPORTED_MODULE_2__.multiply)(600, 1000)
-  });
-  const chainsList = (0,react__WEBPACK_IMPORTED_MODULE_3__.useMemo)(() => {
-    const chainsWithoutTestNets = [];
-    const chainsWithTestNets = [];
-    data?.forEach(_item => {
-      if (_constants__WEBPACK_IMPORTED_MODULE_4__.ALLOWED_CHAINS_ID?.includes(_item.chain_id)) {
-        _item.label = _item.label.replace(' Mainnet', '');
-        if (_item.is_testnet == false && _item.is_appchain == false) {
-          chainsWithoutTestNets.push(_item);
-        }
-        chainsWithTestNets.push(_item);
-      }
-    });
-    return {
-      chainsWithoutTestNets,
-      chainsWithTestNets
-    };
-  }, [data]);
-  return {
-    chainsList
-  };
-}
-_s(useChains, "TUsYbLkwfzikhBXRigDLEy76ZT4=", false, function () {
-  return [swr__WEBPACK_IMPORTED_MODULE_0__["default"]];
-});
+const getWalletBalance = ({
+  chain_id,
+  wallet_address
+}) => {
+  return new Promise((resolve, reject) => (0,_utils_globalApiServices__WEBPACK_IMPORTED_MODULE_0__.globalGetService)(`/${chain_id}/address/${wallet_address}/balances_v2/`, {
+    'no-spam': true
+  }).then(res => {
+    resolve(res.data);
+  }).catch(err => {
+    reject(err);
+  }));
+};
+const getWalletPortfolioGraph = ({
+  chain_id,
+  wallet_address
+}) => {
+  return new Promise((resolve, reject) => (0,_utils_globalApiServices__WEBPACK_IMPORTED_MODULE_0__.globalGetService)(`/${chain_id}/address/${wallet_address}/portfolio_v2/`).then(res => {
+    resolve(res);
+  }).catch(err => {
+    reject(err);
+  }));
+};
+const getAllWalletApprovals = ({
+  chain_id,
+  wallet_address
+}) => {
+  return new Promise((resolve, reject) => (0,_utils_globalApiServices__WEBPACK_IMPORTED_MODULE_0__.globalGetService)(`/${chain_id}/approvals/${wallet_address}/`).then(res => {
+    resolve(res);
+  }).catch(err => {
+    reject(err);
+  }));
+};
+const getWalletNFTs = ({
+  chain_id,
+  wallet_address
+}) => {
+  return new Promise((resolve, reject) => (0,_utils_globalApiServices__WEBPACK_IMPORTED_MODULE_0__.globalGetService)(`/${chain_id}/address/${wallet_address}/balances_nft/`).then(res => {
+    resolve(res);
+  }).catch(err => {
+    reject(err);
+  }));
+};
 
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
@@ -83942,14 +83346,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var swr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swr */ "./node_modules/.pnpm/swr@2.2.0_react@18.2.0/node_modules/swr/core/dist/index.mjs");
 /* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! . */ "./src/pages/Content/hooks/swr/index.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash */ "./node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_2__);
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
 
 var _s = __webpack_require__.$Refresh$.signature();
-
 
 
 
@@ -83997,8 +83398,7 @@ function useTransactionDetail(chain_id, txn_hash) {
   } = (0,swr__WEBPACK_IMPORTED_MODULE_0__["default"])(canFetch, ___WEBPACK_IMPORTED_MODULE_1__.getTransactionDetail, {
     revalidateIfStale: false,
     shouldRetryOnError: false,
-    revalidateOnFocus: false,
-    refreshInterval: (0,lodash__WEBPACK_IMPORTED_MODULE_2__.multiply)(60, 1000)
+    revalidateOnFocus: false
   });
   return {
     transactionDetail: data,
@@ -84006,6 +83406,109 @@ function useTransactionDetail(chain_id, txn_hash) {
   };
 }
 _s(useTransactionDetail, "Tjls6XrRcHNcsAUGDJO8bXojHzg=", false, function () {
+  return [swr__WEBPACK_IMPORTED_MODULE_0__["default"]];
+});
+
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (true) {
+		let errorOverlay;
+		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
+			errorOverlay = __react_refresh_error_overlay__;
+		}
+		let testMode;
+		if (typeof __react_refresh_test__ !== 'undefined') {
+			testMode = __react_refresh_test__;
+		}
+		return __react_refresh_utils__.executeRuntime(
+			exports,
+			$ReactRefreshModuleId$,
+			module.hot,
+			errorOverlay,
+			testMode
+		);
+	}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
+/***/ "./src/pages/Content/hooks/swr/useWalletBalance.js":
+/*!*********************************************************!*\
+  !*** ./src/pages/Content/hooks/swr/useWalletBalance.js ***!
+  \*********************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useWalletBalance": () => (/* binding */ useWalletBalance)
+/* harmony export */ });
+/* harmony import */ var swr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swr */ "./node_modules/.pnpm/swr@2.2.0_react@18.2.0/node_modules/swr/core/dist/index.mjs");
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! . */ "./src/pages/Content/hooks/swr/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
+
+var _s = __webpack_require__.$Refresh$.signature();
+
+
+
+function useWalletBalance(chain_id, wallet_address) {
+  _s();
+  const canFetch = chain_id && wallet_address ? {
+    chain_id,
+    wallet_address,
+    type: 'wallet-balance'
+  } : null;
+  const {
+    data,
+    isValidating
+  } = (0,swr__WEBPACK_IMPORTED_MODULE_0__["default"])(canFetch, ___WEBPACK_IMPORTED_MODULE_1__.getWalletBalance, {
+    revalidateIfStale: false,
+    shouldRetryOnError: false,
+    revalidateOnFocus: false
+  });
+  const walletBalance = (0,react__WEBPACK_IMPORTED_MODULE_2__.useMemo)(() => {
+    let totalBalanceIn$ = 0;
+    let totalBalanceIn$24HrsAgo = 0;
+    let tokens = [];
+    let nativeTokenBalance = null;
+    data?.items?.forEach(_item => {
+      totalBalanceIn$ += _item?.quote || 0;
+      totalBalanceIn$24HrsAgo += _item.quote_24h || 0;
+      if (_item.balance !== '0') {
+        tokens.push(_item);
+      }
+      if (_item.native_token) {
+        nativeTokenBalance = _item;
+      }
+    });
+    return {
+      tokens,
+      totalBalanceIn$,
+      totalBalanceIn$24HrsAgo,
+      nativeTokenBalance
+    };
+  }, [data]);
+  return {
+    walletBalance,
+    walletBalanceLoader: isValidating
+  };
+}
+_s(useWalletBalance, "KBXv8LLBm4MwHYJgFjB1POurpbM=", false, function () {
   return [swr__WEBPACK_IMPORTED_MODULE_0__["default"]];
 });
 
@@ -84069,6 +83572,752 @@ document.addEventListener('DOMContentLoaded', function () {
   const root = react_dom__WEBPACK_IMPORTED_MODULE_1__.createRoot(reactRenderDiv); // createRoot(container!) if you use TypeScript
   root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(_InjectMaster__WEBPACK_IMPORTED_MODULE_0__.InjectMaster, null));
 }, false);
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (true) {
+		let errorOverlay;
+		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
+			errorOverlay = __react_refresh_error_overlay__;
+		}
+		let testMode;
+		if (typeof __react_refresh_test__ !== 'undefined') {
+			testMode = __react_refresh_test__;
+		}
+		return __react_refresh_utils__.executeRuntime(
+			exports,
+			$ReactRefreshModuleId$,
+			module.hot,
+			errorOverlay,
+			testMode
+		);
+	}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
+/***/ "./src/pages/Content/pages/Header.jsx":
+/*!********************************************!*\
+  !*** ./src/pages/Content/pages/Header.jsx ***!
+  \********************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Header)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Input */ "./src/pages/Content/components/Input.jsx");
+/* harmony import */ var _components_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Button */ "./src/pages/Content/components/Button.jsx");
+/* harmony import */ var _context_globalContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../context/globalContext */ "./src/pages/Content/context/globalContext.js");
+/* harmony import */ var _InjectMaster__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../InjectMaster */ "./src/pages/Content/InjectMaster.jsx");
+/* harmony import */ var _components_Dropdown__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Dropdown */ "./src/pages/Content/components/Dropdown.jsx");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Row.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var _components_Title__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Title */ "./src/pages/Content/components/Title.jsx");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils */ "./src/pages/Content/utils/index.js");
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
+
+var _s = __webpack_require__.$Refresh$.signature();
+
+
+
+
+
+
+
+
+
+function Header(type = 'home') {
+  _s();
+  const {
+    updateStep,
+    updateSearchForm,
+    state,
+    resetSearchForm
+  } = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.useGlobalContext)();
+  const [chain, setChain] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(state.searchForm.chain);
+  const [search, setSearch] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(state.searchForm.search);
+  const onStateSubmit = () => {
+    const searchType = (0,_utils__WEBPACK_IMPORTED_MODULE_7__.getSearchType)(search);
+    updateSearchForm(search, chain, searchType);
+    if (searchType === _utils__WEBPACK_IMPORTED_MODULE_7__.searchTypes.address) {
+      updateStep(_InjectMaster__WEBPACK_IMPORTED_MODULE_4__.allPages.wallet);
+    } else if (searchType === _utils__WEBPACK_IMPORTED_MODULE_7__.searchTypes.transactionHash) {
+      updateStep(_InjectMaster__WEBPACK_IMPORTED_MODULE_4__.allPages.transaction);
+    }
+  };
+  const handleClear = () => {
+    setSearch('');
+    if (type === 'transaction' || type === 'wallet') {
+      resetSearchForm();
+    }
+  };
+  const handleGoBack = () => {
+    updateStep(_InjectMaster__WEBPACK_IMPORTED_MODULE_4__.allPages.home);
+    resetSearchForm();
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "pb-2"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Title__WEBPACK_IMPORTED_MODULE_6__["default"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "pb-2"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    className: "pb-3"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    className: "align-items-center"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    md: 8,
+    className: "pr-0"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Input__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    value: search,
+    onChange: e => setSearch(e.target.value)
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    md: 4
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Dropdown__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    value: chain.name,
+    onChange: item => {
+      setChain(item);
+    }
+  })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    className: "align-items-center justify-content-between"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    md: "auto"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    className: "align-items-center justify-content-start"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    md: "auto"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Button__WEBPACK_IMPORTED_MODULE_2__.ButtonP, {
+    onClick: onStateSubmit
+  }, "Search")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    md: "auto"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Button__WEBPACK_IMPORTED_MODULE_2__.ButtonL, {
+    onClick: handleClear
+  }, "Clear")))), (type === 'transaction' || type === 'wallet') && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    md: "auto"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Button__WEBPACK_IMPORTED_MODULE_2__.ButtonS, {
+    onClick: handleGoBack
+  }, "Go Back"))))));
+}
+_s(Header, "36S1B0urnF7IOGbBXOV9NllNVok=", false, function () {
+  return [_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.useGlobalContext];
+});
+_c = Header;
+var _c;
+__webpack_require__.$Refresh$.register(_c, "Header");
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (true) {
+		let errorOverlay;
+		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
+			errorOverlay = __react_refresh_error_overlay__;
+		}
+		let testMode;
+		if (typeof __react_refresh_test__ !== 'undefined') {
+			testMode = __react_refresh_test__;
+		}
+		return __react_refresh_utils__.executeRuntime(
+			exports,
+			$ReactRefreshModuleId$,
+			module.hot,
+			errorOverlay,
+			testMode
+		);
+	}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
+/***/ "./src/pages/Content/pages/Home.jsx":
+/*!******************************************!*\
+  !*** ./src/pages/Content/pages/Home.jsx ***!
+  \******************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Home)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./src/pages/Content/pages/Header.jsx");
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
+
+
+
+function Home() {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "homeContainer px-2 py-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    type: "home"
+  }));
+}
+_c = Home;
+var _c;
+__webpack_require__.$Refresh$.register(_c, "Home");
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (true) {
+		let errorOverlay;
+		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
+			errorOverlay = __react_refresh_error_overlay__;
+		}
+		let testMode;
+		if (typeof __react_refresh_test__ !== 'undefined') {
+			testMode = __react_refresh_test__;
+		}
+		return __react_refresh_utils__.executeRuntime(
+			exports,
+			$ReactRefreshModuleId$,
+			module.hot,
+			errorOverlay,
+			testMode
+		);
+	}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
+/***/ "./src/pages/Content/pages/Transaction.jsx":
+/*!*************************************************!*\
+  !*** ./src/pages/Content/pages/Transaction.jsx ***!
+  \*************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Transaction)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Row.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var _context_globalContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../context/globalContext */ "./src/pages/Content/context/globalContext.js");
+/* harmony import */ var _TransactionDetail__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TransactionDetail */ "./src/pages/Content/pages/TransactionDetail.jsx");
+/* harmony import */ var _hooks_swr_useTransactionDetail__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hooks/swr/useTransactionDetail */ "./src/pages/Content/hooks/swr/useTransactionDetail.js");
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Header */ "./src/pages/Content/pages/Header.jsx");
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
+
+var _s = __webpack_require__.$Refresh$.signature();
+
+
+
+
+
+
+function Transaction() {
+  _s();
+  const {
+    state
+  } = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_1__.useGlobalContext)();
+  const {
+    transactionDetail,
+    transactionDeailLoader
+  } = (0,_hooks_swr_useTransactionDetail__WEBPACK_IMPORTED_MODULE_3__.useTransactionDetail)(state.searchForm.chain.chain_id, state.searchForm.search);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "transactionContainer px-2 py-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "pb-2"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Header__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    type: "transaction"
+  })), transactionDeailLoader ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Loading...") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, transactionDetail ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    md: "auto"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "bg-light bg-gradient px-2 py-4 rounded"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_TransactionDetail__WEBPACK_IMPORTED_MODULE_2__["default"], transactionDetail)))))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "heading5"
+  }, "No transaction found")));
+}
+_s(Transaction, "fXidqPL0cx1/GuIJ+0E1P24MpH8=", false, function () {
+  return [_context_globalContext__WEBPACK_IMPORTED_MODULE_1__.useGlobalContext, _hooks_swr_useTransactionDetail__WEBPACK_IMPORTED_MODULE_3__.useTransactionDetail];
+});
+_c = Transaction;
+var _c;
+__webpack_require__.$Refresh$.register(_c, "Transaction");
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (true) {
+		let errorOverlay;
+		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
+			errorOverlay = __react_refresh_error_overlay__;
+		}
+		let testMode;
+		if (typeof __react_refresh_test__ !== 'undefined') {
+			testMode = __react_refresh_test__;
+		}
+		return __react_refresh_utils__.executeRuntime(
+			exports,
+			$ReactRefreshModuleId$,
+			module.hot,
+			errorOverlay,
+			testMode
+		);
+	}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
+/***/ "./src/pages/Content/pages/TransactionDetail.jsx":
+/*!*******************************************************!*\
+  !*** ./src/pages/Content/pages/TransactionDetail.jsx ***!
+  \*******************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ TransactionPage)
+/* harmony export */ });
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Row.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils */ "./src/pages/Content/utils/index.js");
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
+
+
+
+
+function TransactionPage({
+  block_height,
+  block_signed_at,
+  value,
+  tx_hash,
+  successful,
+  from_address,
+  to_address,
+  pretty_value_quote,
+  gas_offered,
+  gas_spent,
+  gas_price,
+  fees_paid,
+  pretty_gas_quote,
+  gas_metadata,
+  from_address_label
+}) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    md: "4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "heading6"
+  }, "Tx Hash:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "paragraph"
+  }, tx_hash))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    md: "4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "heading6"
+  }, "Status:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "paragraph"
+  }, successful ? 'Success' : 'Failed'))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    md: "4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "heading6"
+  }, "Block:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "paragraph"
+  }, block_height))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    md: "4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "heading6"
+  }, "Time Stamp:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "paragraph"
+  }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.formatDate)(block_signed_at, true)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    md: "4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "heading6"
+  }, "From:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "paragraph"
+  }, from_address, from_address_label ? `(${from_address_label})` : ''))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    md: "4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "heading6"
+  }, "To:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "paragraph"
+  }, to_address))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    md: "4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "heading6"
+  }, "Value:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "paragraph"
+  }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getTokenFormattedNumber)(Number(value), gas_metadata.contract_decimals), ' ', gas_metadata.contract_ticker_symbol, " (", pretty_value_quote, ")"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    md: "4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "heading6"
+  }, "Transaction Fee:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "paragraph"
+  }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getTokenFormattedNumber)(fees_paid, gas_metadata.contract_decimals, false), ' ', gas_metadata.contract_ticker_symbol, " (", pretty_gas_quote, ")"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    md: "4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "heading6"
+  }, "Gas Price:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "paragraph"
+  }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.gasValueWeiToGwei)(gas_price), " Gwei"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    md: "4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "heading6"
+  }, " Gas Limit & Usage:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "paragraph"
+  }, gas_offered, " | ", gas_spent, " (", (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getPercentage)(gas_spent, gas_offered), "%)"))));
+}
+_c = TransactionPage;
+var _c;
+__webpack_require__.$Refresh$.register(_c, "TransactionPage");
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (true) {
+		let errorOverlay;
+		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
+			errorOverlay = __react_refresh_error_overlay__;
+		}
+		let testMode;
+		if (typeof __react_refresh_test__ !== 'undefined') {
+			testMode = __react_refresh_test__;
+		}
+		return __react_refresh_utils__.executeRuntime(
+			exports,
+			$ReactRefreshModuleId$,
+			module.hot,
+			errorOverlay,
+			testMode
+		);
+	}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
+/***/ "./src/pages/Content/pages/Wallet.jsx":
+/*!********************************************!*\
+  !*** ./src/pages/Content/pages/Wallet.jsx ***!
+  \********************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Wallet)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Row.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var _context_globalContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../context/globalContext */ "./src/pages/Content/context/globalContext.js");
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Header */ "./src/pages/Content/pages/Header.jsx");
+/* harmony import */ var _WalletDetail__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./WalletDetail */ "./src/pages/Content/pages/WalletDetail.jsx");
+/* harmony import */ var _hooks_swr_useWalletBalance__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../hooks/swr/useWalletBalance */ "./src/pages/Content/hooks/swr/useWalletBalance.js");
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
+
+var _s = __webpack_require__.$Refresh$.signature();
+
+
+
+
+
+
+// import { useWalletPortfolioGraph } from '../hooks/swr/useWalletPortfolioGraph';
+
+function Wallet() {
+  _s();
+  const {
+    state
+  } = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_1__.useGlobalContext)();
+  const {
+    walletBalance,
+    walletBalanceLoader
+  } = (0,_hooks_swr_useWalletBalance__WEBPACK_IMPORTED_MODULE_4__.useWalletBalance)(state.searchForm.chain.chain_id, state.searchForm.search);
+
+  /*
+  const { walletPortfolioGraph, walletPortfolioLoader } =
+    useWalletPortfolioGraph(
+      state.searchForm.chain.chain_id,
+      state.searchForm.search
+    );
+  */
+  console.log(walletBalance, 'walletBalance');
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "transactionContainer px-2 py-4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "pb-2"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    type: "wallet"
+  })), walletBalanceLoader ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Loading...") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, walletBalance ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    md: "auto"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "bg-light bg-gradient px-2 py-4 rounded"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_WalletDetail__WEBPACK_IMPORTED_MODULE_3__["default"], walletBalance)))))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "heading5"
+  }, "No account wallet address found")));
+}
+_s(Wallet, "eoSTD3GB0BixiSUVLInyu5ZIcZ8=", false, function () {
+  return [_context_globalContext__WEBPACK_IMPORTED_MODULE_1__.useGlobalContext, _hooks_swr_useWalletBalance__WEBPACK_IMPORTED_MODULE_4__.useWalletBalance];
+});
+_c = Wallet;
+var _c;
+__webpack_require__.$Refresh$.register(_c, "Wallet");
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (true) {
+		let errorOverlay;
+		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
+			errorOverlay = __react_refresh_error_overlay__;
+		}
+		let testMode;
+		if (typeof __react_refresh_test__ !== 'undefined') {
+			testMode = __react_refresh_test__;
+		}
+		return __react_refresh_utils__.executeRuntime(
+			exports,
+			$ReactRefreshModuleId$,
+			module.hot,
+			errorOverlay,
+			testMode
+		);
+	}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
+/***/ "./src/pages/Content/pages/WalletDetail.jsx":
+/*!**************************************************!*\
+  !*** ./src/pages/Content/pages/WalletDetail.jsx ***!
+  \**************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ WalletDetail)
+/* harmony export */ });
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Row.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
+
+
+
+function WalletDetail({}) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_1__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    md: "4"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "heading6"
+  }, "Wallet Balace:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "paragraph"
+  }, "Balance"))));
+}
+_c = WalletDetail;
+var _c;
+__webpack_require__.$Refresh$.register(_c, "WalletDetail");
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (true) {
+		let errorOverlay;
+		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
+			errorOverlay = __react_refresh_error_overlay__;
+		}
+		let testMode;
+		if (typeof __react_refresh_test__ !== 'undefined') {
+			testMode = __react_refresh_test__;
+		}
+		return __react_refresh_utils__.executeRuntime(
+			exports,
+			$ReactRefreshModuleId$,
+			module.hot,
+			errorOverlay,
+			testMode
+		);
+	}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
+/***/ "./src/pages/Content/utils/chains.js":
+/*!*******************************************!*\
+  !*** ./src/pages/Content/utils/chains.js ***!
+  \*******************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "chainServices": () => (/* binding */ chainServices)
+/* harmony export */ });
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
+
+const CHAIN_DATA = {
+  ETHEREUM: {
+    name: 'eth-mainnet',
+    chain_id: '1',
+    is_testnet: false,
+    db_schema_name: 'chain_eth_mainnet',
+    label: 'Ethereum',
+    category_label: 'Ethereum',
+    logo_url: 'https://www.datocms-assets.com/86369/1669653891-eth.svg',
+    black_logo_url: 'https://www.datocms-assets.com/86369/1669619544-ethereum.png',
+    white_logo_url: 'https://www.datocms-assets.com/86369/1669619533-ethereum.png',
+    is_appchain: false,
+    appchain_of: null,
+    rpc: 'https://eth.llamarpc.com'
+  },
+  POLYGON: {
+    name: 'matic-mainnet',
+    chain_id: '137',
+    is_testnet: false,
+    db_schema_name: 'chain_matic_mainnet',
+    label: 'Polygon',
+    category_label: 'Polygon',
+    logo_url: 'https://www.datocms-assets.com/86369/1677870347-property-1-polygon-zkevm-icon-white.svg',
+    black_logo_url: 'https://www.datocms-assets.com/86369/1677870457-property-1-polygon-white.png',
+    white_logo_url: 'https://www.datocms-assets.com/86369/1677870452-property-1-polygon-colour.png',
+    is_appchain: false,
+    appchain_of: null,
+    rpc: 'https://polygon.llamarpc.com'
+  },
+  OPTIMISM: {
+    name: 'optimism-mainnet',
+    chain_id: '10',
+    is_testnet: false,
+    db_schema_name: 'chain_optimism_mainnet',
+    label: 'Optimism',
+    category_label: 'Optimism',
+    logo_url: 'https://www.datocms-assets.com/86369/1670347457-optimism-icon-white.svg',
+    black_logo_url: 'https://www.datocms-assets.com/86369/1670347467-optimisim-white.png',
+    white_logo_url: 'https://www.datocms-assets.com/86369/1670347461-optimisim-colour.png',
+    is_appchain: false,
+    appchain_of: null,
+    rpc: 'https://mainnet.optimism.io'
+  },
+  BASE: {
+    name: 'base-mainnet',
+    chain_id: '8453',
+    is_testnet: false,
+    db_schema_name: 'chain_base_mainnet',
+    label: 'Base',
+    category_label: 'Coinbase',
+    logo_url: 'https://www.datocms-assets.com/86369/1677538323-property-1-base-icon-white.svg',
+    black_logo_url: 'https://www.datocms-assets.com/86369/1677538328-property-1-base-white.png',
+    white_logo_url: 'https://www.datocms-assets.com/86369/1677538326-base-colour.png',
+    is_appchain: false,
+    appchain_of: null,
+    rpc: 'https://mainnet.base.org'
+  },
+  ZORA: {
+    name: 'zora-mainnet',
+    chain_id: '7777777',
+    is_testnet: false,
+    db_schema_name: 'chain_zora_mainnet',
+    label: 'Zora',
+    category_label: 'ZORA',
+    logo_url: 'https://www.datocms-assets.com/86369/1687802329-zora-icon-white.svg',
+    black_logo_url: 'https://www.datocms-assets.com/86369/1687802340-zora-white.png',
+    white_logo_url: 'https://www.datocms-assets.com/86369/1687802336-zora-colour.png',
+    is_appchain: false,
+    appchain_of: null,
+    rpc: 'https://rpc.zora.energy'
+  }
+};
+class Chains {
+  getAllChainsData = () => {
+    return [CHAIN_DATA.ETHEREUM, CHAIN_DATA.POLYGON, CHAIN_DATA.OPTIMISM, CHAIN_DATA.BASE, CHAIN_DATA.ZORA];
+  };
+}
+const chainServices = new Chains();
+
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -84244,6 +84493,150 @@ const API_INSTANCES = {
   covalent: covalentInstance
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (API_INSTANCES);
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (true) {
+		let errorOverlay;
+		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
+			errorOverlay = __react_refresh_error_overlay__;
+		}
+		let testMode;
+		if (typeof __react_refresh_test__ !== 'undefined') {
+			testMode = __react_refresh_test__;
+		}
+		return __react_refresh_utils__.executeRuntime(
+			exports,
+			$ReactRefreshModuleId$,
+			module.hot,
+			errorOverlay,
+			testMode
+		);
+	}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
+/***/ "./src/pages/Content/utils/index.js":
+/*!******************************************!*\
+  !*** ./src/pages/Content/utils/index.js ***!
+  \******************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "chainServices": () => (/* reexport safe */ _chains__WEBPACK_IMPORTED_MODULE_0__.chainServices),
+/* harmony export */   "formatDate": () => (/* binding */ formatDate),
+/* harmony export */   "formatDateTime": () => (/* binding */ formatDateTime),
+/* harmony export */   "gasValueWeiToGwei": () => (/* binding */ gasValueWeiToGwei),
+/* harmony export */   "getPercentage": () => (/* binding */ getPercentage),
+/* harmony export */   "getSearchType": () => (/* binding */ getSearchType),
+/* harmony export */   "getStringType": () => (/* binding */ getStringType),
+/* harmony export */   "getTokenFormattedNumber": () => (/* binding */ getTokenFormattedNumber),
+/* harmony export */   "isValidBlockNumber": () => (/* binding */ isValidBlockNumber),
+/* harmony export */   "isValidEOAAddress": () => (/* binding */ isValidEOAAddress),
+/* harmony export */   "isValidTransactionHash": () => (/* binding */ isValidTransactionHash),
+/* harmony export */   "searchTypes": () => (/* binding */ searchTypes)
+/* harmony export */ });
+/* harmony import */ var _chains__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chains */ "./src/pages/Content/utils/chains.js");
+/* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ethers */ "./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/address/checks.js");
+/* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ethers */ "./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/utils/units.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/.pnpm/moment@2.29.4/node_modules/moment/moment.js");
+/* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash */ "./node_modules/.pnpm/lodash@4.17.21/node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_2__);
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
+
+
+
+
+
+const isValidEOAAddress = address => {
+  return (0,ethers__WEBPACK_IMPORTED_MODULE_3__.isAddress)(address);
+};
+const isValidTransactionHash = hash => {
+  const regex = /^0x([A-Fa-f0-9]{64})$/;
+  return regex.test(hash);
+};
+const isValidBlockNumber = async (blockNumber, rpcUrl) => {
+  // const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
+  // try {
+  //   const block = await provider.getBlock(blockNumber);
+  //   return !!block;
+  // } catch (error) {
+  //   return false;
+  // }
+};
+const searchTypes = {
+  address: 'address',
+  transactionHash: 'transactionHash',
+  blockNumber: 'blockNumber'
+};
+const getSearchType = _search => {
+  if (isValidEOAAddress(_search)) {
+    return searchTypes.address;
+  } else if (isValidTransactionHash(_search)) {
+    return searchTypes.transactionHash;
+  } else {
+    return undefined;
+  }
+};
+const getStringType = _val => {
+  return {
+    [searchTypes.address]: 'Address',
+    [searchTypes.transactionHash]: 'Transaction',
+    [searchTypes.blockNumber]: 'Block',
+    undefined: ''
+  }[_val];
+};
+const gasValueWeiToGwei = weiValue => {
+  return (0,ethers__WEBPACK_IMPORTED_MODULE_4__.formatUnits)(weiValue, 'gwei');
+};
+const getTokenFormattedNumber = (value, decimals = 18, roundOff = true, fractions = 0) => {
+  const _decimals = decimals || 18;
+  const _value = value || 0;
+  const _expoValue = Math.pow(10, _decimals);
+  let _calculated = _value / _expoValue;
+  if (!roundOff) {
+    return Number(_calculated);
+  }
+  let _decimalFixed = fractions;
+  if (fractions == 0) {
+    _decimalFixed = 2;
+    if (_calculated < 100) {
+      _decimalFixed = 6;
+    }
+  }
+  const expo = Math.pow(10, _decimalFixed);
+  _calculated = Math.floor(_calculated * expo) / expo;
+  return Number(_calculated.toFixed(_decimalFixed));
+};
+const formatDateTime = str => {
+  return moment__WEBPACK_IMPORTED_MODULE_1___default().unix(str).format('MMM DD, YYYY h:mm A');
+};
+const formatDate = (str, isWithTime = false, isWithSuffix = false) => {
+  return moment__WEBPACK_IMPORTED_MODULE_1___default()(str).format(`${isWithTime && isWithSuffix ? 'MMM DD, YYYY h:mm A' : isWithTime ? 'ddd DD MMM YYYY, HH:mm:ss' : 'MMM DD, YYYY'}`);
+};
+const getPercentage = (numerator, denominator, options = {
+  decimal: 2
+}) => {
+  if (denominator === 0) return 0;
+  return Number(((0,lodash__WEBPACK_IMPORTED_MODULE_2__.divide)(numerator, denominator) * 100).toFixed(options.decimal));
+};
+
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -87525,6 +87918,575 @@ function getWDSMetadata(SocketClient) {
 }
 
 module.exports = getWDSMetadata;
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/@noble+hashes@1.1.2/node_modules/@noble/hashes/esm/_assert.js":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@noble+hashes@1.1.2/node_modules/@noble/hashes/esm/_assert.js ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "bool": () => (/* binding */ bool),
+/* harmony export */   "bytes": () => (/* binding */ bytes),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "exists": () => (/* binding */ exists),
+/* harmony export */   "hash": () => (/* binding */ hash),
+/* harmony export */   "number": () => (/* binding */ number),
+/* harmony export */   "output": () => (/* binding */ output)
+/* harmony export */ });
+function number(n) {
+    if (!Number.isSafeInteger(n) || n < 0)
+        throw new Error(`Wrong positive integer: ${n}`);
+}
+function bool(b) {
+    if (typeof b !== 'boolean')
+        throw new Error(`Expected boolean, not ${b}`);
+}
+function bytes(b, ...lengths) {
+    if (!(b instanceof Uint8Array))
+        throw new TypeError('Expected Uint8Array');
+    if (lengths.length > 0 && !lengths.includes(b.length))
+        throw new TypeError(`Expected Uint8Array of length ${lengths}, not of length=${b.length}`);
+}
+function hash(hash) {
+    if (typeof hash !== 'function' || typeof hash.create !== 'function')
+        throw new Error('Hash should be wrapped by utils.wrapConstructor');
+    number(hash.outputLen);
+    number(hash.blockLen);
+}
+function exists(instance, checkFinished = true) {
+    if (instance.destroyed)
+        throw new Error('Hash instance has been destroyed');
+    if (checkFinished && instance.finished)
+        throw new Error('Hash#digest() has already been called');
+}
+function output(out, instance) {
+    bytes(out);
+    const min = instance.outputLen;
+    if (out.length < min) {
+        throw new Error(`digestInto() expects output buffer of length at least ${min}`);
+    }
+}
+const assert = {
+    number,
+    bool,
+    bytes,
+    hash,
+    exists,
+    output,
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (assert);
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/@noble+hashes@1.1.2/node_modules/@noble/hashes/esm/_u64.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@noble+hashes@1.1.2/node_modules/@noble/hashes/esm/_u64.js ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "add": () => (/* binding */ add),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   "fromBig": () => (/* binding */ fromBig),
+/* harmony export */   "split": () => (/* binding */ split),
+/* harmony export */   "toBig": () => (/* binding */ toBig)
+/* harmony export */ });
+const U32_MASK64 = BigInt(2 ** 32 - 1);
+const _32n = BigInt(32);
+// We are not using BigUint64Array, because they are extremely slow as per 2022
+function fromBig(n, le = false) {
+    if (le)
+        return { h: Number(n & U32_MASK64), l: Number((n >> _32n) & U32_MASK64) };
+    return { h: Number((n >> _32n) & U32_MASK64) | 0, l: Number(n & U32_MASK64) | 0 };
+}
+function split(lst, le = false) {
+    let Ah = new Uint32Array(lst.length);
+    let Al = new Uint32Array(lst.length);
+    for (let i = 0; i < lst.length; i++) {
+        const { h, l } = fromBig(lst[i], le);
+        [Ah[i], Al[i]] = [h, l];
+    }
+    return [Ah, Al];
+}
+const toBig = (h, l) => (BigInt(h >>> 0) << _32n) | BigInt(l >>> 0);
+// for Shift in [0, 32)
+const shrSH = (h, l, s) => h >>> s;
+const shrSL = (h, l, s) => (h << (32 - s)) | (l >>> s);
+// Right rotate for Shift in [1, 32)
+const rotrSH = (h, l, s) => (h >>> s) | (l << (32 - s));
+const rotrSL = (h, l, s) => (h << (32 - s)) | (l >>> s);
+// Right rotate for Shift in (32, 64), NOTE: 32 is special case.
+const rotrBH = (h, l, s) => (h << (64 - s)) | (l >>> (s - 32));
+const rotrBL = (h, l, s) => (h >>> (s - 32)) | (l << (64 - s));
+// Right rotate for shift===32 (just swaps l&h)
+const rotr32H = (h, l) => l;
+const rotr32L = (h, l) => h;
+// Left rotate for Shift in [1, 32)
+const rotlSH = (h, l, s) => (h << s) | (l >>> (32 - s));
+const rotlSL = (h, l, s) => (l << s) | (h >>> (32 - s));
+// Left rotate for Shift in (32, 64), NOTE: 32 is special case.
+const rotlBH = (h, l, s) => (l << (s - 32)) | (h >>> (64 - s));
+const rotlBL = (h, l, s) => (h << (s - 32)) | (l >>> (64 - s));
+// JS uses 32-bit signed integers for bitwise operations which means we cannot
+// simple take carry out of low bit sum by shift, we need to use division.
+// Removing "export" has 5% perf penalty -_-
+function add(Ah, Al, Bh, Bl) {
+    const l = (Al >>> 0) + (Bl >>> 0);
+    return { h: (Ah + Bh + ((l / 2 ** 32) | 0)) | 0, l: l | 0 };
+}
+// Addition with more than 2 elements
+const add3L = (Al, Bl, Cl) => (Al >>> 0) + (Bl >>> 0) + (Cl >>> 0);
+const add3H = (low, Ah, Bh, Ch) => (Ah + Bh + Ch + ((low / 2 ** 32) | 0)) | 0;
+const add4L = (Al, Bl, Cl, Dl) => (Al >>> 0) + (Bl >>> 0) + (Cl >>> 0) + (Dl >>> 0);
+const add4H = (low, Ah, Bh, Ch, Dh) => (Ah + Bh + Ch + Dh + ((low / 2 ** 32) | 0)) | 0;
+const add5L = (Al, Bl, Cl, Dl, El) => (Al >>> 0) + (Bl >>> 0) + (Cl >>> 0) + (Dl >>> 0) + (El >>> 0);
+const add5H = (low, Ah, Bh, Ch, Dh, Eh) => (Ah + Bh + Ch + Dh + Eh + ((low / 2 ** 32) | 0)) | 0;
+// prettier-ignore
+const u64 = {
+    fromBig, split, toBig,
+    shrSH, shrSL,
+    rotrSH, rotrSL, rotrBH, rotrBL,
+    rotr32H, rotr32L,
+    rotlSH, rotlSL, rotlBH, rotlBL,
+    add, add3L, add3H, add4L, add4H, add5H, add5L,
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (u64);
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/@noble+hashes@1.1.2/node_modules/@noble/hashes/esm/cryptoBrowser.js":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@noble+hashes@1.1.2/node_modules/@noble/hashes/esm/cryptoBrowser.js ***!
+  \************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "crypto": () => (/* binding */ crypto)
+/* harmony export */ });
+const crypto = {
+    node: undefined,
+    web: typeof self === 'object' && 'crypto' in self ? self.crypto : undefined,
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/@noble+hashes@1.1.2/node_modules/@noble/hashes/esm/sha3.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@noble+hashes@1.1.2/node_modules/@noble/hashes/esm/sha3.js ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Keccak": () => (/* binding */ Keccak),
+/* harmony export */   "keccakP": () => (/* binding */ keccakP),
+/* harmony export */   "keccak_224": () => (/* binding */ keccak_224),
+/* harmony export */   "keccak_256": () => (/* binding */ keccak_256),
+/* harmony export */   "keccak_384": () => (/* binding */ keccak_384),
+/* harmony export */   "keccak_512": () => (/* binding */ keccak_512),
+/* harmony export */   "sha3_224": () => (/* binding */ sha3_224),
+/* harmony export */   "sha3_256": () => (/* binding */ sha3_256),
+/* harmony export */   "sha3_384": () => (/* binding */ sha3_384),
+/* harmony export */   "sha3_512": () => (/* binding */ sha3_512),
+/* harmony export */   "shake128": () => (/* binding */ shake128),
+/* harmony export */   "shake256": () => (/* binding */ shake256)
+/* harmony export */ });
+/* harmony import */ var _assert_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_assert.js */ "./node_modules/.pnpm/@noble+hashes@1.1.2/node_modules/@noble/hashes/esm/_assert.js");
+/* harmony import */ var _u64_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./_u64.js */ "./node_modules/.pnpm/@noble+hashes@1.1.2/node_modules/@noble/hashes/esm/_u64.js");
+/* harmony import */ var _utils_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./utils.js */ "./node_modules/.pnpm/@noble+hashes@1.1.2/node_modules/@noble/hashes/esm/utils.js");
+
+
+
+// Various per round constants calculations
+const [SHA3_PI, SHA3_ROTL, _SHA3_IOTA] = [[], [], []];
+const _0n = BigInt(0);
+const _1n = BigInt(1);
+const _2n = BigInt(2);
+const _7n = BigInt(7);
+const _256n = BigInt(256);
+const _0x71n = BigInt(0x71);
+for (let round = 0, R = _1n, x = 1, y = 0; round < 24; round++) {
+    // Pi
+    [x, y] = [y, (2 * x + 3 * y) % 5];
+    SHA3_PI.push(2 * (5 * y + x));
+    // Rotational
+    SHA3_ROTL.push((((round + 1) * (round + 2)) / 2) % 64);
+    // Iota
+    let t = _0n;
+    for (let j = 0; j < 7; j++) {
+        R = ((R << _1n) ^ ((R >> _7n) * _0x71n)) % _256n;
+        if (R & _2n)
+            t ^= _1n << ((_1n << BigInt(j)) - _1n);
+    }
+    _SHA3_IOTA.push(t);
+}
+const [SHA3_IOTA_H, SHA3_IOTA_L] = _u64_js__WEBPACK_IMPORTED_MODULE_1__["default"].split(_SHA3_IOTA, true);
+// Left rotation (without 0, 32, 64)
+const rotlH = (h, l, s) => s > 32 ? _u64_js__WEBPACK_IMPORTED_MODULE_1__["default"].rotlBH(h, l, s) : _u64_js__WEBPACK_IMPORTED_MODULE_1__["default"].rotlSH(h, l, s);
+const rotlL = (h, l, s) => s > 32 ? _u64_js__WEBPACK_IMPORTED_MODULE_1__["default"].rotlBL(h, l, s) : _u64_js__WEBPACK_IMPORTED_MODULE_1__["default"].rotlSL(h, l, s);
+// Same as keccakf1600, but allows to skip some rounds
+function keccakP(s, rounds = 24) {
+    const B = new Uint32Array(5 * 2);
+    // NOTE: all indices are x2 since we store state as u32 instead of u64 (bigints to slow in js)
+    for (let round = 24 - rounds; round < 24; round++) {
+        // Theta θ
+        for (let x = 0; x < 10; x++)
+            B[x] = s[x] ^ s[x + 10] ^ s[x + 20] ^ s[x + 30] ^ s[x + 40];
+        for (let x = 0; x < 10; x += 2) {
+            const idx1 = (x + 8) % 10;
+            const idx0 = (x + 2) % 10;
+            const B0 = B[idx0];
+            const B1 = B[idx0 + 1];
+            const Th = rotlH(B0, B1, 1) ^ B[idx1];
+            const Tl = rotlL(B0, B1, 1) ^ B[idx1 + 1];
+            for (let y = 0; y < 50; y += 10) {
+                s[x + y] ^= Th;
+                s[x + y + 1] ^= Tl;
+            }
+        }
+        // Rho (ρ) and Pi (π)
+        let curH = s[2];
+        let curL = s[3];
+        for (let t = 0; t < 24; t++) {
+            const shift = SHA3_ROTL[t];
+            const Th = rotlH(curH, curL, shift);
+            const Tl = rotlL(curH, curL, shift);
+            const PI = SHA3_PI[t];
+            curH = s[PI];
+            curL = s[PI + 1];
+            s[PI] = Th;
+            s[PI + 1] = Tl;
+        }
+        // Chi (χ)
+        for (let y = 0; y < 50; y += 10) {
+            for (let x = 0; x < 10; x++)
+                B[x] = s[y + x];
+            for (let x = 0; x < 10; x++)
+                s[y + x] ^= ~B[(x + 2) % 10] & B[(x + 4) % 10];
+        }
+        // Iota (ι)
+        s[0] ^= SHA3_IOTA_H[round];
+        s[1] ^= SHA3_IOTA_L[round];
+    }
+    B.fill(0);
+}
+class Keccak extends _utils_js__WEBPACK_IMPORTED_MODULE_2__.Hash {
+    // NOTE: we accept arguments in bytes instead of bits here.
+    constructor(blockLen, suffix, outputLen, enableXOF = false, rounds = 24) {
+        super();
+        this.blockLen = blockLen;
+        this.suffix = suffix;
+        this.outputLen = outputLen;
+        this.enableXOF = enableXOF;
+        this.rounds = rounds;
+        this.pos = 0;
+        this.posOut = 0;
+        this.finished = false;
+        this.destroyed = false;
+        // Can be passed from user as dkLen
+        _assert_js__WEBPACK_IMPORTED_MODULE_0__["default"].number(outputLen);
+        // 1600 = 5x5 matrix of 64bit.  1600 bits === 200 bytes
+        if (0 >= this.blockLen || this.blockLen >= 200)
+            throw new Error('Sha3 supports only keccak-f1600 function');
+        this.state = new Uint8Array(200);
+        this.state32 = (0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.u32)(this.state);
+    }
+    keccak() {
+        keccakP(this.state32, this.rounds);
+        this.posOut = 0;
+        this.pos = 0;
+    }
+    update(data) {
+        _assert_js__WEBPACK_IMPORTED_MODULE_0__["default"].exists(this);
+        const { blockLen, state } = this;
+        data = (0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.toBytes)(data);
+        const len = data.length;
+        for (let pos = 0; pos < len;) {
+            const take = Math.min(blockLen - this.pos, len - pos);
+            for (let i = 0; i < take; i++)
+                state[this.pos++] ^= data[pos++];
+            if (this.pos === blockLen)
+                this.keccak();
+        }
+        return this;
+    }
+    finish() {
+        if (this.finished)
+            return;
+        this.finished = true;
+        const { state, suffix, pos, blockLen } = this;
+        // Do the padding
+        state[pos] ^= suffix;
+        if ((suffix & 0x80) !== 0 && pos === blockLen - 1)
+            this.keccak();
+        state[blockLen - 1] ^= 0x80;
+        this.keccak();
+    }
+    writeInto(out) {
+        _assert_js__WEBPACK_IMPORTED_MODULE_0__["default"].exists(this, false);
+        _assert_js__WEBPACK_IMPORTED_MODULE_0__["default"].bytes(out);
+        this.finish();
+        const bufferOut = this.state;
+        const { blockLen } = this;
+        for (let pos = 0, len = out.length; pos < len;) {
+            if (this.posOut >= blockLen)
+                this.keccak();
+            const take = Math.min(blockLen - this.posOut, len - pos);
+            out.set(bufferOut.subarray(this.posOut, this.posOut + take), pos);
+            this.posOut += take;
+            pos += take;
+        }
+        return out;
+    }
+    xofInto(out) {
+        // Sha3/Keccak usage with XOF is probably mistake, only SHAKE instances can do XOF
+        if (!this.enableXOF)
+            throw new Error('XOF is not possible for this instance');
+        return this.writeInto(out);
+    }
+    xof(bytes) {
+        _assert_js__WEBPACK_IMPORTED_MODULE_0__["default"].number(bytes);
+        return this.xofInto(new Uint8Array(bytes));
+    }
+    digestInto(out) {
+        _assert_js__WEBPACK_IMPORTED_MODULE_0__["default"].output(out, this);
+        if (this.finished)
+            throw new Error('digest() was already called');
+        this.writeInto(out);
+        this.destroy();
+        return out;
+    }
+    digest() {
+        return this.digestInto(new Uint8Array(this.outputLen));
+    }
+    destroy() {
+        this.destroyed = true;
+        this.state.fill(0);
+    }
+    _cloneInto(to) {
+        const { blockLen, suffix, outputLen, rounds, enableXOF } = this;
+        to || (to = new Keccak(blockLen, suffix, outputLen, enableXOF, rounds));
+        to.state32.set(this.state32);
+        to.pos = this.pos;
+        to.posOut = this.posOut;
+        to.finished = this.finished;
+        to.rounds = rounds;
+        // Suffix can change in cSHAKE
+        to.suffix = suffix;
+        to.outputLen = outputLen;
+        to.enableXOF = enableXOF;
+        to.destroyed = this.destroyed;
+        return to;
+    }
+}
+const gen = (suffix, blockLen, outputLen) => (0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.wrapConstructor)(() => new Keccak(blockLen, suffix, outputLen));
+const sha3_224 = gen(0x06, 144, 224 / 8);
+/**
+ * SHA3-256 hash function
+ * @param message - that would be hashed
+ */
+const sha3_256 = gen(0x06, 136, 256 / 8);
+const sha3_384 = gen(0x06, 104, 384 / 8);
+const sha3_512 = gen(0x06, 72, 512 / 8);
+const keccak_224 = gen(0x01, 144, 224 / 8);
+/**
+ * keccak-256 hash function. Different from SHA3-256.
+ * @param message - that would be hashed
+ */
+const keccak_256 = gen(0x01, 136, 256 / 8);
+const keccak_384 = gen(0x01, 104, 384 / 8);
+const keccak_512 = gen(0x01, 72, 512 / 8);
+const genShake = (suffix, blockLen, outputLen) => (0,_utils_js__WEBPACK_IMPORTED_MODULE_2__.wrapConstructorWithOpts)((opts = {}) => new Keccak(blockLen, suffix, opts.dkLen === undefined ? outputLen : opts.dkLen, true));
+const shake128 = genShake(0x1f, 168, 128 / 8);
+const shake256 = genShake(0x1f, 136, 256 / 8);
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/@noble+hashes@1.1.2/node_modules/@noble/hashes/esm/utils.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@noble+hashes@1.1.2/node_modules/@noble/hashes/esm/utils.js ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Hash": () => (/* binding */ Hash),
+/* harmony export */   "asyncLoop": () => (/* binding */ asyncLoop),
+/* harmony export */   "bytesToHex": () => (/* binding */ bytesToHex),
+/* harmony export */   "checkOpts": () => (/* binding */ checkOpts),
+/* harmony export */   "concatBytes": () => (/* binding */ concatBytes),
+/* harmony export */   "createView": () => (/* binding */ createView),
+/* harmony export */   "hexToBytes": () => (/* binding */ hexToBytes),
+/* harmony export */   "isLE": () => (/* binding */ isLE),
+/* harmony export */   "nextTick": () => (/* binding */ nextTick),
+/* harmony export */   "randomBytes": () => (/* binding */ randomBytes),
+/* harmony export */   "rotr": () => (/* binding */ rotr),
+/* harmony export */   "toBytes": () => (/* binding */ toBytes),
+/* harmony export */   "u32": () => (/* binding */ u32),
+/* harmony export */   "u8": () => (/* binding */ u8),
+/* harmony export */   "utf8ToBytes": () => (/* binding */ utf8ToBytes),
+/* harmony export */   "wrapConstructor": () => (/* binding */ wrapConstructor),
+/* harmony export */   "wrapConstructorWithOpts": () => (/* binding */ wrapConstructorWithOpts)
+/* harmony export */ });
+/* harmony import */ var _noble_hashes_crypto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @noble/hashes/crypto */ "./node_modules/.pnpm/@noble+hashes@1.1.2/node_modules/@noble/hashes/esm/cryptoBrowser.js");
+/*! noble-hashes - MIT License (c) 2022 Paul Miller (paulmillr.com) */
+// The import here is via the package name. This is to ensure
+// that exports mapping/resolution does fall into place.
+
+// Cast array to different type
+const u8 = (arr) => new Uint8Array(arr.buffer, arr.byteOffset, arr.byteLength);
+const u32 = (arr) => new Uint32Array(arr.buffer, arr.byteOffset, Math.floor(arr.byteLength / 4));
+// Cast array to view
+const createView = (arr) => new DataView(arr.buffer, arr.byteOffset, arr.byteLength);
+// The rotate right (circular right shift) operation for uint32
+const rotr = (word, shift) => (word << (32 - shift)) | (word >>> shift);
+const isLE = new Uint8Array(new Uint32Array([0x11223344]).buffer)[0] === 0x44;
+// There is almost no big endian hardware, but js typed arrays uses platform specific endianness.
+// So, just to be sure not to corrupt anything.
+if (!isLE)
+    throw new Error('Non little-endian hardware is not supported');
+const hexes = Array.from({ length: 256 }, (v, i) => i.toString(16).padStart(2, '0'));
+/**
+ * @example bytesToHex(Uint8Array.from([0xde, 0xad, 0xbe, 0xef]))
+ */
+function bytesToHex(uint8a) {
+    // pre-caching improves the speed 6x
+    if (!(uint8a instanceof Uint8Array))
+        throw new Error('Uint8Array expected');
+    let hex = '';
+    for (let i = 0; i < uint8a.length; i++) {
+        hex += hexes[uint8a[i]];
+    }
+    return hex;
+}
+/**
+ * @example hexToBytes('deadbeef')
+ */
+function hexToBytes(hex) {
+    if (typeof hex !== 'string') {
+        throw new TypeError('hexToBytes: expected string, got ' + typeof hex);
+    }
+    if (hex.length % 2)
+        throw new Error('hexToBytes: received invalid unpadded hex');
+    const array = new Uint8Array(hex.length / 2);
+    for (let i = 0; i < array.length; i++) {
+        const j = i * 2;
+        const hexByte = hex.slice(j, j + 2);
+        const byte = Number.parseInt(hexByte, 16);
+        if (Number.isNaN(byte) || byte < 0)
+            throw new Error('Invalid byte sequence');
+        array[i] = byte;
+    }
+    return array;
+}
+// There is no setImmediate in browser and setTimeout is slow. However, call to async function will return Promise
+// which will be fullfiled only on next scheduler queue processing step and this is exactly what we need.
+const nextTick = async () => { };
+// Returns control to thread each 'tick' ms to avoid blocking
+async function asyncLoop(iters, tick, cb) {
+    let ts = Date.now();
+    for (let i = 0; i < iters; i++) {
+        cb(i);
+        // Date.now() is not monotonic, so in case if clock goes backwards we return return control too
+        const diff = Date.now() - ts;
+        if (diff >= 0 && diff < tick)
+            continue;
+        await nextTick();
+        ts += diff;
+    }
+}
+function utf8ToBytes(str) {
+    if (typeof str !== 'string') {
+        throw new TypeError(`utf8ToBytes expected string, got ${typeof str}`);
+    }
+    return new TextEncoder().encode(str);
+}
+function toBytes(data) {
+    if (typeof data === 'string')
+        data = utf8ToBytes(data);
+    if (!(data instanceof Uint8Array))
+        throw new TypeError(`Expected input type is Uint8Array (got ${typeof data})`);
+    return data;
+}
+/**
+ * Concats Uint8Array-s into one; like `Buffer.concat([buf1, buf2])`
+ * @example concatBytes(buf1, buf2)
+ */
+function concatBytes(...arrays) {
+    if (!arrays.every((a) => a instanceof Uint8Array))
+        throw new Error('Uint8Array list expected');
+    if (arrays.length === 1)
+        return arrays[0];
+    const length = arrays.reduce((a, arr) => a + arr.length, 0);
+    const result = new Uint8Array(length);
+    for (let i = 0, pad = 0; i < arrays.length; i++) {
+        const arr = arrays[i];
+        result.set(arr, pad);
+        pad += arr.length;
+    }
+    return result;
+}
+// For runtime check if class implements interface
+class Hash {
+    // Safe version that clones internal state
+    clone() {
+        return this._cloneInto();
+    }
+}
+// Check if object doens't have custom constructor (like Uint8Array/Array)
+const isPlainObject = (obj) => Object.prototype.toString.call(obj) === '[object Object]' && obj.constructor === Object;
+function checkOpts(defaults, opts) {
+    if (opts !== undefined && (typeof opts !== 'object' || !isPlainObject(opts)))
+        throw new TypeError('Options should be object or undefined');
+    const merged = Object.assign(defaults, opts);
+    return merged;
+}
+function wrapConstructor(hashConstructor) {
+    const hashC = (message) => hashConstructor().update(toBytes(message)).digest();
+    const tmp = hashConstructor();
+    hashC.outputLen = tmp.outputLen;
+    hashC.blockLen = tmp.blockLen;
+    hashC.create = () => hashConstructor();
+    return hashC;
+}
+function wrapConstructorWithOpts(hashCons) {
+    const hashC = (msg, opts) => hashCons(opts).update(toBytes(msg)).digest();
+    const tmp = hashCons({});
+    hashC.outputLen = tmp.outputLen;
+    hashC.blockLen = tmp.blockLen;
+    hashC.create = (opts) => hashCons(opts);
+    return hashC;
+}
+/**
+ * Secure PRNG
+ */
+function randomBytes(bytesLength = 32) {
+    if (_noble_hashes_crypto__WEBPACK_IMPORTED_MODULE_0__.crypto.web) {
+        return _noble_hashes_crypto__WEBPACK_IMPORTED_MODULE_0__.crypto.web.getRandomValues(new Uint8Array(bytesLength));
+    }
+    else if (_noble_hashes_crypto__WEBPACK_IMPORTED_MODULE_0__.crypto.node) {
+        return new Uint8Array(_noble_hashes_crypto__WEBPACK_IMPORTED_MODULE_0__.crypto.node.randomBytes(bytesLength).buffer);
+    }
+    else {
+        throw new Error("The environment doesn't have randomBytes function");
+    }
+}
 
 
 /***/ }),
@@ -91626,6 +92588,376 @@ const version = "6.7.0";
 
 /***/ }),
 
+/***/ "./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/address/address.js":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/address/address.js ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "getAddress": () => (/* binding */ getAddress),
+/* harmony export */   "getIcapAddress": () => (/* binding */ getIcapAddress)
+/* harmony export */ });
+/* harmony import */ var _crypto_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../crypto/index.js */ "./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/crypto/keccak.js");
+/* harmony import */ var _utils_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/index.js */ "./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/utils/data.js");
+/* harmony import */ var _utils_index_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../utils/index.js */ "./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/utils/errors.js");
+
+
+const BN_0 = BigInt(0);
+const BN_36 = BigInt(36);
+function getChecksumAddress(address) {
+    //    if (!isHexString(address, 20)) {
+    //        logger.throwArgumentError("invalid address", "address", address);
+    //    }
+    address = address.toLowerCase();
+    const chars = address.substring(2).split("");
+    const expanded = new Uint8Array(40);
+    for (let i = 0; i < 40; i++) {
+        expanded[i] = chars[i].charCodeAt(0);
+    }
+    const hashed = (0,_utils_index_js__WEBPACK_IMPORTED_MODULE_0__.getBytes)((0,_crypto_index_js__WEBPACK_IMPORTED_MODULE_1__.keccak256)(expanded));
+    for (let i = 0; i < 40; i += 2) {
+        if ((hashed[i >> 1] >> 4) >= 8) {
+            chars[i] = chars[i].toUpperCase();
+        }
+        if ((hashed[i >> 1] & 0x0f) >= 8) {
+            chars[i + 1] = chars[i + 1].toUpperCase();
+        }
+    }
+    return "0x" + chars.join("");
+}
+// See: https://en.wikipedia.org/wiki/International_Bank_Account_Number
+// Create lookup table
+const ibanLookup = {};
+for (let i = 0; i < 10; i++) {
+    ibanLookup[String(i)] = String(i);
+}
+for (let i = 0; i < 26; i++) {
+    ibanLookup[String.fromCharCode(65 + i)] = String(10 + i);
+}
+// How many decimal digits can we process? (for 64-bit float, this is 15)
+// i.e. Math.floor(Math.log10(Number.MAX_SAFE_INTEGER));
+const safeDigits = 15;
+function ibanChecksum(address) {
+    address = address.toUpperCase();
+    address = address.substring(4) + address.substring(0, 2) + "00";
+    let expanded = address.split("").map((c) => { return ibanLookup[c]; }).join("");
+    // Javascript can handle integers safely up to 15 (decimal) digits
+    while (expanded.length >= safeDigits) {
+        let block = expanded.substring(0, safeDigits);
+        expanded = parseInt(block, 10) % 97 + expanded.substring(block.length);
+    }
+    let checksum = String(98 - (parseInt(expanded, 10) % 97));
+    while (checksum.length < 2) {
+        checksum = "0" + checksum;
+    }
+    return checksum;
+}
+;
+const Base36 = (function () {
+    ;
+    const result = {};
+    for (let i = 0; i < 36; i++) {
+        const key = "0123456789abcdefghijklmnopqrstuvwxyz"[i];
+        result[key] = BigInt(i);
+    }
+    return result;
+})();
+function fromBase36(value) {
+    value = value.toLowerCase();
+    let result = BN_0;
+    for (let i = 0; i < value.length; i++) {
+        result = result * BN_36 + Base36[value[i]];
+    }
+    return result;
+}
+/**
+ *  Returns a normalized and checksumed address for %%address%%.
+ *  This accepts non-checksum addresses, checksum addresses and
+ *  [[getIcapAddress]] formats.
+ *
+ *  The checksum in Ethereum uses the capitalization (upper-case
+ *  vs lower-case) of the characters within an address to encode
+ *  its checksum, which offers, on average, a checksum of 15-bits.
+ *
+ *  If %%address%% contains both upper-case and lower-case, it is
+ *  assumed to already be a checksum address and its checksum is
+ *  validated, and if the address fails its expected checksum an
+ *  error is thrown.
+ *
+ *  If you wish the checksum of %%address%% to be ignore, it should
+ *  be converted to lower-case (i.e. ``.toLowercase()``) before
+ *  being passed in. This should be a very rare situation though,
+ *  that you wish to bypass the safegaurds in place to protect
+ *  against an address that has been incorrectly copied from another
+ *  source.
+ *
+ *  @example:
+ *    // Adds the checksum (via upper-casing specific letters)
+ *    getAddress("0x8ba1f109551bd432803012645ac136ddd64dba72")
+ *    //_result:
+ *
+ *    // Converts ICAP address and adds checksum
+ *    getAddress("XE65GB6LDNXYOFTX0NSV3FUWKOWIXAMJK36");
+ *    //_result:
+ *
+ *    // Throws an error if an address contains mixed case,
+ *    // but the checksum fails
+ *    getAddress("0x8Ba1f109551bD432803012645Ac136ddd64DBA72")
+ *    //_error:
+ */
+function getAddress(address) {
+    (0,_utils_index_js__WEBPACK_IMPORTED_MODULE_2__.assertArgument)(typeof (address) === "string", "invalid address", "address", address);
+    if (address.match(/^(0x)?[0-9a-fA-F]{40}$/)) {
+        // Missing the 0x prefix
+        if (!address.startsWith("0x")) {
+            address = "0x" + address;
+        }
+        const result = getChecksumAddress(address);
+        // It is a checksummed address with a bad checksum
+        (0,_utils_index_js__WEBPACK_IMPORTED_MODULE_2__.assertArgument)(!address.match(/([A-F].*[a-f])|([a-f].*[A-F])/) || result === address, "bad address checksum", "address", address);
+        return result;
+    }
+    // Maybe ICAP? (we only support direct mode)
+    if (address.match(/^XE[0-9]{2}[0-9A-Za-z]{30,31}$/)) {
+        // It is an ICAP address with a bad checksum
+        (0,_utils_index_js__WEBPACK_IMPORTED_MODULE_2__.assertArgument)(address.substring(2, 4) === ibanChecksum(address), "bad icap checksum", "address", address);
+        let result = fromBase36(address.substring(4)).toString(16);
+        while (result.length < 40) {
+            result = "0" + result;
+        }
+        return getChecksumAddress("0x" + result);
+    }
+    (0,_utils_index_js__WEBPACK_IMPORTED_MODULE_2__.assertArgument)(false, "invalid address", "address", address);
+}
+/**
+ *  The [ICAP Address format](link-icap) format is an early checksum
+ *  format which attempts to be compatible with the banking
+ *  industry [IBAN format](link-wiki-iban) for bank accounts.
+ *
+ *  It is no longer common or a recommended format.
+ *
+ *  @example:
+ *    getIcapAddress("0x8ba1f109551bd432803012645ac136ddd64dba72");
+ *    //_result:
+ *
+ *    getIcapAddress("XE65GB6LDNXYOFTX0NSV3FUWKOWIXAMJK36");
+ *    //_result:
+ *
+ *    // Throws an error if the ICAP checksum is wrong
+ *    getIcapAddress("XE65GB6LDNXYOFTX0NSV3FUWKOWIXAMJK37");
+ *    //_error:
+ */
+function getIcapAddress(address) {
+    //let base36 = _base16To36(getAddress(address).substring(2)).toUpperCase();
+    let base36 = BigInt(getAddress(address)).toString(36).toUpperCase();
+    while (base36.length < 30) {
+        base36 = "0" + base36;
+    }
+    return "XE" + ibanChecksum("XE00" + base36) + base36;
+}
+//# sourceMappingURL=address.js.map
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/address/checks.js":
+/*!***************************************************************************************!*\
+  !*** ./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/address/checks.js ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "isAddress": () => (/* binding */ isAddress),
+/* harmony export */   "isAddressable": () => (/* binding */ isAddressable),
+/* harmony export */   "resolveAddress": () => (/* binding */ resolveAddress)
+/* harmony export */ });
+/* harmony import */ var _utils_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/index.js */ "./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/utils/errors.js");
+/* harmony import */ var _address_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./address.js */ "./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/address/address.js");
+
+
+/**
+ *  Returns true if %%value%% is an object which implements the
+ *  [[Addressable]] interface.
+ *
+ *  @example:
+ *    // Wallets and AbstractSigner sub-classes
+ *    isAddressable(Wallet.createRandom())
+ *    //_result:
+ *
+ *    // Contracts
+ *    contract = new Contract("dai.tokens.ethers.eth", [ ], provider)
+ *    isAddressable(contract)
+ *    //_result:
+ */
+function isAddressable(value) {
+    return (value && typeof (value.getAddress) === "function");
+}
+/**
+ *  Returns true if %%value%% is a valid address.
+ *
+ *  @example:
+ *    // Valid address
+ *    isAddress("0x8ba1f109551bD432803012645Ac136ddd64DBA72")
+ *    //_result:
+ *
+ *    // Valid ICAP address
+ *    isAddress("XE65GB6LDNXYOFTX0NSV3FUWKOWIXAMJK36")
+ *    //_result:
+ *
+ *    // Invalid checksum
+ *    isAddress("0x8Ba1f109551bD432803012645Ac136ddd64DBa72")
+ *    //_result:
+ *
+ *    // Invalid ICAP checksum
+ *    isAddress("0x8Ba1f109551bD432803012645Ac136ddd64DBA72")
+ *    //_result:
+ *
+ *    // Not an address (an ENS name requires a provided and an
+ *    // asynchronous API to access)
+ *    isAddress("ricmoo.eth")
+ *    //_result:
+ */
+function isAddress(value) {
+    try {
+        (0,_address_js__WEBPACK_IMPORTED_MODULE_0__.getAddress)(value);
+        return true;
+    }
+    catch (error) { }
+    return false;
+}
+async function checkAddress(target, promise) {
+    const result = await promise;
+    if (result == null || result === "0x0000000000000000000000000000000000000000") {
+        (0,_utils_index_js__WEBPACK_IMPORTED_MODULE_1__.assert)(typeof (target) !== "string", "unconfigured name", "UNCONFIGURED_NAME", { value: target });
+        (0,_utils_index_js__WEBPACK_IMPORTED_MODULE_1__.assertArgument)(false, "invalid AddressLike value; did not resolve to a value address", "target", target);
+    }
+    return (0,_address_js__WEBPACK_IMPORTED_MODULE_0__.getAddress)(result);
+}
+/**
+ *  Resolves to an address for the %%target%%, which may be any
+ *  supported address type, an [[Addressable]] or a Promise which
+ *  resolves to an address.
+ *
+ *  If an ENS name is provided, but that name has not been correctly
+ *  configured a [[UnconfiguredNameError]] is thrown.
+ *
+ *  @example:
+ *    addr = "0x6B175474E89094C44Da98b954EedeAC495271d0F"
+ *
+ *    // Addresses are return synchronously
+ *    resolveAddress(addr, provider)
+ *    //_result:
+ *
+ *    // Address promises are resolved asynchronously
+ *    resolveAddress(Promise.resolve(addr))
+ *    //_result:
+ *
+ *    // ENS names are resolved asynchronously
+ *    resolveAddress("dai.tokens.ethers.eth", provider)
+ *    //_result:
+ *
+ *    // Addressable objects are resolved asynchronously
+ *    contract = new Contract(addr, [ ])
+ *    resolveAddress(contract, provider)
+ *    //_result:
+ *
+ *    // Unconfigured ENS names reject
+ *    resolveAddress("nothing-here.ricmoo.eth", provider)
+ *    //_error:
+ *
+ *    // ENS names require a NameResolver object passed in
+ *    // (notice the provider was omitted)
+ *    resolveAddress("nothing-here.ricmoo.eth")
+ *    //_error:
+ */
+function resolveAddress(target, resolver) {
+    if (typeof (target) === "string") {
+        if (target.match(/^0x[0-9a-f]{40}$/i)) {
+            return (0,_address_js__WEBPACK_IMPORTED_MODULE_0__.getAddress)(target);
+        }
+        (0,_utils_index_js__WEBPACK_IMPORTED_MODULE_1__.assert)(resolver != null, "ENS resolution requires a provider", "UNSUPPORTED_OPERATION", { operation: "resolveName" });
+        return checkAddress(target, resolver.resolveName(target));
+    }
+    else if (isAddressable(target)) {
+        return checkAddress(target, target.getAddress());
+    }
+    else if (target && typeof (target.then) === "function") {
+        return checkAddress(target, target);
+    }
+    (0,_utils_index_js__WEBPACK_IMPORTED_MODULE_1__.assertArgument)(false, "unsupported addressable value", "target", target);
+}
+//# sourceMappingURL=checks.js.map
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/crypto/keccak.js":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/crypto/keccak.js ***!
+  \**************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "keccak256": () => (/* binding */ keccak256)
+/* harmony export */ });
+/* harmony import */ var _noble_hashes_sha3__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @noble/hashes/sha3 */ "./node_modules/.pnpm/@noble+hashes@1.1.2/node_modules/@noble/hashes/esm/sha3.js");
+/* harmony import */ var _utils_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/index.js */ "./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/utils/data.js");
+/**
+ *  Cryptographic hashing functions
+ *
+ *  @_subsection: api/crypto:Hash Functions [about-crypto-hashing]
+ */
+
+
+let locked = false;
+const _keccak256 = function (data) {
+    return (0,_noble_hashes_sha3__WEBPACK_IMPORTED_MODULE_0__.keccak_256)(data);
+};
+let __keccak256 = _keccak256;
+/**
+ *  Compute the cryptographic KECCAK256 hash of %%data%%.
+ *
+ *  The %%data%% **must** be a data representation, to compute the
+ *  hash of UTF-8 data use the [[id]] function.
+ *
+ *  @returns DataHexstring
+ *  @example:
+ *    keccak256("0x")
+ *    //_result:
+ *
+ *    keccak256("0x1337")
+ *    //_result:
+ *
+ *    keccak256(new Uint8Array([ 0x13, 0x37 ]))
+ *    //_result:
+ *
+ *    // Strings are assumed to be DataHexString, otherwise it will
+ *    // throw. To hash UTF-8 data, see the note above.
+ *    keccak256("Hello World")
+ *    //_error:
+ */
+function keccak256(_data) {
+    const data = (0,_utils_index_js__WEBPACK_IMPORTED_MODULE_1__.getBytes)(_data, "data");
+    return (0,_utils_index_js__WEBPACK_IMPORTED_MODULE_1__.hexlify)(__keccak256(data));
+}
+keccak256._ = _keccak256;
+keccak256.lock = function () { locked = true; };
+keccak256.register = function (func) {
+    if (locked) {
+        throw new TypeError("keccak256 is locked");
+    }
+    __keccak256 = func;
+};
+Object.freeze(keccak256);
+//# sourceMappingURL=keccak.js.map
+
+/***/ }),
+
 /***/ "./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/utils/data.js":
 /*!***********************************************************************************!*\
   !*** ./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/utils/data.js ***!
@@ -94458,7 +95790,7 @@ const SWRConfig = swr_internal__WEBPACK_IMPORTED_MODULE_2__.OBJECT.definePropert
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("45615a36a9dbc33fa291")
+/******/ 		__webpack_require__.h = () => ("d2b8044d25fdae5d770b")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
