@@ -83569,7 +83569,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const reactRenderDiv = document.createElement('div');
   reactRenderDiv.setAttribute('id', 'element');
   document.body.append(reactRenderDiv);
-  const root = react_dom__WEBPACK_IMPORTED_MODULE_1__.createRoot(reactRenderDiv); // createRoot(container!) if you use TypeScript
+  const root = react_dom__WEBPACK_IMPORTED_MODULE_1__.createRoot(reactRenderDiv);
   root.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2___default().createElement(_InjectMaster__WEBPACK_IMPORTED_MODULE_0__.InjectMaster, null));
 }, false);
 
@@ -84463,7 +84463,6 @@ __webpack_require__.r(__webpack_exports__);
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
 
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 
 const COVALENT_API = 'https://api.covalenthq.com/v1/';
 const COVALENT_API_KEY = 'cqt_rQQMpWRp9kKyrxQGMK6w7HHXxHgH';
@@ -95790,7 +95789,7 @@ const SWRConfig = swr_internal__WEBPACK_IMPORTED_MODULE_2__.OBJECT.definePropert
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("d2b8044d25fdae5d770b")
+/******/ 		__webpack_require__.h = () => ("5e8650d4e3daf6bbba92")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

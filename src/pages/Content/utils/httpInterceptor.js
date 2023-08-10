@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import axios from 'axios';
 
 export const COVALENT_API = 'https://api.covalenthq.com/v1/';

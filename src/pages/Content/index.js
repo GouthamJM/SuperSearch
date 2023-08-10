@@ -9,7 +9,7 @@ document.addEventListener(
     reactRenderDiv.setAttribute('id', 'element');
     document.body.append(reactRenderDiv);
 
-    const root = ReactDOM.createRoot(reactRenderDiv); // createRoot(container!) if you use TypeScript
+    const root = ReactDOM.createRoot(reactRenderDiv);
     root.render(<InjectMaster />);
   },
   false
