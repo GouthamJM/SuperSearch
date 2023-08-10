@@ -62,12 +62,16 @@ export function useGlobalReducer() {
     updateSearchForm: (search, chain) => {
       dispatch({ type: actions.updateSearchForm, payload: { search, chain } });
     },
+
+    resetSearchForm: () => {
+      dispatch({ type: actions.resetSearchForm });
+    },
   };
   return globalState;
 }
 
 export function useGlobalContext() {
-  const { state, updateStep, resetStep, updateSearchForm } =
+  const { state, updateStep, resetStep, updateSearchForm, resetSearchForm } =
     useContext(GlobalContext);
-  return { state, updateStep, resetStep, updateSearchForm };
+  return { state, updateStep, resetStep, updateSearchForm, resetSearchForm };
 }

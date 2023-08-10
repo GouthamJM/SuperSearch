@@ -82887,16 +82887,24 @@ var _s = __webpack_require__.$Refresh$.signature();
 function Transaction() {
   _s();
   const {
-    updateStep,
     updateSearchForm,
-    state
+    state,
+    resetStep,
+    resetSearchForm
   } = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_5__.useGlobalContext)();
   const [chain, setChain] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(state.searchForm.chain);
   const [search, setSearch] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(state.searchForm.search);
   const {
     transactionDetail,
     transactionDeailLoader
-  } = (0,_hooks_swr_useTransactionDetail__WEBPACK_IMPORTED_MODULE_7__.useTransactionDetail)(chain.chain_id, search);
+  } = (0,_hooks_swr_useTransactionDetail__WEBPACK_IMPORTED_MODULE_7__.useTransactionDetail)(state.searchForm.chain.chain_id, state.searchForm.search);
+  const onStateSubmit = () => {
+    updateSearchForm(search, chain);
+  };
+  const onGoBack = () => {
+    resetStep();
+    resetSearchForm();
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionContainer px-2 py-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -82921,14 +82929,30 @@ function Transaction() {
       setChain(item);
     }
   })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    className: "align-items-center"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Button__WEBPACK_IMPORTED_MODULE_3__.ButtonP, null, "Search"))))), transactionDeailLoader ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Loading...") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    className: "align-items-center justify-content-between"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    md: "auto"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    md: "auto"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Button__WEBPACK_IMPORTED_MODULE_3__.ButtonP, {
+    onClick: onStateSubmit
+  }, "Search")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    md: "auto"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Button__WEBPACK_IMPORTED_MODULE_3__.ButtonL, {
+    onClick: () => setSearch('')
+  }, "Clear")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
+    md: "auto"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Button__WEBPACK_IMPORTED_MODULE_3__.ButtonP, {
+    onClick: onGoBack
+  }, "Go Back"))))), transactionDeailLoader ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Loading...") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, transactionDetail ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_8__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_9__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_10__["default"], {
     md: "auto"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "bg-light bg-gradient px-2 py-4 rounded"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_TransactionDetail__WEBPACK_IMPORTED_MODULE_6__["default"], transactionDetail)))))));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_TransactionDetail__WEBPACK_IMPORTED_MODULE_6__["default"], transactionDetail)))))) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "heading5"
+  }, "Not Found")));
 }
-_s(Transaction, "8mrsTQyIY28/VrfXINd7pm9MBk8=", false, function () {
+_s(Transaction, "zSngPlBC5/FX9utHQ/7gaP2G+yQ=", false, function () {
   return [_context_globalContext__WEBPACK_IMPORTED_MODULE_5__.useGlobalContext, _hooks_swr_useTransactionDetail__WEBPACK_IMPORTED_MODULE_7__.useTransactionDetail];
 });
 _c = Transaction;
@@ -83667,6 +83691,11 @@ function useGlobalReducer() {
           chain
         }
       });
+    },
+    resetSearchForm: () => {
+      dispatch({
+        type: actions.resetSearchForm
+      });
     }
   };
   return globalState;
@@ -83678,16 +83707,18 @@ function useGlobalContext() {
     state,
     updateStep,
     resetStep,
-    updateSearchForm
+    updateSearchForm,
+    resetSearchForm
   } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(GlobalContext);
   return {
     state,
     updateStep,
     resetStep,
-    updateSearchForm
+    updateSearchForm,
+    resetSearchForm
   };
 }
-_s2(useGlobalContext, "k8hYpT/8z5QHqzSmnMCKuhdzPwY=");
+_s2(useGlobalContext, "N9WDosdJgfPs1soqe2cOwIZjhLM=");
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -94427,7 +94458,7 @@ const SWRConfig = swr_internal__WEBPACK_IMPORTED_MODULE_2__.OBJECT.definePropert
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("ee448af0f89225d21d8c")
+/******/ 		__webpack_require__.h = () => ("45615a36a9dbc33fa291")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
