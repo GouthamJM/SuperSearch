@@ -280,7 +280,7 @@
   bottom: 0px;
   right: 16px;
   z-index: 99999;
-  min-width: 480px;
+  width: 480px;
 }
 .homePage .homeContainer {
   height: 100%;
@@ -367,6 +367,38 @@
 }
 .walletContainer .walletBody .walletBalance .walletItem:first-child {
   border-right: 1px solid #2B3743;
+}
+
+.walletTransctionBox {
+  background-color: #111929;
+  border-radius: 8px;
+  padding: 16px;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.walletTransctionBox::-webkit-scrollbar {
+  width: 8px;
+  height: 4px;
+}
+.walletTransctionBox::-webkit-scrollbar-track {
+  border-radius: 9999px;
+  background: #ececec;
+}
+.walletTransctionBox::-webkit-scrollbar-thumb {
+  background: #8f98a4;
+  border-radius: 9999px;
+}
+.walletTransctionBox .transactionItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid #2B3743;
+}
+.walletTransctionBox .transactionItem:first-child {
+  padding-top: 0px;
+}
+.walletTransctionBox .transactionItem:last-child {
+  border-bottom: 0px;
 }
 
 @font-face {

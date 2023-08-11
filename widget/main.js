@@ -81054,9 +81054,8 @@ const getTransactionHistory = ({
   chain_id,
   wallet_address
 }) => {
-  return new Promise((resolve, reject) => (0,_utils_globalApiServices__WEBPACK_IMPORTED_MODULE_0__.globalGetService)(`/${chain_id}/address/${wallet_address}/transactions_v2/`).then(res => {
-    console.log(res, 'res');
-    resolve(res);
+  return new Promise((resolve, reject) => (0,_utils_globalApiServices__WEBPACK_IMPORTED_MODULE_0__.globalGetService)(`/${chain_id}/address/${wallet_address}/transactions_v3/`).then(res => {
+    resolve(res?.data);
   }).catch(err => {
     reject(err);
   }));
@@ -81352,6 +81351,84 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 
 /***/ }),
 
+/***/ "./src/pages/Content/hooks/swr/useWalletTransactions.js":
+/*!**************************************************************!*\
+  !*** ./src/pages/Content/hooks/swr/useWalletTransactions.js ***!
+  \**************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "useWalletTransactions": () => (/* binding */ useWalletTransactions)
+/* harmony export */ });
+/* harmony import */ var swr__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swr */ "./node_modules/.pnpm/swr@2.2.0_react@18.2.0/node_modules/swr/core/dist/index.mjs");
+/* harmony import */ var ___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! . */ "./src/pages/Content/hooks/swr/index.js");
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
+
+var _s = __webpack_require__.$Refresh$.signature();
+
+
+function useWalletTransactions(chain_id, wallet_address) {
+  _s();
+  const canFetch = chain_id && wallet_address ? {
+    chain_id,
+    wallet_address,
+    type: 'wallet-transactions'
+  } : null;
+  const {
+    data,
+    isValidating
+  } = (0,swr__WEBPACK_IMPORTED_MODULE_0__["default"])(canFetch, ___WEBPACK_IMPORTED_MODULE_1__.getTransactionHistory, {
+    revalidateIfStale: false,
+    shouldRetryOnError: false,
+    revalidateOnFocus: false
+  });
+  return {
+    walletTransactions: data,
+    walletTransactionLoader: isValidating
+  };
+}
+_s(useWalletTransactions, "Tjls6XrRcHNcsAUGDJO8bXojHzg=", false, function () {
+  return [swr__WEBPACK_IMPORTED_MODULE_0__["default"]];
+});
+
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (true) {
+		let errorOverlay;
+		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
+			errorOverlay = __react_refresh_error_overlay__;
+		}
+		let testMode;
+		if (typeof __react_refresh_test__ !== 'undefined') {
+			testMode = __react_refresh_test__;
+		}
+		return __react_refresh_utils__.executeRuntime(
+			exports,
+			$ReactRefreshModuleId$,
+			module.hot,
+			errorOverlay,
+			testMode
+		);
+	}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
 /***/ "./src/pages/Content/index.js":
 /*!************************************!*\
   !*** ./src/pages/Content/index.js ***!
@@ -81577,6 +81654,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Header */ "./src/pages/Content/pages/components/Header.jsx");
 /* harmony import */ var _components_WalletDetail__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/WalletDetail */ "./src/pages/Content/pages/components/WalletDetail.jsx");
 /* harmony import */ var _hooks_swr_useWalletBalance__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../hooks/swr/useWalletBalance */ "./src/pages/Content/hooks/swr/useWalletBalance.js");
+/* harmony import */ var _hooks_swr_useWalletTransactions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../hooks/swr/useWalletTransactions */ "./src/pages/Content/hooks/swr/useWalletTransactions.js");
+/* harmony import */ var _components_WalletTransactions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/WalletTransactions */ "./src/pages/Content/pages/components/WalletTransactions.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
@@ -81587,7 +81666,7 @@ var _s = __webpack_require__.$Refresh$.signature();
 
 
 
-// import { useWalletPortfolioGraph } from '../hooks/swr/useWalletPortfolioGraph';
+
 
 function Wallet() {
   _s();
@@ -81598,22 +81677,35 @@ function Wallet() {
     walletBalance,
     walletBalanceLoader
   } = (0,_hooks_swr_useWalletBalance__WEBPACK_IMPORTED_MODULE_4__.useWalletBalance)(state.searchForm.chain.chain_id, state.searchForm.search);
+  const {
+    walletTransactions,
+    walletTransactionLoader
+  } = (0,_hooks_swr_useWalletTransactions__WEBPACK_IMPORTED_MODULE_5__.useWalletTransactions)(state.searchForm.chain.chain_id, state.searchForm.search);
+  console.log(walletTransactions?.items, 'walletTransactions');
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pb-2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pb-2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
     type: "wallet"
-  })), walletBalanceLoader ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Loading...") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "heading6 pb-3"
+  })), walletBalanceLoader || walletTransactionLoader ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Loading...") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "heading6 pb-2"
   }, "Address details"), walletBalance ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "walletBox"
+    className: "walletBox pb-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_WalletDetail__WEBPACK_IMPORTED_MODULE_3__["default"], walletBalance)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "heading5"
+  }, "No account wallet address found"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "heading6 pt-4 pb-2"
+  }, "Transactions"), walletTransactions.items ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "walletTransctionBox"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_WalletTransactions__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    transactions: walletTransactions.items
+  })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "heading5"
   }, "No account wallet address found")));
 }
-_s(Wallet, "eoSTD3GB0BixiSUVLInyu5ZIcZ8=", false, function () {
-  return [_context_globalContext__WEBPACK_IMPORTED_MODULE_1__.useGlobalContext, _hooks_swr_useWalletBalance__WEBPACK_IMPORTED_MODULE_4__.useWalletBalance];
+_s(Wallet, "nCWCEZ335er8NsGKLX1kW1GZlP8=", false, function () {
+  return [_context_globalContext__WEBPACK_IMPORTED_MODULE_1__.useGlobalContext, _hooks_swr_useWalletBalance__WEBPACK_IMPORTED_MODULE_4__.useWalletBalance, _hooks_swr_useWalletTransactions__WEBPACK_IMPORTED_MODULE_5__.useWalletTransactions];
 });
 _c = Wallet;
 var _c;
@@ -82094,6 +82186,78 @@ if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Pr
 
 /***/ }),
 
+/***/ "./src/pages/Content/pages/components/WalletTransactions.jsx":
+/*!*******************************************************************!*\
+  !*** ./src/pages/Content/pages/components/WalletTransactions.jsx ***!
+  \*******************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ WalletTransactions)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils */ "./src/pages/Content/utils/index.js");
+/* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
+/* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
+__webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
+
+
+
+function WalletTransactions({
+  transactions = []
+}) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, transactions?.map(_item => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "transactionItem"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "pb-2 heading7"
+  }, "Hash: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.shortenAddress)(_item.tx_hash))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "supportTextGray"
+  }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.formatDate)(_item.block_signed_at, true))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "pb-2 heading7"
+  }, _item.pretty_value_quote), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "supportTextGray"
+  }, "To: ", (0,_utils__WEBPACK_IMPORTED_MODULE_1__.shortenAddress)(_item.to_address))))));
+}
+_c = WalletTransactions;
+var _c;
+__webpack_require__.$Refresh$.register(_c, "WalletTransactions");
+
+const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
+const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
+	$ReactRefreshModuleId$
+);
+
+function $ReactRefreshModuleRuntime$(exports) {
+	if (true) {
+		let errorOverlay;
+		if (typeof __react_refresh_error_overlay__ !== 'undefined') {
+			errorOverlay = __react_refresh_error_overlay__;
+		}
+		let testMode;
+		if (typeof __react_refresh_test__ !== 'undefined') {
+			testMode = __react_refresh_test__;
+		}
+		return __react_refresh_utils__.executeRuntime(
+			exports,
+			$ReactRefreshModuleId$,
+			module.hot,
+			errorOverlay,
+			testMode
+		);
+	}
+}
+
+if (typeof Promise !== 'undefined' && $ReactRefreshCurrentExports$ instanceof Promise) {
+	$ReactRefreshCurrentExports$.then($ReactRefreshModuleRuntime$);
+} else {
+	$ReactRefreshModuleRuntime$($ReactRefreshCurrentExports$);
+}
+
+/***/ }),
+
 /***/ "./src/pages/Content/ui_components/Button.jsx":
 /*!****************************************************!*\
   !*** ./src/pages/Content/ui_components/Button.jsx ***!
@@ -82378,7 +82542,7 @@ function Title() {
     className: "metadata pr-1"
   }, "Powered by"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     style: {
-      transform: "translateY('-2px')"
+      transform: 'translateY(-2px)'
     }
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -82846,7 +83010,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "isValidBlockNumber": () => (/* binding */ isValidBlockNumber),
 /* harmony export */   "isValidEOAAddress": () => (/* binding */ isValidEOAAddress),
 /* harmony export */   "isValidTransactionHash": () => (/* binding */ isValidTransactionHash),
-/* harmony export */   "searchTypes": () => (/* binding */ searchTypes)
+/* harmony export */   "searchTypes": () => (/* binding */ searchTypes),
+/* harmony export */   "shortenAddress": () => (/* binding */ shortenAddress)
 /* harmony export */ });
 /* harmony import */ var _chains__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chains */ "./src/pages/Content/utils/chains.js");
 /* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ethers */ "./node_modules/.pnpm/ethers@6.7.0/node_modules/ethers/lib.esm/address/checks.js");
@@ -82983,6 +83148,17 @@ const getCurrencyFormattedString = (val, decimals = 2, currency = 'USD', ignoreS
     return minus + _val.slice(0, -3) + currencySuffix;
   }
   return minus + _val + currencySuffix;
+};
+const shortenAddress = (str, isLengthier) => {
+  if (!str) {
+    return '';
+  }
+  if (str && isLengthier) {
+    return str.substring(0, 15) + '...' + str.substring(str.length - 15, str.length);
+  } else if (str.length > 20) {
+    return str.substring(0, 5) + '...' + str.substring(str.length - 4, str.length);
+  }
+  return str;
 };
 
 
@@ -94065,7 +94241,7 @@ const SWRConfig = swr_internal__WEBPACK_IMPORTED_MODULE_2__.OBJECT.definePropert
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("ff25da5d9b066b5d11da")
+/******/ 		__webpack_require__.h = () => ("f63649178e2f93723385")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

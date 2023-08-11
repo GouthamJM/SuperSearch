@@ -22,7 +22,7 @@ export default function Title() {
       </div>
       <div className="d-flex flex-row align-items-center gap-2">
         <div className="metadata pr-1">Powered by</div>
-        <div style={{ transform: "translateY('-2px')" }}>
+        <div style={{ transform: 'translateY(-2px)' }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="65"
