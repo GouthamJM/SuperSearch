@@ -6,6 +6,12 @@ $mediumFont: 500;
 $semiBoldFont: 600;
 $boldFont: 700;
 
+$primaryColor:#000427;
+
+
+$primary: #000427;
+$secondary: #FF4D8B;
+
 $black: #000000;
 $white: #ffffff;
 $ivory: #f5f9e9;
@@ -427,19 +433,3 @@ $lineHeight14: 14px;
 }
 
 
-
-$MprimaryLight:#8abdff; 
-$Mprimary: #6d5dfc;
-$MprimaryDark: #5b0eeb;
-
-$Mwhite: #FFFFFF;
-$MgreyLight1: #E4EBF5;
-$MgreyLight2: #c8d0e7;
-$MgreyLight3: #bec8e4;
-$MgreyDark: #9baacf;
-
-$shadow: .3rem .3rem .6rem $MgreyLight2, 
--.2rem -.2rem .5rem $Mwhite;
-
-$inner-shadow: inset .2rem .2rem .5rem $MgreyLight2, 
-inset -.2rem -.2rem .5rem $Mwhite;

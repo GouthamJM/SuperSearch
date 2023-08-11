@@ -1,7 +1,18 @@
+@import "./bootstrap.css";
 @import "abstraction/font";
 @import "abstraction/flex";
-@import "components/button";
 @import "constants/variable";
 @import "layout/home";
 @import "layout/transaction";
 
+
+
+@font-face {
+    font-family: 'Inter';
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;700;800;900&display=swap');
+}
+
+
+.cursorPointer{
+    cursor: pointer;
+}

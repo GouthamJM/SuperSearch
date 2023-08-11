@@ -97,6 +97,7 @@ const getPercentage = (numerator, denominator, options = { decimal: 2 }) => {
     (divide(numerator, denominator) * 100).toFixed(options.decimal)
   );
 };
+
 export {
   chainServices,
   getStringType,

@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Form from 'react-bootstrap/Form';
 import { chainServices } from '../utils';
 
 function Dropdown(props) {
@@ -13,13 +12,18 @@ function Dropdown(props) {
     onChange?.(_chain);
   };
   return (
-    <Form.Select aria-label="Select chain" {...rest} onChange={chainSelect}>
+    <select
+      aria-label="Select chain"
+      {...rest}
+      onChange={chainSelect}
+      className="supersearch-form-select"
+    >
       {chainServices.getAllChainsData()?.map((_item) => (
         <option value={_item.name} key={_item.name}>
           {_item.label}
         </option>
       ))}
-    </Form.Select>
+    </select>
   );
 }
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+
 import { useGlobalContext } from '../context/globalContext';
-import TransactionDetail from './TransactionDetail';
+import TransactionDetail from './components/TransactionDetail';
 import { useTransactionDetail } from '../hooks/swr/useTransactionDetail';
-import Header from './Header';
+import Header from './components/Header';
 
 export default function Transaction() {
   const { state } = useGlobalContext();
@@ -14,7 +14,7 @@ export default function Transaction() {
   );
 
   return (
-    <div className="transactionContainer px-2 py-4">
+    <div>
       <div className="pb-2">
         <Header type="transaction" />
       </div>
@@ -22,17 +22,10 @@ export default function Transaction() {
         <p>Loading...</p>
       ) : (
         <>
+          <div className="heading6 pb-3">Transaction details</div>
           {transactionDetail ? (
-            <div>
-              <Container>
-                <Row>
-                  <Col md="auto">
-                    <div className="bg-light bg-gradient px-2 py-4 rounded">
-                      <TransactionDetail {...transactionDetail} />
-                    </div>
-                  </Col>
-                </Row>
-              </Container>
+            <div className="transactionBox">
+              <TransactionDetail {...transactionDetail} />
             </div>
           ) : (
             <div className="heading5">No transaction found</div>

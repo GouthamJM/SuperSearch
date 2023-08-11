@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { useGlobalContext } from '../context/globalContext';
 import Header from './Header';
-import WalletDetail from './WalletDetail';
+import WalletDetail from './components/WalletDetail';
 import { useWalletBalance } from '../hooks/swr/useWalletBalance';
 // import { useWalletPortfolioGraph } from '../hooks/swr/useWalletPortfolioGraph';
 

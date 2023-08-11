@@ -4,6 +4,9 @@ import { useMemo } from 'react';
 import Transaction from './pages/Transaction';
 import { GlobalContext, useGlobalReducer } from './context/globalContext';
 import Wallet from './pages/Wallet';
+import Layout from './pages/Layout';
+import Header from './pages/Header';
+import Title from './ui_components/Title';
 
 export const allPages = {
   home: 'home',
@@ -25,9 +28,46 @@ function InjectMaster() {
         return <Home />;
     }
   }, [globalState.state.steps]);
+
+  const [accordion, setAccordion] = React.useState(false);
+
   return (
     <GlobalContext.Provider value={globalState}>
-      <div className="homePage">{steps}</div>
+      <div className="homePage">
+        <Layout>
+          <div className={accordion ? 'pb-4' : ''}>
+            <div
+              className="d-flex cursorPointer"
+              onClick={() => setAccordion(!accordion)}
+            >
+              <div className="flex-grow-1">
+                <Title />
+              </div>
+              <div className="flex-grow-2">
+                <div className={` ${accordion ? 'rotateImage' : ''}`}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M5.25 8.625L12 15.375L18.75 8.625"
+                      stroke="white"
+                      stroke-width="2.25"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {accordion && <>{steps}</>}
+        </Layout>
+      </div>
     </GlobalContext.Provider>
   );
 }

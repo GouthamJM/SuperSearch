@@ -61,8 +61,8 @@
     @include fontStyle(
       $fontFamily: $font_Inter,
       $size: $font16,
-      $weight: $semiBoldFont,
-      $color: $primaryBlue,
+      $weight: $boldFont,
+      $color: $white,
       $lineHeight: $lineHeight24
     );
     @include wordSpaceBreak;
@@ -118,7 +118,7 @@
       $fontFamily: $font_Inter,
       $size: $font12,
       $weight: $regularFont,
-      $color: $primaryBlue,
+      $color: $white,
       $lineHeight: $lineHeight18
     );
     @include wordSpaceBreak;
@@ -172,13 +172,11 @@
     @include fontStyle(
       $fontFamily: $font_Inter,
       $size: $font10,
-      $weight: $mediumFont,
-      $color: $primaryBlue,
+      $weight: $regularFont,
+      $color: $white,
       $lineHeight: $lineHeight16
     );
-     &.warning {
-      color: $red !important;;
-    }
+   
     @include wordSpaceBreak;
   }
 

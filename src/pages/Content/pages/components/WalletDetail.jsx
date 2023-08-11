@@ -1,7 +1,7 @@
 import { Container, Row, Col } from 'react-bootstrap';
 import React from 'react';
 
-export default function WalletDetail({}) {
+export default function WalletDetail() {
   return (
     <Container>
       <Row>
