@@ -2,7 +2,7 @@ import React from 'react';
 
 import { chainServices } from '../utils';
 
-function Dropdown(props) {
+function ChainDropdown(props) {
   const { onChange, ...rest } = props;
 
   const chainSelect = (e) => {
@@ -27,4 +27,4 @@ function Dropdown(props) {
   );
 }
 
-export default Dropdown;
+export default ChainDropdown;

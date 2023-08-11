@@ -42,3 +42,30 @@
         padding-bottom: 0px;
     }
 }
+.walletBox{
+    background-color: #111929;
+    border-radius: 8px;
+    padding: 16px;
+}
+.walletContainer{
+    padding-top: 4px;
+    .walletHeader{
+        padding-bottom: 16px;
+    }
+    .walletBody{
+        .walletBalance{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-bottom: 20px;
+            .walletItem{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                &:first-child{
+                    border-right:1px solid #2B3743;
+                }
+            }
+        }
+      
+    }
+}

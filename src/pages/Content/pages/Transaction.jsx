@@ -23,13 +23,9 @@ export default function Transaction() {
       ) : (
         <>
           <div className="heading6 pb-3">Transaction details</div>
-          {transactionDetail ? (
-            <div className="transactionBox">
-              <TransactionDetail {...transactionDetail} />
-            </div>
-          ) : (
-            <div className="heading5">No transaction found</div>
-          )}
+          <div className="transactionBox">
+            <TransactionDetail {...transactionDetail} />
+          </div>
         </>
       )}
     </div>

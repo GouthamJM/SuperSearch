@@ -4,8 +4,8 @@ import { useMemo } from 'react';
 import Transaction from './pages/Transaction';
 import { GlobalContext, useGlobalReducer } from './context/globalContext';
 import Wallet from './pages/Wallet';
-import Layout from './pages/Layout';
-import Header from './pages/Header';
+import Layout from './pages/components/Layout';
+
 import Title from './ui_components/Title';
 
 export const allPages = {

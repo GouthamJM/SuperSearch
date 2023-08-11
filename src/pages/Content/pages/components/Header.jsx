@@ -1,10 +1,10 @@
 import React from 'react';
-import Input from '../ui_components/Input';
-import { ButtonP } from '../ui_components/Button';
-import { useGlobalContext } from '../context/globalContext';
-import { allPages } from '../InjectMaster';
-import Dropdown from '../ui_components/Dropdown';
-import { getSearchType, searchTypes } from '../utils';
+import Input from '../../ui_components/Input';
+import { ButtonP } from '../../ui_components/Button';
+import { useGlobalContext } from '../../context/globalContext';
+import { allPages } from '../../InjectMaster';
+import ChainDropdown from '../../ui_components/ChainDropdown';
+import { getSearchType, searchTypes } from '../../utils';
 
 export default function Header() {
   const { updateStep, updateSearchForm, state } = useGlobalContext();
@@ -29,7 +29,7 @@ export default function Header() {
           <Input value={search} onChange={(e) => setSearch(e.target.value)} />
         </div>
         <div className="flex-grow-2">
-          <Dropdown
+          <ChainDropdown
             value={chain.name}
             onChange={(item) => {
               setChain(item);

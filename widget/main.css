@@ -65,9 +65,9 @@
 
 .heading5 {
   font-family: "Inter", sans-serif;
-  font-size: 18px;
-  font-weight: 600;
-  color: #013440;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
   line-height: 27px;
   word-break: break-word;
   white-space: pre-wrap;
@@ -95,7 +95,7 @@
   font-family: "Inter", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #013440;
+  color: #ffffff;
   line-height: 21px;
   word-break: break-word;
   white-space: pre-wrap;
@@ -164,7 +164,7 @@
   font-family: "Inter", sans-serif;
   font-size: 12px;
   font-weight: 400;
-  color: #80999f;
+  color: #ADB5BD;
   line-height: 18px;
   word-break: break-word;
   white-space: pre-wrap;
@@ -341,6 +341,32 @@
   border-bottom: 0px;
   margin-bottom: 0px;
   padding-bottom: 0px;
+}
+
+.walletBox {
+  background-color: #111929;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.walletContainer {
+  padding-top: 4px;
+}
+.walletContainer .walletHeader {
+  padding-bottom: 16px;
+}
+.walletContainer .walletBody .walletBalance {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 20px;
+}
+.walletContainer .walletBody .walletBalance .walletItem {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.walletContainer .walletBody .walletBalance .walletItem:first-child {
+  border-right: 1px solid #2B3743;
 }
 
 @font-face {

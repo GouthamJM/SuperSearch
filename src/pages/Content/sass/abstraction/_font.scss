@@ -49,9 +49,9 @@
   .heading5 {
     @include fontStyle(
       $fontFamily: $font_Inter,
-      $size: $font18,
-      $weight: $semiBoldFont,
-      $color: $primaryBlue,
+      $size: $font20,
+      $weight: $boldFont,
+      $color: $white,
       $lineHeight: $lineHeight27
     );
     @include wordSpaceBreak;
@@ -73,7 +73,7 @@
       $fontFamily: $font_Inter,
       $size: $font14,
       $weight: $regularFont,
-      $color: $primaryBlue,
+      $color: $white,
       $lineHeight: $lineHeight21
     );
 
@@ -133,7 +133,7 @@
       $fontFamily: $font_Inter,
       $size: $font12,
       $weight: $regularFont,
-      $color: $gray50,
+      $color: #ADB5BD,
       $lineHeight: $lineHeight18
     );
     @include wordSpaceBreak;
