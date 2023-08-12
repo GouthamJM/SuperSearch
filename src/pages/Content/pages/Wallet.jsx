@@ -1,13 +1,13 @@
 import React from 'react';
 import { useGlobalContext } from '../context/globalContext';
-import Header from './components/Header';
 import WalletDetail from './components/WalletDetail';
 import { useWalletBalance } from '../hooks/swr/useWalletBalance';
 import { useWalletTransactions } from '../hooks/swr/useWalletTransactions';
 import WalletTransactions from './components/WalletTransactions';
+import { useEffect } from 'react';
 
 export default function Wallet() {
-  const { state } = useGlobalContext();
+  const { state, updateAPILoader } = useGlobalContext();
 
   const { walletBalance, walletBalanceLoader } = useWalletBalance(
     state.searchForm.chain.chain_id,
@@ -19,16 +19,15 @@ export default function Wallet() {
     state.searchForm.search
   );
 
-  console.log(walletTransactions?.items, 'walletTransactions');
+  useEffect(() => {
+    if (!walletBalanceLoader && !walletTransactionLoader) {
+      updateAPILoader(false);
+    }
+  }, [walletBalanceLoader, walletTransactionLoader]);
 
   return (
-    <div className="pb-2">
-      <div className="pb-2">
-        <Header type="wallet" />
-      </div>
-      {walletBalanceLoader || walletTransactionLoader ? (
-        <p>Loading...</p>
-      ) : (
+    <div>
+      {walletBalanceLoader || walletTransactionLoader ? null : (
         <>
           <div className="heading6 pb-2">Address details</div>
           {walletBalance ? (

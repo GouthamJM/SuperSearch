@@ -2,33 +2,29 @@ import React from 'react';
 import Input from '../../ui_components/Input';
 import { ButtonP } from '../../ui_components/Button';
 import { useGlobalContext } from '../../context/globalContext';
-import { allPages } from '../../InjectMaster';
 import ChainDropdown from '../../ui_components/ChainDropdown';
-import { getSearchType, searchTypes } from '../../utils';
+import { useEffect } from 'react';
 
 export default function Header() {
-  const { updateStep, updateSearchForm, state } = useGlobalContext();
+  const { state, updatePageDetail } = useGlobalContext();
 
   const [chain, setChain] = React.useState(state.searchForm.chain);
   const [search, setSearch] = React.useState(state.searchForm.search);
 
   const onStateSubmit = () => {
-    const searchType = getSearchType(search);
-    updateSearchForm(search, chain, searchType);
-    if (searchType === searchTypes.address) {
-      updateStep(allPages.wallet);
-    } else if (searchType === searchTypes.transactionHash) {
-      updateStep(allPages.transaction);
-    }
+    updatePageDetail(search, chain);
   };
 
+  useEffect(() => {
+    setSearch(state.searchForm.search);
+  }, [state.searchForm.search]);
   return (
     <div className="pb-3">
-      <div className="d-flex align-items-center pb-4 gap-3">
-        <div className="flex-grow-1">
+      <div className="homeSearchHeader">
+        <div>
           <Input value={search} onChange={(e) => setSearch(e.target.value)} />
         </div>
-        <div className="flex-grow-2">
+        <div>
           <ChainDropdown
             value={chain.name}
             onChange={(item) => {
@@ -38,7 +34,22 @@ export default function Header() {
         </div>
       </div>
       <div>
-        <ButtonP onClick={onStateSubmit}>Search</ButtonP>
+        <ButtonP onClick={onStateSubmit}>
+          {state.apiLoader ? (
+            <>
+              Loading
+              <img
+                alt="loading"
+                className="loadingImage"
+                src={
+                  'https://s3-alpha-sig.figma.com/img/67ce/f0ec/5361073ef5fcfb51079c35ccd05380bf?Expires=1692576000&Signature=IKBLMiKTm8M6Jzi2pB9krlPLFSDZy7C9pVSW6tqphe~n8ODdo4SaI1-kUThfmjXPQJWfnR3jP93U29K~Q1AIkTgvBLFlu2aXe6fmh93Ydp1smT798Ta-ptsaOPgBBvrefweUUQXwdciAxB1yckMxX8ey6fXODsHBi5OHbHURyMLpbEwkhPXiBK~PeIcGOQ9XuABYJu1unK3g3T~vy5Tx0ov-5L68o6kVko7Lp7KqlgaMKDY4MYf554wfywyCkaSO4x5HZqCZ72ONugWOIv~iWzw~LDi6zOQhwd57UZWVD9eCKULZ6ZfQr6SRnzsMZSGOyAeWR~e2AvOV~~C9Dmqc8A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
+                }
+              />
+            </>
+          ) : (
+            <>Search</>
+          )}
+        </ButtonP>
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 function ButtonP(props) {
   let { children, ...rest } = props;
   return (
-    <div class="d-grid">
+    <div className="d-grid">
       <button type="button" class="searchBtn searchBtn-primary" {...rest}>
         {children}
       </button>
@@ -15,8 +15,8 @@ function ButtonP(props) {
 function ButtonS(props) {
   let { children, ...rest } = props;
   return (
-    <div class="d-grid">
-      <button type="button" class="btn btn-secondary">
+    <div className="d-grid">
+      <button type="button" class="btn btn-secondary" {...rest}>
         Search
       </button>
     </div>
@@ -26,8 +26,8 @@ function ButtonS(props) {
 function ButtonL(props) {
   let { children, ...rest } = props;
   return (
-    <div class="d-grid">
-      <Button {...rest} variant="light">
+    <div className="d-grid">
+      <Button {...rest} variant="light" type="button">
         {children}
       </Button>
     </div>

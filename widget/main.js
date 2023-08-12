@@ -80638,11 +80638,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_Wallet__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/Wallet */ "./src/pages/Content/pages/Wallet.jsx");
 /* harmony import */ var _pages_components_Layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/components/Layout */ "./src/pages/Content/pages/components/Layout.jsx");
 /* harmony import */ var _ui_components_Title__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ui_components/Title */ "./src/pages/Content/ui_components/Title.jsx");
+/* harmony import */ var _pages_components_Header__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./pages/components/Header */ "./src/pages/Content/pages/components/Header.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
 
 var _s = __webpack_require__.$Refresh$.signature();
+
 
 
 
@@ -80659,6 +80661,7 @@ const allPages = {
 function InjectMaster() {
   _s();
   const globalState = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.useGlobalReducer)();
+  console.log(globalState.state.steps, 'globalState.state.steps');
   const steps = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => {
     switch (globalState.state.steps) {
       case allPages.home:
@@ -80679,7 +80682,7 @@ function InjectMaster() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_pages_components_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: accordion ? 'pb-4' : ''
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "d-flex cursorPointer",
+    className: "d-flex cursorPointer pb-2",
     onClick: () => setAccordion(!accordion)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "flex-grow-1"
@@ -80699,7 +80702,11 @@ function InjectMaster() {
     "stroke-width": "2.25",
     "stroke-linecap": "round",
     "stroke-linejoin": "round"
-  })))))), accordion && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, steps))));
+  })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, accordion && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "pb-2"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_pages_components_Header__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    type: "wallet"
+  })), steps))))));
 }
 _s(InjectMaster, "jHKOUUAnwGHvho6YpDc/Y/R2LuM=", false, function () {
   return [_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.useGlobalReducer];
@@ -80857,6 +80864,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils */ "./src/pages/Content/utils/index.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
@@ -80865,9 +80873,12 @@ var _s = __webpack_require__.$Refresh$.signature(),
   _s2 = __webpack_require__.$Refresh$.signature();
 
 
+
+
 const allPages = {
   home: 'home',
-  transaction: 'transaction'
+  transaction: 'transaction',
+  wallet: 'wallet'
 };
 const initValue = {
   steps: allPages.home,
@@ -80887,13 +80898,15 @@ const initValue = {
       appchain_of: null
     },
     searchType: ''
-  }
+  },
+  apiLoader: false
 };
 const actions = {
   resetStep: 'resetStep',
   updateStep: 'updateStep',
   updateSearchForm: 'updateSearchForm',
-  resetSearchForm: 'resetSearchForm'
+  resetSearchForm: 'resetSearchForm',
+  updateAPILoader: 'updateAPILoader'
 };
 const GlobalContext = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)(initValue);
 const reducer = (state, action) => {
@@ -80918,6 +80931,11 @@ const reducer = (state, action) => {
         ...state,
         searchForm: initValue.searchForm
       };
+    case actions.updateAPILoader:
+      return {
+        ...state,
+        apiLoader: action.payload
+      };
     default:
       return state;
   }
@@ -80925,39 +80943,64 @@ const reducer = (state, action) => {
 function useGlobalReducer() {
   _s();
   const [state, dispatch] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useReducer)(reducer, initValue);
-  const globalState = {
-    state,
-    updateStep: step => {
-      dispatch({
-        type: actions.updateStep,
-        payload: step
-      });
-    },
-    resetStep: step => {
-      dispatch({
-        type: actions.resetStep,
-        payload: step
-      });
-    },
-    updateSearchForm: (search, chain, searchType) => {
-      dispatch({
-        type: actions.updateSearchForm,
-        payload: {
-          search,
-          chain,
-          searchType
+  const globalState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => {
+    return {
+      state,
+      updateStep: step => {
+        dispatch({
+          type: actions.updateStep,
+          payload: step
+        });
+      },
+      resetStep: step => {
+        dispatch({
+          type: actions.resetStep,
+          payload: step
+        });
+      },
+      updateSearchForm: (search, chain, searchType) => {
+        dispatch({
+          type: actions.updateSearchForm,
+          payload: {
+            search,
+            chain,
+            searchType
+          }
+        });
+      },
+      updateAPILoader: apiLoader => {
+        dispatch({
+          type: actions.updateAPILoader,
+          payload: apiLoader
+        });
+      },
+      updatePageDetail: function (search, chain) {
+        const searchType = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getSearchType)(search);
+        console.log(this, 'this');
+        console.log(searchType, 'searchType');
+        console.log(globalState, 'globalState');
+        console.log(chain, 'chain');
+        globalState.updateSearchForm(search, chain, searchType);
+        globalState.updateAPILoader(true);
+        console.log(_utils__WEBPACK_IMPORTED_MODULE_1__.searchTypes, 'searchTypes');
+        if (searchType === _utils__WEBPACK_IMPORTED_MODULE_1__.searchTypes.address) {
+          console.log('updated address');
+          globalState.updateStep(allPages.wallet);
+        } else if (searchType === _utils__WEBPACK_IMPORTED_MODULE_1__.searchTypes.transactionHash) {
+          console.log('updated transactionHash');
+          globalState.updateStep(allPages.transaction);
         }
-      });
-    },
-    resetSearchForm: () => {
-      dispatch({
-        type: actions.resetSearchForm
-      });
-    }
-  };
+      },
+      resetSearchForm: () => {
+        dispatch({
+          type: actions.resetSearchForm
+        });
+      }
+    };
+  }, [state]);
   return globalState;
 }
-_s(useGlobalReducer, "uQZMx2sOy6mI/8rjsDg4EjXzeJY=");
+_s(useGlobalReducer, "lnoVZn6Lqq3gYARqaJ9tK389acI=");
 function useGlobalContext() {
   _s2();
   const {
@@ -80965,17 +81008,21 @@ function useGlobalContext() {
     updateStep,
     resetStep,
     updateSearchForm,
-    resetSearchForm
+    resetSearchForm,
+    updateAPILoader,
+    updatePageDetail
   } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(GlobalContext);
   return {
     state,
     updateStep,
     resetStep,
     updateSearchForm,
-    resetSearchForm
+    resetSearchForm,
+    updateAPILoader,
+    updatePageDetail
   };
 }
-_s2(useGlobalContext, "N9WDosdJgfPs1soqe2cOwIZjhLM=");
+_s2(useGlobalContext, "iwwzlZMJNcBKHlDIspZiaspwQ9g=");
 
 const $ReactRefreshModuleId$ = __webpack_require__.$Refresh$.moduleId;
 const $ReactRefreshCurrentExports$ = __react_refresh_utils__.getModuleExports(
@@ -81502,17 +81549,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Header */ "./src/pages/Content/pages/components/Header.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
 
 
-
 function Home() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    type: "home"
-  });
+  return null;
 }
 _c = Home;
 var _c;
@@ -81567,7 +81610,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _context_globalContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../context/globalContext */ "./src/pages/Content/context/globalContext.js");
 /* harmony import */ var _components_TransactionDetail__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/TransactionDetail */ "./src/pages/Content/pages/components/TransactionDetail.jsx");
 /* harmony import */ var _hooks_swr_useTransactionDetail__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hooks/swr/useTransactionDetail */ "./src/pages/Content/hooks/swr/useTransactionDetail.js");
-/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Header */ "./src/pages/Content/pages/components/Header.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
@@ -81581,23 +81623,25 @@ var _s = __webpack_require__.$Refresh$.signature();
 function Transaction() {
   _s();
   const {
-    state
+    state,
+    updateAPILoader
   } = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_1__.useGlobalContext)();
   const {
     transactionDetail,
     transactionDeailLoader
   } = (0,_hooks_swr_useTransactionDetail__WEBPACK_IMPORTED_MODULE_3__.useTransactionDetail)(state.searchForm.chain.chain_id, state.searchForm.search);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "pb-2"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    type: "transaction"
-  })), transactionDeailLoader ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Loading...") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (!transactionDeailLoader) {
+      updateAPILoader(false);
+    }
+  }, [transactionDeailLoader]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, transactionDeailLoader ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "heading6 pb-3"
   }, "Transaction details"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionBox"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_TransactionDetail__WEBPACK_IMPORTED_MODULE_2__["default"], transactionDetail))));
 }
-_s(Transaction, "fXidqPL0cx1/GuIJ+0E1P24MpH8=", false, function () {
+_s(Transaction, "SBvBzFgbjUi55xrJ06Bl3XM/9YU=", false, function () {
   return [_context_globalContext__WEBPACK_IMPORTED_MODULE_1__.useGlobalContext, _hooks_swr_useTransactionDetail__WEBPACK_IMPORTED_MODULE_3__.useTransactionDetail];
 });
 _c = Transaction;
@@ -81651,11 +81695,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _context_globalContext__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../context/globalContext */ "./src/pages/Content/context/globalContext.js");
-/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Header */ "./src/pages/Content/pages/components/Header.jsx");
-/* harmony import */ var _components_WalletDetail__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/WalletDetail */ "./src/pages/Content/pages/components/WalletDetail.jsx");
-/* harmony import */ var _hooks_swr_useWalletBalance__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../hooks/swr/useWalletBalance */ "./src/pages/Content/hooks/swr/useWalletBalance.js");
-/* harmony import */ var _hooks_swr_useWalletTransactions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../hooks/swr/useWalletTransactions */ "./src/pages/Content/hooks/swr/useWalletTransactions.js");
-/* harmony import */ var _components_WalletTransactions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/WalletTransactions */ "./src/pages/Content/pages/components/WalletTransactions.jsx");
+/* harmony import */ var _components_WalletDetail__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/WalletDetail */ "./src/pages/Content/pages/components/WalletDetail.jsx");
+/* harmony import */ var _hooks_swr_useWalletBalance__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../hooks/swr/useWalletBalance */ "./src/pages/Content/hooks/swr/useWalletBalance.js");
+/* harmony import */ var _hooks_swr_useWalletTransactions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../hooks/swr/useWalletTransactions */ "./src/pages/Content/hooks/swr/useWalletTransactions.js");
+/* harmony import */ var _components_WalletTransactions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/WalletTransactions */ "./src/pages/Content/pages/components/WalletTransactions.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
@@ -81671,41 +81714,40 @@ var _s = __webpack_require__.$Refresh$.signature();
 function Wallet() {
   _s();
   const {
-    state
+    state,
+    updateAPILoader
   } = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_1__.useGlobalContext)();
   const {
     walletBalance,
     walletBalanceLoader
-  } = (0,_hooks_swr_useWalletBalance__WEBPACK_IMPORTED_MODULE_4__.useWalletBalance)(state.searchForm.chain.chain_id, state.searchForm.search);
+  } = (0,_hooks_swr_useWalletBalance__WEBPACK_IMPORTED_MODULE_3__.useWalletBalance)(state.searchForm.chain.chain_id, state.searchForm.search);
   const {
     walletTransactions,
     walletTransactionLoader
-  } = (0,_hooks_swr_useWalletTransactions__WEBPACK_IMPORTED_MODULE_5__.useWalletTransactions)(state.searchForm.chain.chain_id, state.searchForm.search);
-  console.log(walletTransactions?.items, 'walletTransactions');
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "pb-2"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "pb-2"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    type: "wallet"
-  })), walletBalanceLoader || walletTransactionLoader ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Loading...") : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  } = (0,_hooks_swr_useWalletTransactions__WEBPACK_IMPORTED_MODULE_4__.useWalletTransactions)(state.searchForm.chain.chain_id, state.searchForm.search);
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    if (!walletBalanceLoader && !walletTransactionLoader) {
+      updateAPILoader(false);
+    }
+  }, [walletBalanceLoader, walletTransactionLoader]);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, walletBalanceLoader || walletTransactionLoader ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "heading6 pb-2"
   }, "Address details"), walletBalance ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "walletBox pb-4"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_WalletDetail__WEBPACK_IMPORTED_MODULE_3__["default"], walletBalance)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_WalletDetail__WEBPACK_IMPORTED_MODULE_2__["default"], walletBalance)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "heading5"
   }, "No account wallet address found"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "heading6 pt-4 pb-2"
   }, "Recent Transactions"), walletTransactions.items ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "walletTransctionBox"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_WalletTransactions__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_WalletTransactions__WEBPACK_IMPORTED_MODULE_5__["default"], {
     transactions: walletTransactions.items
   })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "heading5"
   }, "No account wallet address found")));
 }
-_s(Wallet, "nCWCEZ335er8NsGKLX1kW1GZlP8=", false, function () {
-  return [_context_globalContext__WEBPACK_IMPORTED_MODULE_1__.useGlobalContext, _hooks_swr_useWalletBalance__WEBPACK_IMPORTED_MODULE_4__.useWalletBalance, _hooks_swr_useWalletTransactions__WEBPACK_IMPORTED_MODULE_5__.useWalletTransactions];
+_s(Wallet, "oKVEkf3WqDm0/lEvrsNoq5m9Iu0=", false, function () {
+  return [_context_globalContext__WEBPACK_IMPORTED_MODULE_1__.useGlobalContext, _hooks_swr_useWalletBalance__WEBPACK_IMPORTED_MODULE_3__.useWalletBalance, _hooks_swr_useWalletTransactions__WEBPACK_IMPORTED_MODULE_4__.useWalletTransactions];
 });
 _c = Wallet;
 var _c;
@@ -81760,9 +81802,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ui_components_Input__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../ui_components/Input */ "./src/pages/Content/ui_components/Input.jsx");
 /* harmony import */ var _ui_components_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../ui_components/Button */ "./src/pages/Content/ui_components/Button.jsx");
 /* harmony import */ var _context_globalContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../context/globalContext */ "./src/pages/Content/context/globalContext.js");
-/* harmony import */ var _InjectMaster__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../InjectMaster */ "./src/pages/Content/InjectMaster.jsx");
-/* harmony import */ var _ui_components_ChainDropdown__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../ui_components/ChainDropdown */ "./src/pages/Content/ui_components/ChainDropdown.jsx");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../utils */ "./src/pages/Content/utils/index.js");
+/* harmony import */ var _ui_components_ChainDropdown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../ui_components/ChainDropdown */ "./src/pages/Content/ui_components/ChainDropdown.jsx");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
@@ -81774,46 +81814,41 @@ var _s = __webpack_require__.$Refresh$.signature();
 
 
 
-
 function Header() {
   _s();
   const {
-    updateStep,
-    updateSearchForm,
-    state
+    state,
+    updatePageDetail
   } = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.useGlobalContext)();
   const [chain, setChain] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(state.searchForm.chain);
   const [search, setSearch] = react__WEBPACK_IMPORTED_MODULE_0___default().useState(state.searchForm.search);
   const onStateSubmit = () => {
-    const searchType = (0,_utils__WEBPACK_IMPORTED_MODULE_6__.getSearchType)(search);
-    updateSearchForm(search, chain, searchType);
-    if (searchType === _utils__WEBPACK_IMPORTED_MODULE_6__.searchTypes.address) {
-      updateStep(_InjectMaster__WEBPACK_IMPORTED_MODULE_4__.allPages.wallet);
-    } else if (searchType === _utils__WEBPACK_IMPORTED_MODULE_6__.searchTypes.transactionHash) {
-      updateStep(_InjectMaster__WEBPACK_IMPORTED_MODULE_4__.allPages.transaction);
-    }
+    updatePageDetail(search, chain);
   };
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    setSearch(state.searchForm.search);
+  }, [state.searchForm.search]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pb-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "d-flex align-items-center pb-4 gap-3"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "flex-grow-1"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ui_components_Input__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    className: "homeSearchHeader"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ui_components_Input__WEBPACK_IMPORTED_MODULE_1__["default"], {
     value: search,
     onChange: e => setSearch(e.target.value)
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "flex-grow-2"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ui_components_ChainDropdown__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ui_components_ChainDropdown__WEBPACK_IMPORTED_MODULE_4__["default"], {
     value: chain.name,
     onChange: item => {
       setChain(item);
     }
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ui_components_Button__WEBPACK_IMPORTED_MODULE_2__.ButtonP, {
     onClick: onStateSubmit
-  }, "Search")));
+  }, state.apiLoader ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, "Loading", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", {
+    alt: "loading",
+    className: "loadingImage",
+    src: 'https://s3-alpha-sig.figma.com/img/67ce/f0ec/5361073ef5fcfb51079c35ccd05380bf?Expires=1692576000&Signature=IKBLMiKTm8M6Jzi2pB9krlPLFSDZy7C9pVSW6tqphe~n8ODdo4SaI1-kUThfmjXPQJWfnR3jP93U29K~Q1AIkTgvBLFlu2aXe6fmh93Ydp1smT798Ta-ptsaOPgBBvrefweUUQXwdciAxB1yckMxX8ey6fXODsHBi5OHbHURyMLpbEwkhPXiBK~PeIcGOQ9XuABYJu1unK3g3T~vy5Tx0ov-5L68o6kVko7Lp7KqlgaMKDY4MYf554wfywyCkaSO4x5HZqCZ72ONugWOIv~iWzw~LDi6zOQhwd57UZWVD9eCKULZ6ZfQr6SRnzsMZSGOyAeWR~e2AvOV~~C9Dmqc8A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4'
+  })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, "Search"))));
 }
-_s(Header, "W3mLMt5Oj7f24+d93FYGSHf4m+Y=", false, function () {
+_s(Header, "kPuXRSglJu9/8BrjU6B+0eYcKXA=", false, function () {
   return [_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.useGlobalContext];
 });
 _c = Header;
@@ -81926,16 +81961,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ TransactionPage)
 /* harmony export */ });
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Container.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Row.js");
-/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Col.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Container.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Row.js");
+/* harmony import */ var react_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-bootstrap */ "./node_modules/.pnpm/react-bootstrap@2.8.0_@types+react@18.0.26_react-dom@18.2.0_react@18.2.0/node_modules/react-bootstrap/esm/Col.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils */ "./src/pages/Content/utils/index.js");
 /* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../constants */ "./src/pages/Content/constants/index.js");
+/* harmony import */ var _context_globalContext__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../context/globalContext */ "./src/pages/Content/context/globalContext.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
+
+var _s = __webpack_require__.$Refresh$.signature();
 
 
 
@@ -81958,31 +81996,39 @@ function TransactionPage({
   gas_metadata,
   from_address_label
 }) {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  _s();
+  const {
+    updatePageDetail,
+    state
+  } = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.useGlobalContext)();
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], {
     className: "p-0"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionColumn"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
     md: "4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportText medium"
-  }, "Tx Hash:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "supportText"
+  }, "Tx Hash:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "supportText clickableText",
+    onClick: () => {
+      updatePageDetail(tx_hash, state.searchForm.chain);
+    }
   }, tx_hash)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionColumn"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    className: "align-items-center"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    className: "align-items-center"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
     md: "4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportText medium"
-  }, "Status:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, successful ? _constants__WEBPACK_IMPORTED_MODULE_2__.successSvg : _constants__WEBPACK_IMPORTED_MODULE_2__.pendingSvg))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, "Status:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, successful ? _constants__WEBPACK_IMPORTED_MODULE_2__.successSvg : _constants__WEBPACK_IMPORTED_MODULE_2__.pendingSvg))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionColumn"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
     md: "4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportText medium"
-  }, "Block:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+  }, "Block:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
     className: "me-1"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
@@ -81997,62 +82043,71 @@ function TransactionPage({
     className: "supportText d-sm-inline"
   }, block_height)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionColumn"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
     md: "4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportText medium"
-  }, "Time Stamp:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, "Time Stamp:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "supportText"
   }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.formatDate)(block_signed_at, true))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionColumn"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
     md: "4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportText medium"
-  }, "From:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "supportText"
+  }, "From:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "supportText clickableText",
+    onClick: () => {
+      updatePageDetail(from_address, state.searchForm.chain);
+    }
   }, from_address, from_address_label ? `(${from_address_label})` : '')))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionColumn"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
     md: "4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportText medium"
-  }, "To:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "supportText"
+  }, "To:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "supportText clickableText",
+    onClick: () => {
+      updatePageDetail(to_address, state.searchForm.chain);
+    }
   }, to_address)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionColumn"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
     md: "4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportText medium"
-  }, "Value:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, "Value:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "supportText"
   }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getTokenFormattedNumber)(Number(value), gas_metadata.contract_decimals), ' ', gas_metadata.contract_ticker_symbol, " (", pretty_value_quote, ")")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionColumn"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
     md: "4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportText medium"
-  }, "Transaction Fee:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, "Transaction Fee:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "supportText"
   }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getTokenFormattedNumber)(fees_paid, gas_metadata.contract_decimals, false), ' ', gas_metadata.contract_ticker_symbol, " (", pretty_gas_quote, ")")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionColumn"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
     md: "4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportText medium"
-  }, "Gas Price:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, "Gas Price:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "supportText"
   }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.gasValueWeiToGwei)(gas_price), " Gwei")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionColumn"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
     md: "4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportText medium"
-  }, " Gas Limit & Usage:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+  }, " Gas Limit & Usage:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
     className: "supportText"
   }, gas_offered, " | ", gas_spent, " (", (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getPercentage)(gas_spent, gas_offered), "%)")))))));
 }
+_s(TransactionPage, "TWL+9Df4sriZnCtA6jA/wSlgkxo=", false, function () {
+  return [_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.useGlobalContext];
+});
 _c = TransactionPage;
 var _c;
 __webpack_require__.$Refresh$.register(_c, "TransactionPage");
@@ -82200,27 +82255,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.2.0/node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils */ "./src/pages/Content/utils/index.js");
+/* harmony import */ var _context_globalContext__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../context/globalContext */ "./src/pages/Content/context/globalContext.js");
 /* provided dependency */ var __react_refresh_utils__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/lib/runtime/RefreshUtils.js");
 /* provided dependency */ var __react_refresh_error_overlay__ = __webpack_require__(/*! ./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js */ "./node_modules/.pnpm/@pmmmwh+react-refresh-webpack-plugin@0.5.10_react-refresh@0.14.0_type-fest@3.5.2_webpack-dev-_skrg7t5nsjnpr5enl42qxqlu2a/node_modules/@pmmmwh/react-refresh-webpack-plugin/overlay/index.js");
 __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js */ "./node_modules/.pnpm/react-refresh@0.14.0/node_modules/react-refresh/runtime.js");
+
+var _s = __webpack_require__.$Refresh$.signature();
 
 
 
 function WalletTransactions({
   transactions = []
 }) {
+  _s();
+  const {
+    updatePageDetail,
+    state
+  } = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_2__.useGlobalContext)();
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, transactions?.map(_item => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionItem"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pb-2 heading7"
-  }, "Hash: ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("b", null, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.shortenAddress)(_item.tx_hash))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, "Hash:", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "clickableText",
+    onClick: () => {
+      updatePageDetail(_item.tx_hash, state.searchForm.chain);
+    }
+  }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.shortenAddress)(_item.tx_hash))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportTextGray"
   }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.formatDate)(_item.block_signed_at, true))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pb-2 heading7"
   }, "Value: ", _item.pretty_value_quote), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportTextGray"
-  }, "To: ", (0,_utils__WEBPACK_IMPORTED_MODULE_1__.shortenAddress)(_item.to_address))))));
+  }, "To:", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+    className: "clickableText",
+    onClick: () => {
+      updatePageDetail(_item.to_address, state.searchForm.chain);
+    }
+  }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.shortenAddress)(_item.to_address)))))));
 }
+_s(WalletTransactions, "TWL+9Df4sriZnCtA6jA/wSlgkxo=", false, function () {
+  return [_context_globalContext__WEBPACK_IMPORTED_MODULE_2__.useGlobalContext];
+});
 _c = WalletTransactions;
 var _c;
 __webpack_require__.$Refresh$.register(_c, "WalletTransactions");
@@ -82287,7 +82363,7 @@ function ButtonP(props) {
     ...rest
   } = props;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "d-grid"
+    className: "d-grid"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", _extends({
     type: "button",
     class: "searchBtn searchBtn-primary"
@@ -82300,11 +82376,11 @@ function ButtonS(props) {
     ...rest
   } = props;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "d-grid"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+    className: "d-grid"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", _extends({
     type: "button",
     class: "btn btn-secondary"
-  }, "Search"));
+  }, rest), "Search"));
 }
 _c2 = ButtonS;
 function ButtonL(props) {
@@ -82313,9 +82389,10 @@ function ButtonL(props) {
     ...rest
   } = props;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    class: "d-grid"
+    className: "d-grid"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap_Button__WEBPACK_IMPORTED_MODULE_1__["default"], _extends({}, rest, {
-    variant: "light"
+    variant: "light",
+    type: "button"
   }), children));
 }
 _c3 = ButtonL;
@@ -94241,7 +94318,7 @@ const SWRConfig = swr_internal__WEBPACK_IMPORTED_MODULE_2__.OBJECT.definePropert
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("a3f76b3f87c1b1f51798")
+/******/ 		__webpack_require__.h = () => ("be80b901c7955f982ec4")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

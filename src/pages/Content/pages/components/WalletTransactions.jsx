@@ -1,14 +1,24 @@
 import React from 'react';
 import { formatDate, shortenAddress } from '../../utils';
+import { useGlobalContext } from '../../context/globalContext';
 
 export default function WalletTransactions({ transactions = [] }) {
+  const { updatePageDetail, state } = useGlobalContext();
   return (
     <div>
       {transactions?.map((_item) => (
         <div className="transactionItem">
           <div>
             <div className="pb-2 heading7">
-              Hash: <b>{shortenAddress(_item.tx_hash)}</b>
+              Hash:{' '}
+              <span
+                className="clickableText"
+                onClick={() => {
+                  updatePageDetail(_item.tx_hash, state.searchForm.chain);
+                }}
+              >
+                {shortenAddress(_item.tx_hash)}
+              </span>
             </div>
             <div className="supportTextGray">
               {formatDate(_item.block_signed_at, true)}
@@ -19,7 +29,15 @@ export default function WalletTransactions({ transactions = [] }) {
               Value: {_item.pretty_value_quote}
             </div>
             <div className="supportTextGray">
-              To: {shortenAddress(_item.to_address)}
+              To:{' '}
+              <span
+                className="clickableText"
+                onClick={() => {
+                  updatePageDetail(_item.to_address, state.searchForm.chain);
+                }}
+              >
+                {shortenAddress(_item.to_address)}
+              </span>
             </div>
           </div>
         </div>

@@ -294,6 +294,29 @@
   transform: rotate(180deg);
 }
 
+.homeSearchHeader {
+  display: grid;
+  grid-template-columns: auto 120px;
+  gap: 8px;
+  padding-bottom: 20px;
+}
+
+.loadingImage {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  transform: translate3d(6px, -5px, 0px);
+}
+
+.clickableText {
+  color: #2d9cdb;
+  cursor: pointer;
+  font-weight: 600;
+}
+.clickableText:hover {
+  text-decoration: underline;
+}
+
 @keyframes smoothScroll {
   0% {
     transform: translateY(-142px);

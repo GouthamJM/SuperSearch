@@ -7,6 +7,7 @@ import Wallet from './pages/Wallet';
 import Layout from './pages/components/Layout';
 
 import Title from './ui_components/Title';
+import Header from './pages/components/Header';
 
 export const allPages = {
   home: 'home',
@@ -16,6 +17,7 @@ export const allPages = {
 
 function InjectMaster() {
   const globalState = useGlobalReducer();
+  console.log(globalState.state.steps, 'globalState.state.steps');
   const steps = useMemo(() => {
     switch (globalState.state.steps) {
       case allPages.home:
@@ -37,7 +39,7 @@ function InjectMaster() {
         <Layout>
           <div className={accordion ? 'pb-4' : ''}>
             <div
-              className="d-flex cursorPointer"
+              className="d-flex cursorPointer pb-2"
               onClick={() => setAccordion(!accordion)}
             >
               <div className="flex-grow-1">
@@ -64,8 +66,18 @@ function InjectMaster() {
               </div>
             </div>
           </div>
-
-          {accordion && <>{steps}</>}
+          <div>
+            <div>
+              {accordion && (
+                <>
+                  <div className="pb-2">
+                    <Header type="wallet" />
+                  </div>
+                  {steps}
+                </>
+              )}
+            </div>
+          </div>
         </Layout>
       </div>
     </GlobalContext.Provider>

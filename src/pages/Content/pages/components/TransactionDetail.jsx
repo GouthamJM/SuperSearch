@@ -8,6 +8,7 @@ import {
 } from '../../utils';
 
 import { successSvg, pendingSvg } from '../../constants';
+import { useGlobalContext } from '../../context/globalContext';
 
 export default function TransactionPage({
   block_height,
@@ -26,6 +27,7 @@ export default function TransactionPage({
   gas_metadata,
   from_address_label,
 }) {
+  const { updatePageDetail, state } = useGlobalContext();
   return (
     <div>
       <div>
@@ -36,7 +38,14 @@ export default function TransactionPage({
                 <div className="supportText medium">Tx Hash:</div>
               </Col>
               <Col>
-                <p className="supportText">{tx_hash}</p>
+                <p
+                  className="supportText clickableText"
+                  onClick={() => {
+                    updatePageDetail(tx_hash, state.searchForm.chain);
+                  }}
+                >
+                  {tx_hash}
+                </p>
               </Col>
             </Row>
           </div>
@@ -90,7 +99,12 @@ export default function TransactionPage({
                 <div className="supportText medium">From:</div>
               </Col>
               <Col>
-                <p className="supportText">
+                <p
+                  className="supportText clickableText"
+                  onClick={() => {
+                    updatePageDetail(from_address, state.searchForm.chain);
+                  }}
+                >
                   {from_address}
                   {from_address_label ? `(${from_address_label})` : ''}
                 </p>
@@ -103,7 +117,14 @@ export default function TransactionPage({
                 <div className="supportText medium">To:</div>
               </Col>
               <Col>
-                <p className="supportText">{to_address}</p>
+                <p
+                  className="supportText clickableText"
+                  onClick={() => {
+                    updatePageDetail(to_address, state.searchForm.chain);
+                  }}
+                >
+                  {to_address}
+                </p>
               </Col>
             </Row>
           </div>

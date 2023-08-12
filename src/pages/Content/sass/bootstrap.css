@@ -78,10 +78,10 @@
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
-  --bs-body-color: #ADB5BD;
-  --bs-body-color-rgb: 33, 37, 41;
-  --bs-body-bg: #20293A;
-  --bs-body-bg-rgb: 255, 255, 255;
+  --bs-supersearch-body-color: #ADB5BD;
+  --bs-supersearch-body-color-rgb: 33, 37, 41;
+  --bs-supersearch-body-bg: #20293A;
+  --bs-supersearch-body-bg-rgb: 255, 255, 255;
   --bs-emphasis-color: #000;
   --bs-emphasis-color-rgb: 0, 0, 0;
   --bs-secondary-color: #ADB5BD;
@@ -126,10 +126,10 @@
 
 [data-bs-theme=dark] {
   color-scheme: dark;
-  --bs-body-color: #dee2e6;
-  --bs-body-color-rgb: 222, 226, 230;
-  --bs-body-bg: #212529;
-  --bs-body-bg-rgb: 33, 37, 41;
+  --bs-supersearch-body-color: #dee2e6;
+  --bs-supersearch-body-color-rgb: 222, 226, 230;
+  --bs-supersearch-body-bg: #212529;
+  --bs-supersearch-body-bg-rgb: 33, 37, 41;
   --bs-emphasis-color: #fff;
   --bs-emphasis-color-rgb: 255, 255, 255;
   --bs-secondary-color: rgba(222, 226, 230, 0.75);
@@ -196,9 +196,9 @@ body {
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
+  color: var(--bs-supersearch-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-supersearch-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -390,8 +390,8 @@ a > code {
 kbd {
   padding: 0.1875rem 0.375rem;
   font-size: 0.875em;
-  color: var(--bs-body-bg);
-  background-color: var(--bs-body-color);
+  color: var(--bs-supersearch-body-bg);
+  background-color: var(--bs-supersearch-body-color);
   border-radius: 0.25rem;
 }
 kbd kbd {
@@ -703,7 +703,7 @@ progress {
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-supersearch-body-bg);
   border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: var(--bs-border-radius);
   max-width: 100%;
@@ -1850,15 +1850,15 @@ progress {
   --bs-table-bg-type: initial;
   --bs-table-color-state: initial;
   --bs-table-bg-state: initial;
-  --bs-table-color: var(--bs-body-color);
-  --bs-table-bg: var(--bs-body-bg);
+  --bs-table-color: var(--bs-supersearch-body-color);
+  --bs-table-bg: var(--bs-supersearch-body-bg);
   --bs-table-border-color: var(--bs-border-color);
   --bs-table-accent-bg: transparent;
-  --bs-table-striped-color: var(--bs-body-color);
+  --bs-table-striped-color: var(--bs-supersearch-body-color);
   --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
-  --bs-table-active-color: var(--bs-body-color);
+  --bs-table-active-color: var(--bs-supersearch-body-color);
   --bs-table-active-bg: rgba(0, 0, 0, 0.1);
-  --bs-table-hover-color: var(--bs-body-color);
+  --bs-table-hover-color: var(--bs-supersearch-body-color);
   --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
   width: 100%;
   margin-bottom: 1rem;
@@ -2109,11 +2109,11 @@ progress {
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  color: var(--bs-body-color);
+  color: var(--bs-supersearch-body-color);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-supersearch-body-bg);
   background-clip: padding-box;
 
   border: none !important;
@@ -2132,7 +2132,7 @@ progress {
   cursor: pointer;
 }
 .superSearch-form-control:focus {
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-supersearch-body-bg);
   outline: 0;
 
 }
@@ -2162,7 +2162,7 @@ progress {
   margin: -0.375rem -0.75rem;
   -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
-  color: var(--bs-body-color);
+  color: var(--bs-supersearch-body-color);
   background-color: var(--bs-tertiary-bg);
   pointer-events: none;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2173,7 +2173,7 @@ progress {
   margin: -0.375rem -0.75rem;
   -webkit-margin-end: 0.75rem;
   margin-inline-end: 0.75rem;
-  color: var(--bs-body-color);
+  color: var(--bs-supersearch-body-color);
   background-color: var(--bs-tertiary-bg);
   pointer-events: none;
 
@@ -2201,7 +2201,7 @@ progress {
   padding: 0.375rem 0;
   margin-bottom: 0;
   line-height: 1.5;
-  color: var(--bs-body-color);
+  color: var(--bs-supersearch-body-color);
   background-color: transparent;
 
 }
@@ -2288,15 +2288,15 @@ textarea.superSearch-form-control-lg {
   --bs-supersearch-form-select-bg-img: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3.5 5.75L8 10.25L12.5 5.75' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   display: block;
   width: 100%;
-  padding: 0.5rem 2.25rem 0.5rem 0.75rem;
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  color: var(--bs-body-color);
+  color: var(--bs-supersearch-body-color);
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-supersearch-body-bg);
   background-image: var(--bs-supersearch-form-select-bg-img), var(--bs-supersearch-form-select-bg-icon, none);
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
@@ -2324,7 +2324,7 @@ textarea.superSearch-form-control-lg {
 }
 .supersearch-form-select:-moz-focusring {
   color: transparent;
-  text-shadow: 0 0 0 var(--bs-body-color);
+  text-shadow: 0 0 0 var(--bs-supersearch-body-color);
 }
 
 .supersearch-form-select-sm {
@@ -2370,7 +2370,7 @@ textarea.superSearch-form-control-lg {
 }
 
 .form-check-input {
-  --bs-form-check-bg: var(--bs-body-bg);
+  --bs-form-check-bg: var(--bs-supersearch-body-bg);
   width: 1em;
   height: 1em;
   margin-top: 0.25em;
@@ -2632,14 +2632,14 @@ textarea.superSearch-form-control-lg {
   padding-bottom: 0.625rem;
 }
 .form-floating > .superSearch-form-control:not(:-moz-placeholder-shown) ~ label {
-  color: rgba(var(--bs-body-color-rgb), 0.65);
+  color: rgba(var(--bs-supersearch-body-color-rgb), 0.65);
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 .form-floating > .superSearch-form-control:focus ~ label,
 .form-floating > .superSearch-form-control:not(:placeholder-shown) ~ label,
 .form-floating > .superSearch-form-control-plaintext ~ label,
 .form-floating > .supersearch-form-select ~ label {
-  color: rgba(var(--bs-body-color-rgb), 0.65);
+  color: rgba(var(--bs-supersearch-body-color-rgb), 0.65);
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 .form-floating > .superSearch-form-control:not(:-moz-placeholder-shown) ~ label::after {
@@ -2648,7 +2648,7 @@ textarea.superSearch-form-control-lg {
   z-index: -1;
   height: 1.5em;
   content: "";
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-supersearch-body-bg);
   border-radius: var(--bs-border-radius);
 }
 .form-floating > .superSearch-form-control:focus ~ label::after,
@@ -2660,11 +2660,11 @@ textarea.superSearch-form-control-lg {
   z-index: -1;
   height: 1.5em;
   content: "";
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-supersearch-body-bg);
   border-radius: var(--bs-border-radius);
 }
 .form-floating > .superSearch-form-control:-webkit-autofill ~ label {
-  color: rgba(var(--bs-body-color-rgb), 0.65);
+  color: rgba(var(--bs-supersearch-body-color-rgb), 0.65);
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 .form-floating > .superSearch-form-control-plaintext ~ label {
@@ -2714,7 +2714,7 @@ textarea.superSearch-form-control-lg {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: var(--bs-body-color);
+  color: var(--bs-supersearch-body-color);
   text-align: center;
   white-space: nowrap;
   background-color: var(--bs-tertiary-bg);
@@ -2957,8 +2957,8 @@ textarea.superSearch-form-control-lg {
   --bs-btn-font-size: 1rem;
   --bs-btn-font-weight: 400;
   --bs-btn-line-height: 1.5;
-  --bs-btn-color: var(--bs-body-color);
-  --bs-btn-bg: var(--bs-body-color);
+  --bs-btn-color: var(--bs-supersearch-body-color);
+  --bs-btn-bg: var(--bs-supersearch-body-color);
   --bs-btn-border-width: var(--bs-border-width);
   --bs-btn-border-color: transparent;
   --bs-btn-border-radius: var(--bs-border-radius);
@@ -3407,8 +3407,8 @@ textarea.superSearch-form-control-lg {
   --bs-ChainDropdown-padding-y: 0.5rem;
   --bs-ChainDropdown-spacer: 0.125rem;
   --bs-ChainDropdown-font-size: 1rem;
-  --bs-ChainDropdown-color: var(--bs-body-color);
-  --bs-ChainDropdown-bg: var(--bs-body-bg);
+  --bs-ChainDropdown-color: var(--bs-supersearch-body-color);
+  --bs-ChainDropdown-bg: var(--bs-supersearch-body-bg);
   --bs-ChainDropdown-border-color: var(--bs-border-color-translucent);
   --bs-ChainDropdown-border-radius: var(--bs-border-radius);
   --bs-ChainDropdown-border-width: var(--bs-border-width);
@@ -3416,8 +3416,8 @@ textarea.superSearch-form-control-lg {
   --bs-ChainDropdown-divider-bg: var(--bs-border-color-translucent);
   --bs-ChainDropdown-divider-margin-y: 0.5rem;
   --bs-ChainDropdown-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  --bs-ChainDropdown-link-color: var(--bs-body-color);
-  --bs-ChainDropdown-link-hover-color: var(--bs-body-color);
+  --bs-ChainDropdown-link-color: var(--bs-supersearch-body-color);
+  --bs-ChainDropdown-link-hover-color: var(--bs-supersearch-body-color);
   --bs-ChainDropdown-link-hover-bg: var(--bs-tertiary-bg);
   --bs-ChainDropdown-link-active-color: #fff;
   --bs-ChainDropdown-link-active-bg: #0d6efd;
@@ -3840,8 +3840,8 @@ textarea.superSearch-form-control-lg {
   --bs-nav-tabs-border-radius: var(--bs-border-radius);
   --bs-nav-tabs-link-hover-border-color: var(--bs-secondary-bg) var(--bs-secondary-bg) var(--bs-border-color);
   --bs-nav-tabs-link-active-color: var(--bs-emphasis-color);
-  --bs-nav-tabs-link-active-bg: var(--bs-body-bg);
-  --bs-nav-tabs-link-active-border-color: var(--bs-border-color) var(--bs-border-color) var(--bs-body-bg);
+  --bs-nav-tabs-link-active-bg: var(--bs-supersearch-body-bg);
+  --bs-nav-tabs-link-active-border-color: var(--bs-border-color) var(--bs-border-color) var(--bs-supersearch-body-bg);
   border-bottom: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
 }
 .nav-tabs .nav-link {
@@ -4366,11 +4366,11 @@ textarea.superSearch-form-control-lg {
   --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
   --bs-card-cap-padding-y: 0.5rem;
   --bs-card-cap-padding-x: 1rem;
-  --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+  --bs-card-cap-bg: rgba(var(--bs-supersearch-body-color-rgb), 0.03);
   --bs-card-cap-color: ;
   --bs-card-height: ;
   --bs-card-color: ;
-  --bs-card-bg: var(--bs-body-bg);
+  --bs-card-bg: var(--bs-supersearch-body-bg);
   --bs-card-img-overlay-padding: 1rem;
   --bs-card-group-margin: 0.75rem;
   position: relative;
@@ -4378,7 +4378,7 @@ textarea.superSearch-form-control-lg {
   flex-direction: column;
   min-width: 0;
   height: var(--bs-card-height);
-  color: var(--bs-body-color);
+  color: var(--bs-supersearch-body-color);
   word-wrap: break-word;
   background-color: var(--bs-card-bg);
   background-clip: border-box;
@@ -4541,8 +4541,8 @@ textarea.superSearch-form-control-lg {
 }
 
 .accordion {
-  --bs-accordion-color: var(--bs-body-color);
-  --bs-accordion-bg: var(--bs-body-bg);
+  --bs-accordion-color: var(--bs-supersearch-body-color);
+  --bs-accordion-bg: var(--bs-supersearch-body-bg);
   --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
   --bs-accordion-border-color: var(--bs-border-color);
   --bs-accordion-border-width: var(--bs-border-width);
@@ -4550,7 +4550,7 @@ textarea.superSearch-form-control-lg {
   --bs-accordion-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
   --bs-accordion-btn-padding-x: 1.25rem;
   --bs-accordion-btn-padding-y: 1rem;
-  --bs-accordion-btn-color: var(--bs-body-color);
+  --bs-accordion-btn-color: var(--bs-supersearch-body-color);
   --bs-accordion-btn-bg: var(--bs-accordion-bg);
   --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
   --bs-accordion-btn-icon-width: 1.25rem;
@@ -4717,7 +4717,7 @@ textarea.superSearch-form-control-lg {
   --bs-pagination-padding-y: 0.375rem;
   --bs-pagination-font-size: 1rem;
   --bs-pagination-color: var(--bs-link-color);
-  --bs-pagination-bg: var(--bs-body-bg);
+  --bs-pagination-bg: var(--bs-supersearch-body-bg);
   --bs-pagination-border-width: var(--bs-border-width);
   --bs-pagination-border-color: var(--bs-border-color);
   --bs-pagination-border-radius: var(--bs-border-radius);
@@ -4991,8 +4991,8 @@ textarea.superSearch-form-control-lg {
 }
 
 .list-group {
-  --bs-list-group-color: var(--bs-body-color);
-  --bs-list-group-bg: var(--bs-body-bg);
+  --bs-list-group-color: var(--bs-supersearch-body-color);
+  --bs-list-group-bg: var(--bs-supersearch-body-bg);
   --bs-list-group-border-color: var(--bs-border-color);
   --bs-list-group-border-width: var(--bs-border-width);
   --bs-list-group-border-radius: var(--bs-border-radius);
@@ -5001,10 +5001,10 @@ textarea.superSearch-form-control-lg {
   --bs-list-group-action-color: var(--bs-secondary-color);
   --bs-list-group-action-hover-color: var(--bs-emphasis-color);
   --bs-list-group-action-hover-bg: var(--bs-tertiary-bg);
-  --bs-list-group-action-active-color: var(--bs-body-color);
+  --bs-list-group-action-active-color: var(--bs-supersearch-body-color);
   --bs-list-group-action-active-bg: var(--bs-secondary-bg);
   --bs-list-group-disabled-color: var(--bs-secondary-color);
-  --bs-list-group-disabled-bg: var(--bs-body-bg);
+  --bs-list-group-disabled-bg: var(--bs-supersearch-body-bg);
   --bs-list-group-active-color: #fff;
   --bs-list-group-active-bg: #0d6efd;
   --bs-list-group-active-border-color: #0d6efd;
@@ -5386,13 +5386,13 @@ textarea.superSearch-form-control-lg {
   --bs-toast-max-width: 350px;
   --bs-toast-font-size: 0.875rem;
   --bs-toast-color: ;
-  --bs-toast-bg: rgba(var(--bs-body-bg-rgb), 0.85);
+  --bs-toast-bg: rgba(var(--bs-supersearch-body-bg-rgb), 0.85);
   --bs-toast-border-width: var(--bs-border-width);
   --bs-toast-border-color: var(--bs-border-color-translucent);
   --bs-toast-border-radius: var(--bs-border-radius);
   --bs-toast-box-shadow: var(--bs-box-shadow);
   --bs-toast-header-color: var(--bs-secondary-color);
-  --bs-toast-header-bg: rgba(var(--bs-body-bg-rgb), 0.85);
+  --bs-toast-header-bg: rgba(var(--bs-supersearch-body-bg-rgb), 0.85);
   --bs-toast-header-border-color: var(--bs-border-color-translucent);
   width: var(--bs-toast-max-width);
   max-width: 100%;
@@ -5453,7 +5453,7 @@ textarea.superSearch-form-control-lg {
   --bs-modal-padding: 1rem;
   --bs-modal-margin: 0.5rem;
   --bs-modal-color: ;
-  --bs-modal-bg: var(--bs-body-bg);
+  --bs-modal-bg: var(--bs-supersearch-body-bg);
   --bs-modal-border-color: var(--bs-border-color-translucent);
   --bs-modal-border-width: var(--bs-border-width);
   --bs-modal-border-radius: var(--bs-border-radius-lg);
@@ -5746,7 +5746,7 @@ textarea.superSearch-form-control-lg {
   --bs-tooltip-padding-y: 0.25rem;
   --bs-tooltip-margin: ;
   --bs-tooltip-font-size: 0.875rem;
-  --bs-tooltip-color: var(--bs-body-bg);
+  --bs-tooltip-color: var(--bs-supersearch-body-bg);
   --bs-tooltip-bg: var(--bs-emphasis-color);
   --bs-tooltip-border-radius: var(--bs-border-radius);
   --bs-tooltip-opacity: 0.9;
@@ -5845,7 +5845,7 @@ textarea.superSearch-form-control-lg {
   --bs-popover-zindex: 1070;
   --bs-popover-max-width: 276px;
   --bs-popover-font-size: 0.875rem;
-  --bs-popover-bg: var(--bs-body-bg);
+  --bs-popover-bg: var(--bs-supersearch-body-bg);
   --bs-popover-border-width: var(--bs-border-width);
   --bs-popover-border-color: var(--bs-border-color-translucent);
   --bs-popover-border-radius: var(--bs-border-radius-lg);
@@ -5858,7 +5858,7 @@ textarea.superSearch-form-control-lg {
   --bs-popover-header-bg: var(--bs-secondary-bg);
   --bs-popover-body-padding-x: 1rem;
   --bs-popover-body-padding-y: 1rem;
-  --bs-popover-body-color: var(--bs-body-color);
+  --bs-popover-body-color: var(--bs-supersearch-body-color);
   --bs-popover-arrow-width: 1rem;
   --bs-popover-arrow-height: 0.5rem;
   --bs-popover-arrow-border: var(--bs-popover-border-color);
@@ -6281,8 +6281,8 @@ textarea.superSearch-form-control-lg {
   --bs-offcanvas-height: 30vh;
   --bs-offcanvas-padding-x: 1rem;
   --bs-offcanvas-padding-y: 1rem;
-  --bs-offcanvas-color: var(--bs-body-color);
-  --bs-offcanvas-bg: var(--bs-body-bg);
+  --bs-offcanvas-color: var(--bs-supersearch-body-color);
+  --bs-offcanvas-bg: var(--bs-supersearch-body-bg);
   --bs-offcanvas-border-width: var(--bs-border-width);
   --bs-offcanvas-border-color: var(--bs-border-color-translucent);
   --bs-offcanvas-box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
@@ -8548,7 +8548,7 @@ textarea.superSearch-form-control-lg {
 
 .text-body {
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
+  color: rgba(var(--bs-supersearch-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
 .text-muted {
@@ -8852,7 +8852,7 @@ textarea.superSearch-form-control-lg {
 
 .bg-body {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-body-bg-rgb), var(--bs-bg-opacity)) !important;
+  background-color: rgba(var(--bs-supersearch-body-bg-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-transparent {

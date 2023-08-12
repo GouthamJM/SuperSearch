@@ -3,24 +3,25 @@ import React from 'react';
 import { useGlobalContext } from '../context/globalContext';
 import TransactionDetail from './components/TransactionDetail';
 import { useTransactionDetail } from '../hooks/swr/useTransactionDetail';
-import Header from './components/Header';
+import { useEffect } from 'react';
 
 export default function Transaction() {
-  const { state } = useGlobalContext();
+  const { state, updateAPILoader } = useGlobalContext();
 
   const { transactionDetail, transactionDeailLoader } = useTransactionDetail(
     state.searchForm.chain.chain_id,
     state.searchForm.search
   );
 
+  useEffect(() => {
+    if (!transactionDeailLoader) {
+      updateAPILoader(false);
+    }
+  }, [transactionDeailLoader]);
+
   return (
     <div>
-      <div className="pb-2">
-        <Header type="transaction" />
-      </div>
-      {transactionDeailLoader ? (
-        <p>Loading...</p>
-      ) : (
+      {transactionDeailLoader ? null : (
         <>
           <div className="heading6 pb-3">Transaction details</div>
           <div className="transactionBox">
