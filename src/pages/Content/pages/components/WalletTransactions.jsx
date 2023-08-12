@@ -15,7 +15,9 @@ export default function WalletTransactions({ transactions = [] }) {
             </div>
           </div>
           <div>
-            <div className="pb-2 heading7">{_item.pretty_value_quote}</div>
+            <div className="pb-2 heading7">
+              Value: {_item.pretty_value_quote}
+            </div>
             <div className="supportTextGray">
               To: {shortenAddress(_item.to_address)}
             </div>

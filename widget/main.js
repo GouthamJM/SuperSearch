@@ -81696,7 +81696,7 @@ function Wallet() {
     className: "heading5"
   }, "No account wallet address found"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "heading6 pt-4 pb-2"
-  }, "Transactions"), walletTransactions.items ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, "Recent Transactions"), walletTransactions.items ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "walletTransctionBox"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_WalletTransactions__WEBPACK_IMPORTED_MODULE_6__["default"], {
     transactions: walletTransactions.items
@@ -82217,7 +82217,7 @@ function WalletTransactions({
     className: "supportTextGray"
   }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.formatDate)(_item.block_signed_at, true))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pb-2 heading7"
-  }, _item.pretty_value_quote), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, "Value: ", _item.pretty_value_quote), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportTextGray"
   }, "To: ", (0,_utils__WEBPACK_IMPORTED_MODULE_1__.shortenAddress)(_item.to_address))))));
 }
@@ -94241,7 +94241,7 @@ const SWRConfig = swr_internal__WEBPACK_IMPORTED_MODULE_2__.OBJECT.definePropert
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("f63649178e2f93723385")
+/******/ 		__webpack_require__.h = () => ("a3f76b3f87c1b1f51798")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

@@ -39,7 +39,7 @@ export default function Wallet() {
             <div className="heading5">No account wallet address found</div>
           )}
 
-          <div className="heading6 pt-4 pb-2">Transactions</div>
+          <div className="heading6 pt-4 pb-2">Recent Transactions</div>
           {walletTransactions.items ? (
             <div className="walletTransctionBox">
               <WalletTransactions transactions={walletTransactions.items} />
