@@ -81832,7 +81832,9 @@ function Header() {
     className: "ss-pb-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "homeSearchHeader"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ui_components_Input__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "homeInput"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ui_components_Input__WEBPACK_IMPORTED_MODULE_1__["default"], {
     value: search,
     onChange: e => setSearch(e.target.value)
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ui_components_ChainDropdown__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -94318,7 +94320,7 @@ const SWRConfig = swr_internal__WEBPACK_IMPORTED_MODULE_2__.OBJECT.definePropert
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("b39d9c4bdd5ce60f4b17")
+/******/ 		__webpack_require__.h = () => ("e338898f58e40ebc9972")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

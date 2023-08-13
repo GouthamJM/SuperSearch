@@ -21,7 +21,7 @@ export default function Header() {
   return (
     <div className="ss-pb-3">
       <div className="homeSearchHeader">
-        <div>
+        <div className="homeInput">
           <Input value={search} onChange={(e) => setSearch(e.target.value)} />
         </div>
         <div>
