@@ -12,7 +12,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*", "<all_urls>"],
+      "matches": ["http://*/*", "https://*/*"],
       "js": ["contentScript.bundle.js"],
       "css": ["injector.css"],
       "run_at": "document_start",
