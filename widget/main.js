@@ -80679,9 +80679,9 @@ function InjectMaster() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "homePage"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_pages_components_Layout__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: accordion ? 'pb-4' : ''
+    className: accordion ? 'ss-pb-4' : ''
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "d-flex cursorPointer pb-2",
+    className: "d-flex cursorPointer ss-pb-2",
     onClick: () => setAccordion(!accordion)
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "flex-grow-1"
@@ -80702,7 +80702,7 @@ function InjectMaster() {
     "stroke-linecap": "round",
     "stroke-linejoin": "round"
   })))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, accordion && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "pb-2"
+    className: "ss-pb-2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_pages_components_Header__WEBPACK_IMPORTED_MODULE_7__["default"], {
     type: "wallet"
   })), steps))))));
@@ -81098,7 +81098,6 @@ const getTransactionHistory = ({
   wallet_address
 }) => {
   return new Promise((resolve, reject) => (0,_utils_globalApiServices__WEBPACK_IMPORTED_MODULE_0__.globalGetService)(`/${chain_id}/address/${wallet_address}/transactions_v3/`).then(res => {
-    console.log(res, 'getTransactionHistory');
     resolve(res?.data);
   }).catch(err => {
     reject(err);
@@ -81635,7 +81634,7 @@ function Transaction() {
     }
   }, [transactionDeailLoader]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, transactionDeailLoader ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "heading6 pb-3"
+    className: "heading6 ss-pb-3"
   }, "Transaction details"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionBox"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_TransactionDetail__WEBPACK_IMPORTED_MODULE_2__["default"], transactionDetail))));
@@ -81732,13 +81731,13 @@ function Wallet() {
     }
   }, [walletBalanceLoader, walletTransactionLoader]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, walletBalanceLoader || walletTransactionLoader ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "heading6 pb-2"
+    className: "heading6 ss-pb-2"
   }, "Address details"), walletBalance ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "walletBox pb-4"
+    className: "walletBox ss-pb-4"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_WalletDetail__WEBPACK_IMPORTED_MODULE_2__["default"], walletBalance)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "heading5"
   }, "No account wallet address found"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "heading6 pt-4 pb-2"
+    className: "heading6 pt-4 ss-pb-2"
   }, "Recent Transactions"), walletTransactions && walletTransactions?.items ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "walletTransctionBox"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_WalletTransactions__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -81830,7 +81829,7 @@ function Header() {
     setSearch(state.searchForm.search);
   }, [state.searchForm.search]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "pb-3"
+    className: "ss-pb-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "homeSearchHeader"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ui_components_Input__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -81911,7 +81910,7 @@ function Layout({
   children
 }) {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "homeContainer px-4 py-4"
+    className: "homeContainer ss-px-4 ss-py-4"
   }, children);
 }
 _c = Layout;
@@ -82003,7 +82002,7 @@ function TransactionPage({
     state
   } = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.useGlobalContext)();
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    className: "p-0"
+    className: "ss-p-0"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionColumn"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_5__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -82030,7 +82029,7 @@ function TransactionPage({
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportText medium"
   }, "Block:")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_bootstrap__WEBPACK_IMPORTED_MODULE_6__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-    className: "me-1"
+    className: "ss-me-1"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     width: "16",
@@ -82185,13 +82184,13 @@ function WalletDetail({
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "walletItem"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "supportText pb-2"
+    className: "supportText ss-pb-2"
   }, "Total Balance"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "heading5"
   }, (0,_utils__WEBPACK_IMPORTED_MODULE_2__.getCurrencyFormattedString)(totalBalanceIn$))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "walletItem"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "supportText pb-2"
+    className: "supportText ss-pb-2"
   }, nativeTokenBalance?.contract_ticker_symbol, " Balance"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "heading5"
   }, (0,_utils__WEBPACK_IMPORTED_MODULE_2__.getTokenFormattedNumber)(nativeTokenBalance?.balance, nativeTokenBalance?.contract_decimals), ' ', nativeTokenBalance?.contract_ticker_symbol), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -82199,7 +82198,7 @@ function WalletDetail({
   }, "(", nativeTokenBalance?.pretty_quote_24h ?? '', ")"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "walletHoldings"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "supportText pb-2"
+    className: "supportText ss-pb-2"
   }, "Token holdings"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ui_components_TokensDropdown__WEBPACK_IMPORTED_MODULE_1__["default"], {
     tokens: tokens,
     totalBalanceIn$: totalBalanceIn$
@@ -82276,7 +82275,7 @@ function WalletTransactions({
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, transactions?.map(_item => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionItem"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "pb-2 heading7"
+    className: "ss-pb-2 heading7"
   }, "Hash:", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
     className: "clickableText",
     onClick: () => {
@@ -82285,7 +82284,7 @@ function WalletTransactions({
   }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.shortenAddress)(_item?.tx_hash))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportTextGray"
   }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.formatDate)(_item?.block_signed_at, true))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    className: "pb-2 heading7"
+    className: "ss-pb-2 heading7"
   }, "Value: ", _item?.pretty_value_quote), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportTextGray"
   }, "To:", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
@@ -94319,7 +94318,7 @@ const SWRConfig = swr_internal__WEBPACK_IMPORTED_MODULE_2__.OBJECT.definePropert
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("cdee601c001a5eebd8ee")
+/******/ 		__webpack_require__.h = () => ("b39d9c4bdd5ce60f4b17")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

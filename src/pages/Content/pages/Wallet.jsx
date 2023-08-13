@@ -31,16 +31,16 @@ export default function Wallet() {
     <div>
       {walletBalanceLoader || walletTransactionLoader ? null : (
         <>
-          <div className="heading6 pb-2">Address details</div>
+          <div className="heading6 ss-pb-2">Address details</div>
           {walletBalance ? (
-            <div className="walletBox pb-4">
+            <div className="walletBox ss-pb-4">
               <WalletDetail {...walletBalance} />
             </div>
           ) : (
             <div className="heading5">No account wallet address found</div>
           )}
 
-          <div className="heading6 pt-4 pb-2">Recent Transactions</div>
+          <div className="heading6 pt-4 ss-pb-2">Recent Transactions</div>
           {walletTransactions && walletTransactions?.items ? (
             <div className="walletTransctionBox">
               <WalletTransactions transactions={walletTransactions?.items} />

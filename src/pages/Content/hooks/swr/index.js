@@ -28,7 +28,6 @@ const getTransactionHistory = ({ chain_id, wallet_address }) => {
   return new Promise((resolve, reject) =>
     globalGetService(`/${chain_id}/address/${wallet_address}/transactions_v3/`)
       .then((res) => {
-        console.log(res, 'getTransactionHistory');
         resolve(res?.data);
       })
       .catch((err) => {

@@ -36,9 +36,9 @@ function InjectMaster() {
     <GlobalContext.Provider value={globalState}>
       <div className="homePage">
         <Layout>
-          <div className={accordion ? 'pb-4' : ''}>
+          <div className={accordion ? 'ss-pb-4' : ''}>
             <div
-              className="d-flex cursorPointer pb-2"
+              className="d-flex cursorPointer ss-pb-2"
               onClick={() => setAccordion(!accordion)}
             >
               <div className="flex-grow-1">
@@ -69,7 +69,7 @@ function InjectMaster() {
             <div>
               {accordion && (
                 <>
-                  <div className="pb-2">
+                  <div className="ss-pb-2">
                     <Header type="wallet" />
                   </div>
                   {steps}

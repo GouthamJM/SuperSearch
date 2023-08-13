@@ -19,7 +19,7 @@ export default function Header() {
     setSearch(state.searchForm.search);
   }, [state.searchForm.search]);
   return (
-    <div className="pb-3">
+    <div className="ss-pb-3">
       <div className="homeSearchHeader">
         <div>
           <Input value={search} onChange={(e) => setSearch(e.target.value)} />

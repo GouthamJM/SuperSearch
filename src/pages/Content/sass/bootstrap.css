@@ -8020,7 +8020,7 @@ textarea.superSearch-form-control-lg {
   margin-right: 0 !important;
 }
 
-.me-1 {
+.ss-me-1 {
   margin-right: 0.25rem !important;
 }
 
@@ -8100,7 +8100,7 @@ textarea.superSearch-form-control-lg {
   margin-left: auto !important;
 }
 
-.p-0 {
+.ss-p-0 {
   padding: 0 !important;
 }
 
@@ -8144,7 +8144,7 @@ textarea.superSearch-form-control-lg {
   padding-left: 12px !important;
 }
 
-.px-4 {
+.ss-px-4 {
   padding-right: 16px !important;
   padding-left: 16px  !important;
 }
@@ -8174,7 +8174,7 @@ textarea.superSearch-form-control-lg {
   padding-bottom: 12px !important;
 }
 
-.py-4 {
+.ss-py-4 {
   padding-top: 16px !important;
   padding-bottom: 16px !important;
 }
@@ -8240,15 +8240,15 @@ textarea.superSearch-form-control-lg {
   padding-bottom: 0.25rem !important;
 }
 
-.pb-2 {
+.ss-pb-2 {
   padding-bottom: 0.5rem !important;
 }
 
-.pb-3 {
+.ss-pb-3 {
   padding-bottom: 1rem !important;
 }
 
-.pb-4 {
+.ss-pb-4 {
   padding-bottom: 1.5rem !important;
 }
 

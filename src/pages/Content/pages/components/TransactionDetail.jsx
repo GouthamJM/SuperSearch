@@ -31,7 +31,7 @@ export default function TransactionPage({
   return (
     <div>
       <div>
-        <Container className="p-0">
+        <Container className="ss-p-0">
           <div className="transactionColumn">
             <Row>
               <Col md="4">
@@ -63,7 +63,7 @@ export default function TransactionPage({
                 <div className="supportText medium">Block:</div>
               </Col>
               <Col>
-                <span className="me-1">
+                <span className="ss-me-1">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"

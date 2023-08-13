@@ -9,7 +9,7 @@ export default function WalletTransactions({ transactions = [] }) {
       {transactions?.map((_item) => (
         <div className="transactionItem">
           <div>
-            <div className="pb-2 heading7">
+            <div className="ss-pb-2 heading7">
               Hash:{' '}
               <span
                 className="clickableText"
@@ -25,7 +25,7 @@ export default function WalletTransactions({ transactions = [] }) {
             </div>
           </div>
           <div>
-            <div className="pb-2 heading7">
+            <div className="ss-pb-2 heading7">
               Value: {_item?.pretty_value_quote}
             </div>
             <div className="supportTextGray">

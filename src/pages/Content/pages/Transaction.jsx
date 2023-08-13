@@ -25,7 +25,7 @@ export default function Transaction() {
     <div>
       {transactionDeailLoader ? null : (
         <>
-          <div className="heading6 pb-3">Transaction details</div>
+          <div className="heading6 ss-pb-3">Transaction details</div>
           <div className="transactionBox">
             <TransactionDetail {...transactionDetail} />
           </div>

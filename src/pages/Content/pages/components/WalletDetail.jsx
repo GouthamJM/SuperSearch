@@ -17,13 +17,13 @@ export default function WalletDetail({
       <div className="walletBody">
         <div className="walletBalance">
           <div className="walletItem">
-            <div className="supportText pb-2">Total Balance</div>
+            <div className="supportText ss-pb-2">Total Balance</div>
             <div className="heading5">
               {getCurrencyFormattedString(totalBalanceIn$)}
             </div>
           </div>
           <div className="walletItem">
-            <div className="supportText pb-2">
+            <div className="supportText ss-pb-2">
               {nativeTokenBalance?.contract_ticker_symbol} Balance
             </div>
             <div className="heading5">
@@ -39,7 +39,7 @@ export default function WalletDetail({
           </div>
         </div>
         <div className="walletHoldings">
-          <div className="supportText pb-2">Token holdings</div>
+          <div className="supportText ss-pb-2">Token holdings</div>
           <TokensDropdown tokens={tokens} totalBalanceIn$={totalBalanceIn$} />
         </div>
       </div>
