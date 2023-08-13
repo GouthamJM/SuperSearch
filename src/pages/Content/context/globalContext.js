@@ -31,6 +31,7 @@ const initValue = {
     searchType: '',
   },
   apiLoader: false,
+  error: '',
 };
 
 const actions = {
@@ -39,6 +40,7 @@ const actions = {
   updateSearchForm: 'updateSearchForm',
   resetSearchForm: 'resetSearchForm',
   updateAPILoader: 'updateAPILoader',
+  updateError: 'updateError',
 };
 export const GlobalContext = createContext(initValue);
 
@@ -54,6 +56,8 @@ const reducer = (state, action) => {
       return { ...state, searchForm: initValue.searchForm };
     case actions.updateAPILoader:
       return { ...state, apiLoader: action.payload };
+    case actions.updateError:
+      return { ...state, error: action.payload };
     default:
       return state;
   }
@@ -79,6 +83,12 @@ export function useGlobalReducer() {
         dispatch({
           type: actions.updateAPILoader,
           payload: apiLoader,
+        });
+      },
+      updateError: (_error) => {
+        dispatch({
+          type: actions.updateError,
+          payload: _error,
         });
       },
       updatePageDetail: function (search, chain) {
@@ -113,6 +123,7 @@ export function useGlobalContext() {
     resetSearchForm,
     updateAPILoader,
     updatePageDetail,
+    updateError,
   } = useContext(GlobalContext);
   return {
     state,
@@ -122,5 +133,6 @@ export function useGlobalContext() {
     resetSearchForm,
     updateAPILoader,
     updatePageDetail,
+    updateError,
   };
 }

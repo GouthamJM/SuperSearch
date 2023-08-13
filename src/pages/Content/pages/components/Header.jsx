@@ -6,7 +6,7 @@ import ChainDropdown from '../../ui_components/ChainDropdown';
 import { useEffect } from 'react';
 
 export default function Header() {
-  const { state, updatePageDetail } = useGlobalContext();
+  const { state, updatePageDetail, updateError } = useGlobalContext();
 
   const [chain, setChain] = React.useState(state.searchForm.chain);
   const [search, setSearch] = React.useState(state.searchForm.search);
@@ -18,16 +18,24 @@ export default function Header() {
   useEffect(() => {
     setSearch(state.searchForm.search);
   }, [state.searchForm.search]);
+
   return (
     <div className="ss-pb-3">
       <div className="homeSearchHeader">
         <div className="homeInput">
-          <Input value={search} onChange={(e) => setSearch(e.target.value)} />
+          <Input
+            value={search}
+            onChange={(e) => {
+              updateError('');
+              setSearch(e.target.value);
+            }}
+          />
         </div>
         <div>
           <ChainDropdown
             value={chain.name}
             onChange={(item) => {
+              updateError('');
               setChain(item);
             }}
           />

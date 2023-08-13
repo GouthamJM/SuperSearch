@@ -52,6 +52,17 @@
     padding-top: 4px;
     .walletHeader {
         padding-bottom: 16px;
+        display: flex;
+        align-items: center;
+        .walletAddressIcon{
+            object-fit: contain;
+            border-radius: 100%;
+            margin-right: 8px;
+            height: 24px;
+            width: 24px;
+            vertical-align: middle;
+            margin-bottom: 0px;
+        }
     }
     .walletBody {
         .walletBalance {

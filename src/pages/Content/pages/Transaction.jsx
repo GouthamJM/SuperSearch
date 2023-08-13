@@ -6,31 +6,34 @@ import { useTransactionDetail } from '../hooks/swr/useTransactionDetail';
 import { useEffect } from 'react';
 
 export default function Transaction() {
-  const { state, updateAPILoader } = useGlobalContext();
-
-  const { transactionDetail, transactionDeailLoader } = useTransactionDetail(
+  const { state, updateAPILoader, updateError } = useGlobalContext();
+  const { transactionDetail, transactionDeatilLoader } = useTransactionDetail(
     state.searchForm.chain.chain_id,
-    state.searchForm.search
+    state.searchForm.search,
+    (_err) => {
+      updateError('No Transaction Found');
+    }
   );
-
   useEffect(() => {
-    if (!transactionDeailLoader) {
+    if (!transactionDeatilLoader) {
       updateAPILoader(false);
     } else {
       updateAPILoader(true);
     }
-  }, [transactionDeailLoader]);
+  }, [transactionDeatilLoader]);
+  console.log(transactionDeatilLoader, transactionDetail, 'transactionDetail');
 
   return (
     <div>
-      {transactionDeailLoader ? null : (
+      {!transactionDeatilLoader && transactionDetail ? (
         <>
           <div className="heading6 ss-pb-3">Transaction details</div>
           <div className="transactionBox">
             <TransactionDetail {...transactionDetail} />
           </div>
         </>
-      )}
+      ) : null}
+      {state.error && <div className="heading6">{state.error}</div>}
     </div>
   );
 }

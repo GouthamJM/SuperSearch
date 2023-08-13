@@ -13,7 +13,16 @@ export default function WalletDetail({
 }) {
   return (
     <div className="walletContainer">
-      <div className="walletHeader heading7">{address}</div>
+      <div className="walletHeader">
+        <div>
+          <img
+            src={`https://effigy.im/a/${address}.png`}
+            alt="avatar"
+            className="walletAddressIcon"
+          />
+        </div>
+        <div className="heading7">{address}</div>
+      </div>
       <div className="walletBody">
         <div className="walletBalance">
           <div className="walletItem">

@@ -31,17 +31,18 @@ import { getTransactionDetail } from '.';
     "pretty_gas_quote": "$1.08",
     "gas_quote_rate": 1865.03125,
     "log_events": []
-}
+}v
 */
-function useTransactionDetail(chain_id, txn_hash) {
+function useTransactionDetail(chain_id, txn_hash, onError) {
   const canFetch = chain_id && txn_hash ? { chain_id, txn_hash } : null;
   const { data, isValidating } = useSWR(canFetch, getTransactionDetail, {
     revalidateIfStale: false,
     shouldRetryOnError: false,
     revalidateOnFocus: false,
+    onError,
   });
 
-  return { transactionDetail: data, transactionDeailLoader: isValidating };
+  return { transactionDetail: data, transactionDeatilLoader: isValidating };
 }
 
 export { useTransactionDetail };

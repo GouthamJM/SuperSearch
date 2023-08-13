@@ -16,7 +16,12 @@ const getTransactionDetail = ({ chain_id, txn_hash }) => {
   return new Promise((resolve, reject) =>
     globalGetService(`/${chain_id}/transaction_v2/${txn_hash}/`)
       .then((res) => {
-        resolve(res?.data?.items[0]);
+        console.log(res, 'res');
+        if (res?.data?.items[0]) {
+          resolve(res?.data?.items[0]);
+        } else {
+          reject(false);
+        }
       })
       .catch((err) => {
         reject(err);
@@ -28,7 +33,11 @@ const getTransactionHistory = ({ chain_id, wallet_address }) => {
   return new Promise((resolve, reject) =>
     globalGetService(`/${chain_id}/address/${wallet_address}/transactions_v3/`)
       .then((res) => {
-        resolve(res?.data);
+        if (res.data) {
+          resolve(res?.data);
+        } else {
+          reject(false);
+        }
       })
       .catch((err) => {
         reject(err);
@@ -42,7 +51,11 @@ const getWalletBalance = ({ chain_id, wallet_address }) => {
       'no-spam': true,
     })
       .then((res) => {
-        resolve(res.data);
+        if (res?.data) {
+          resolve(res.data);
+        } else {
+          reject(false);
+        }
       })
       .catch((err) => {
         reject(err);
