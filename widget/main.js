@@ -80661,7 +80661,6 @@ const allPages = {
 function InjectMaster() {
   _s();
   const globalState = (0,_context_globalContext__WEBPACK_IMPORTED_MODULE_3__.useGlobalReducer)();
-  console.log(globalState.state.steps, 'globalState.state.steps');
   const steps = (0,react__WEBPACK_IMPORTED_MODULE_0__.useMemo)(() => {
     switch (globalState.state.steps) {
       case allPages.home:
@@ -80975,20 +80974,17 @@ function useGlobalReducer() {
         });
       },
       updatePageDetail: function (search, chain) {
-        const searchType = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getSearchType)(search);
-        console.log(this, 'this');
-        console.log(searchType, 'searchType');
-        console.log(globalState, 'globalState');
-        console.log(chain, 'chain');
-        globalState.updateSearchForm(search, chain, searchType);
-        globalState.updateAPILoader(true);
-        console.log(_utils__WEBPACK_IMPORTED_MODULE_1__.searchTypes, 'searchTypes');
-        if (searchType === _utils__WEBPACK_IMPORTED_MODULE_1__.searchTypes.address) {
-          console.log('updated address');
-          globalState.updateStep(allPages.wallet);
-        } else if (searchType === _utils__WEBPACK_IMPORTED_MODULE_1__.searchTypes.transactionHash) {
-          console.log('updated transactionHash');
-          globalState.updateStep(allPages.transaction);
+        try {
+          const searchType = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getSearchType)(search);
+          globalState.updateSearchForm(search, chain, searchType);
+          globalState.updateAPILoader(true);
+          if (searchType === _utils__WEBPACK_IMPORTED_MODULE_1__.searchTypes.address) {
+            globalState.updateStep(allPages.wallet);
+          } else if (searchType === _utils__WEBPACK_IMPORTED_MODULE_1__.searchTypes.transactionHash) {
+            globalState.updateStep(allPages.transaction);
+          }
+        } catch (err) {
+          console.log(err, 'updatePageDetail');
         }
       },
       resetSearchForm: () => {
@@ -81082,7 +81078,7 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/.
 
 const getAllChains = () => {
   return new Promise((resolve, reject) => (0,_utils_globalApiServices__WEBPACK_IMPORTED_MODULE_0__.globalGetService)('/chains/').then(res => {
-    resolve(res.data.items);
+    resolve(res?.data?.items);
   }).catch(err => {
     reject(err);
   }));
@@ -81092,7 +81088,7 @@ const getTransactionDetail = ({
   txn_hash
 }) => {
   return new Promise((resolve, reject) => (0,_utils_globalApiServices__WEBPACK_IMPORTED_MODULE_0__.globalGetService)(`/${chain_id}/transaction_v2/${txn_hash}/`).then(res => {
-    resolve(res.data.items[0]);
+    resolve(res?.data?.items[0]);
   }).catch(err => {
     reject(err);
   }));
@@ -81102,6 +81098,7 @@ const getTransactionHistory = ({
   wallet_address
 }) => {
   return new Promise((resolve, reject) => (0,_utils_globalApiServices__WEBPACK_IMPORTED_MODULE_0__.globalGetService)(`/${chain_id}/address/${wallet_address}/transactions_v3/`).then(res => {
+    console.log(res, 'getTransactionHistory');
     resolve(res?.data);
   }).catch(err => {
     reject(err);
@@ -81633,6 +81630,8 @@ function Transaction() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     if (!transactionDeailLoader) {
       updateAPILoader(false);
+    } else {
+      updateAPILoader(true);
     }
   }, [transactionDeailLoader]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, transactionDeailLoader ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -81728,6 +81727,8 @@ function Wallet() {
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
     if (!walletBalanceLoader && !walletTransactionLoader) {
       updateAPILoader(false);
+    } else {
+      updateAPILoader(true);
     }
   }, [walletBalanceLoader, walletTransactionLoader]);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, walletBalanceLoader || walletTransactionLoader ? null : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -81738,10 +81739,10 @@ function Wallet() {
     className: "heading5"
   }, "No account wallet address found"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "heading6 pt-4 pb-2"
-  }, "Recent Transactions"), walletTransactions.items ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, "Recent Transactions"), walletTransactions && walletTransactions?.items ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "walletTransctionBox"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_WalletTransactions__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    transactions: walletTransactions.items
+    transactions: walletTransactions?.items
   })) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "heading5"
   }, "No account wallet address found")));
@@ -82279,20 +82280,20 @@ function WalletTransactions({
   }, "Hash:", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
     className: "clickableText",
     onClick: () => {
-      updatePageDetail(_item.tx_hash, state.searchForm.chain);
+      updatePageDetail(_item?.tx_hash, state.searchForm.chain);
     }
-  }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.shortenAddress)(_item.tx_hash))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.shortenAddress)(_item?.tx_hash))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportTextGray"
-  }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.formatDate)(_item.block_signed_at, true))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.formatDate)(_item?.block_signed_at, true))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "pb-2 heading7"
-  }, "Value: ", _item.pretty_value_quote), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, "Value: ", _item?.pretty_value_quote), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "supportTextGray"
   }, "To:", ' ', /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
     className: "clickableText",
     onClick: () => {
-      updatePageDetail(_item.to_address, state.searchForm.chain);
+      updatePageDetail(_item?.to_address, state.searchForm.chain);
     }
-  }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.shortenAddress)(_item.to_address)))))));
+  }, (0,_utils__WEBPACK_IMPORTED_MODULE_1__.shortenAddress)(_item?.to_address)))))));
 }
 _s(WalletTransactions, "TWL+9Df4sriZnCtA6jA/wSlgkxo=", false, function () {
   return [_context_globalContext__WEBPACK_IMPORTED_MODULE_2__.useGlobalContext];
@@ -94318,7 +94319,7 @@ const SWRConfig = swr_internal__WEBPACK_IMPORTED_MODULE_2__.OBJECT.definePropert
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("be80b901c7955f982ec4")
+/******/ 		__webpack_require__.h = () => ("cdee601c001a5eebd8ee")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

@@ -14,29 +14,29 @@ export default function WalletTransactions({ transactions = [] }) {
               <span
                 className="clickableText"
                 onClick={() => {
-                  updatePageDetail(_item.tx_hash, state.searchForm.chain);
+                  updatePageDetail(_item?.tx_hash, state.searchForm.chain);
                 }}
               >
-                {shortenAddress(_item.tx_hash)}
+                {shortenAddress(_item?.tx_hash)}
               </span>
             </div>
             <div className="supportTextGray">
-              {formatDate(_item.block_signed_at, true)}
+              {formatDate(_item?.block_signed_at, true)}
             </div>
           </div>
           <div>
             <div className="pb-2 heading7">
-              Value: {_item.pretty_value_quote}
+              Value: {_item?.pretty_value_quote}
             </div>
             <div className="supportTextGray">
               To:{' '}
               <span
                 className="clickableText"
                 onClick={() => {
-                  updatePageDetail(_item.to_address, state.searchForm.chain);
+                  updatePageDetail(_item?.to_address, state.searchForm.chain);
                 }}
               >
-                {shortenAddress(_item.to_address)}
+                {shortenAddress(_item?.to_address)}
               </span>
             </div>
           </div>

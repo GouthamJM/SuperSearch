@@ -16,6 +16,8 @@ export default function Transaction() {
   useEffect(() => {
     if (!transactionDeailLoader) {
       updateAPILoader(false);
+    } else {
+      updateAPILoader(true);
     }
   }, [transactionDeailLoader]);
 

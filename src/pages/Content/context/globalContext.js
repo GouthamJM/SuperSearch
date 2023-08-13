@@ -82,20 +82,18 @@ export function useGlobalReducer() {
         });
       },
       updatePageDetail: function (search, chain) {
-        const searchType = getSearchType(search);
-        console.log(this, 'this');
-        console.log(searchType, 'searchType');
-        console.log(globalState, 'globalState');
-        console.log(chain, 'chain');
-        globalState.updateSearchForm(search, chain, searchType);
-        globalState.updateAPILoader(true);
-        console.log(searchTypes, 'searchTypes');
-        if (searchType === searchTypes.address) {
-          console.log('updated address');
-          globalState.updateStep(allPages.wallet);
-        } else if (searchType === searchTypes.transactionHash) {
-          console.log('updated transactionHash');
-          globalState.updateStep(allPages.transaction);
+        try {
+          const searchType = getSearchType(search);
+
+          globalState.updateSearchForm(search, chain, searchType);
+          globalState.updateAPILoader(true);
+          if (searchType === searchTypes.address) {
+            globalState.updateStep(allPages.wallet);
+          } else if (searchType === searchTypes.transactionHash) {
+            globalState.updateStep(allPages.transaction);
+          }
+        } catch (err) {
+          console.log(err, 'updatePageDetail');
         }
       },
       resetSearchForm: () => {

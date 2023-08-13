@@ -22,6 +22,8 @@ export default function Wallet() {
   useEffect(() => {
     if (!walletBalanceLoader && !walletTransactionLoader) {
       updateAPILoader(false);
+    } else {
+      updateAPILoader(true);
     }
   }, [walletBalanceLoader, walletTransactionLoader]);
 
@@ -39,9 +41,9 @@ export default function Wallet() {
           )}
 
           <div className="heading6 pt-4 pb-2">Recent Transactions</div>
-          {walletTransactions.items ? (
+          {walletTransactions && walletTransactions?.items ? (
             <div className="walletTransctionBox">
-              <WalletTransactions transactions={walletTransactions.items} />
+              <WalletTransactions transactions={walletTransactions?.items} />
             </div>
           ) : (
             <div className="heading5">No account wallet address found</div>

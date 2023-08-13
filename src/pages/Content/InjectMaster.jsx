@@ -17,7 +17,6 @@ export const allPages = {
 
 function InjectMaster() {
   const globalState = useGlobalReducer();
-  console.log(globalState.state.steps, 'globalState.state.steps');
   const steps = useMemo(() => {
     switch (globalState.state.steps) {
       case allPages.home:
