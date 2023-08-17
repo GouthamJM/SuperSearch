@@ -80925,7 +80925,8 @@ const initValue = {
       black_logo_url: 'https://www.datocms-assets.com/86369/1669619544-ethereum.png',
       white_logo_url: 'https://www.datocms-assets.com/86369/1669619533-ethereum.png',
       is_appchain: false,
-      appchain_of: null
+      appchain_of: null,
+      rpc: 'https://eth.llamarpc.com'
     },
     searchType: ''
   },
@@ -81017,9 +81018,9 @@ function useGlobalReducer() {
           payload: _error
         });
       },
-      updatePageDetail: function (search, chain) {
+      updatePageDetail: async function (search, chain) {
         try {
-          const searchType = (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getSearchType)(search, chain);
+          const searchType = await (0,_utils__WEBPACK_IMPORTED_MODULE_1__.getSearchType)(search, chain);
           globalState.updateSearchForm(search, chain, searchType);
           globalState.updateAPILoader(true);
           if (searchType === _utils__WEBPACK_IMPORTED_MODULE_1__.searchTypes.address) {
@@ -82415,7 +82416,7 @@ function TransactionPage({
     d: "M8 1.5C4.41594 1.5 1.5 4.41594 1.5 8C1.5 11.5841 4.41594 14.5 8 14.5C11.5841 14.5 14.5 11.5841 14.5 8C14.5 4.41594 11.5841 1.5 8 1.5ZM11.3828 5.82156L7.18281 10.8216C7.13674 10.8764 7.07941 10.9208 7.01471 10.9516C6.95001 10.9823 6.87945 10.9989 6.80781 11H6.79938C6.72929 11 6.66 10.9852 6.59599 10.9567C6.53198 10.9282 6.47468 10.8865 6.42781 10.8344L4.62781 8.83438C4.5821 8.78589 4.54654 8.72876 4.52322 8.66633C4.4999 8.60391 4.4893 8.53745 4.49203 8.47087C4.49477 8.40429 4.51078 8.33892 4.53914 8.27862C4.56749 8.21831 4.60761 8.16429 4.65715 8.11971C4.70668 8.07514 4.76463 8.04091 4.82757 8.01905C4.89052 7.99719 4.95721 7.98813 5.02371 7.9924C5.09021 7.99668 5.15518 8.01421 5.21481 8.04396C5.27444 8.0737 5.32752 8.11507 5.37094 8.16562L6.78625 9.73812L10.6172 5.17844C10.7031 5.07909 10.8247 5.01754 10.9556 5.00711C11.0866 4.99668 11.2164 5.03819 11.317 5.12268C11.4175 5.20717 11.4808 5.32784 11.4931 5.45862C11.5055 5.5894 11.4658 5.71977 11.3828 5.82156Z",
     fill: "#ABE4B8"
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-    className: "supportText d-sm-inline",
+    className: "supportText d-sm-inline clickableText",
     onClick: () => updatePageDetail(block_height, state.searchForm.chain)
   }, block_height)))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     className: "transactionColumn"
@@ -83473,8 +83474,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   shortenAddress: () => (/* binding */ shortenAddress)
 /* harmony export */ });
 /* harmony import */ var _chains__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chains */ "./src/pages/Content/utils/chains.js");
-/* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ethers */ "./node_modules/ethers/lib.esm/address/checks.js");
-/* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ethers */ "./node_modules/ethers/lib.esm/providers/provider-jsonrpc.js");
+/* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ethers */ "./node_modules/ethers/lib.esm/providers/provider-jsonrpc.js");
+/* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ethers */ "./node_modules/ethers/lib.esm/address/checks.js");
 /* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ethers */ "./node_modules/ethers/lib.esm/utils/units.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_1__);
@@ -83488,15 +83489,24 @@ __webpack_require__.$Refresh$.runtime = __webpack_require__(/*! ./node_modules/r
 
 
 
-const isValidEOAAddress = address => {
-  return (0,ethers__WEBPACK_IMPORTED_MODULE_3__.isAddress)(address);
+const isValidEOAAddress = async (address, rpcUrl) => {
+  const provider = new ethers__WEBPACK_IMPORTED_MODULE_3__.JsonRpcProvider(rpcUrl);
+  try {
+    const ens = await provider.getBalance(address);
+    if (ens) {
+      return true;
+    }
+    return (0,ethers__WEBPACK_IMPORTED_MODULE_4__.isAddress)(address);
+  } catch (error) {
+    return false;
+  }
 };
 const isValidTransactionHash = hash => {
   const regex = /^0x([A-Fa-f0-9]{64})$/;
   return regex.test(hash);
 };
 const isValidBlockNumber = async (blockNumber, rpcUrl) => {
-  const provider = new ethers__WEBPACK_IMPORTED_MODULE_4__.JsonRpcProvider(rpcUrl);
+  const provider = new ethers__WEBPACK_IMPORTED_MODULE_3__.JsonRpcProvider(rpcUrl);
   try {
     const block = await provider.getBlock(blockNumber);
     if (block?.hash) {
@@ -83512,15 +83522,19 @@ const searchTypes = {
   transactionHash: 'transactionHash',
   blockNumber: 'blockNumber'
 };
-const getSearchType = (_search, _chain) => {
-  if (isValidEOAAddress(_search)) {
+const getSearchType = async (_search, _chain) => {
+  if (isValidTransactionHash(_search)) {
     return searchTypes.address;
-  } else if (isValidTransactionHash(_search)) {
-    return searchTypes.transactionHash;
-  } else if (isValidBlockNumber(_search, _chain.rpc)) {
-    return searchTypes.blockNumber;
   } else {
-    return undefined;
+    const isValidAddress = await isValidEOAAddress(_search, _chain.rpc);
+    if (isValidAddress) {
+      return searchTypes.address;
+    }
+    const isValidBlock = await isValidBlockNumber(_search, _chain.rpc);
+    if (isValidBlock) {
+      return searchTypes.blockNumber;
+    }
+    return;
   }
 };
 const getStringType = _val => {
@@ -112613,7 +112627,7 @@ const SWRConfig = swr_internal__WEBPACK_IMPORTED_MODULE_3__.OBJECT.definePropert
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("a6bdfa7051c6de273ad1")
+/******/ 		__webpack_require__.h = () => ("3af91c50def90e048336")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

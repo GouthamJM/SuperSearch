@@ -78,7 +78,7 @@ export default function TransactionPage({
                   </svg>
                 </span>
                 <p
-                  className="supportText d-sm-inline"
+                  className="supportText d-sm-inline clickableText"
                   onClick={() =>
                     updatePageDetail(block_height, state.searchForm.chain)
                   }

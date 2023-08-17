@@ -3,8 +3,17 @@ import { isAddress, formatUnits, JsonRpcProvider } from 'ethers';
 import moment from 'moment';
 import { divide } from 'lodash';
 
-const isValidEOAAddress = (address) => {
-  return isAddress(address);
+const isValidEOAAddress = async (address, rpcUrl) => {
+  const provider = new JsonRpcProvider(rpcUrl);
+  try {
+    const ens = await provider.getBalance(address);
+    if (ens) {
+      return true;
+    }
+    return isAddress(address);
+  } catch (error) {
+    return false;
+  }
 };
 const isValidTransactionHash = (hash) => {
   const regex = /^0x([A-Fa-f0-9]{64})$/;
@@ -30,15 +39,19 @@ const searchTypes = {
   blockNumber: 'blockNumber',
 };
 
-const getSearchType = (_search, _chain) => {
-  if (isValidEOAAddress(_search)) {
+const getSearchType = async (_search, _chain) => {
+  if (isValidTransactionHash(_search)) {
     return searchTypes.address;
-  } else if (isValidTransactionHash(_search)) {
-    return searchTypes.transactionHash;
-  } else if (isValidBlockNumber(_search, _chain.rpc)) {
-    return searchTypes.blockNumber;
   } else {
-    return undefined;
+    const isValidAddress = await isValidEOAAddress(_search, _chain.rpc);
+    if (isValidAddress) {
+      return searchTypes.address;
+    }
+    const isValidBlock = await isValidBlockNumber(_search, _chain.rpc);
+    if (isValidBlock) {
+      return searchTypes.blockNumber;
+    }
+    return;
   }
 };
 

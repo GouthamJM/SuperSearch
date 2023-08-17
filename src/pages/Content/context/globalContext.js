@@ -28,6 +28,7 @@ const initValue = {
         'https://www.datocms-assets.com/86369/1669619533-ethereum.png',
       is_appchain: false,
       appchain_of: null,
+      rpc: 'https://eth.llamarpc.com',
     },
     searchType: '',
   },
@@ -92,9 +93,9 @@ export function useGlobalReducer() {
           payload: _error,
         });
       },
-      updatePageDetail: function (search, chain) {
+      updatePageDetail: async function (search, chain) {
         try {
-          const searchType = getSearchType(search, chain);
+          const searchType = await getSearchType(search, chain);
           globalState.updateSearchForm(search, chain, searchType);
           globalState.updateAPILoader(true);
           if (searchType === searchTypes.address) {
