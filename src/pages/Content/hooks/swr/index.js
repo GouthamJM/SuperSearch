@@ -99,6 +99,18 @@ const getWalletNFTs = ({ chain_id, wallet_address }) => {
   );
 };
 
+const getBlockDetail = ({ chain_id, block_height }) => {
+  return new Promise((resolve, reject) =>
+    globalGetService(`/${chain_id}/block_v2/${block_height}/`)
+      .then((res) => {
+        resolve(res);
+      })
+      .catch((err) => {
+        reject(err);
+      })
+  );
+};
+
 export {
   getAllChains,
   getTransactionDetail,
@@ -107,4 +119,5 @@ export {
   getWalletPortfolioGraph,
   getAllWalletApprovals,
   getWalletNFTs,
+  getBlockDetail,
 };

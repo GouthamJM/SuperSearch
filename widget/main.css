@@ -336,7 +336,7 @@
   border-radius: 8px;
   padding: 16px;
   max-height: 300px;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 .transactionBox::-webkit-scrollbar {
@@ -355,7 +355,7 @@
 .transactionColumn {
   padding: 12px 0px;
   width: 100%;
-  border-bottom: 1px solid #2B3743;
+  border-bottom: 1px solid #2b3743;
 }
 .transactionColumn:first-child {
   padding-top: 0px;
@@ -400,7 +400,7 @@
   flex-direction: column;
 }
 .walletContainer .walletBody .walletBalance .walletItem:first-child {
-  border-right: 1px solid #2B3743;
+  border-right: 1px solid #2b3743;
 }
 
 .walletTransctionBox {
@@ -427,7 +427,7 @@
   display: flex;
   justify-content: space-between;
   padding: 16px 0;
-  border-bottom: 1px solid #2B3743;
+  border-bottom: 1px solid #2b3743;
 }
 .walletTransctionBox .transactionItem:first-child {
   padding-top: 0px;

@@ -7,6 +7,7 @@ export const allPages = {
   home: 'home',
   transaction: 'transaction',
   wallet: 'wallet',
+  block: 'block',
 };
 
 const initValue = {
@@ -93,14 +94,15 @@ export function useGlobalReducer() {
       },
       updatePageDetail: function (search, chain) {
         try {
-          const searchType = getSearchType(search);
-
+          const searchType = getSearchType(search, chain);
           globalState.updateSearchForm(search, chain, searchType);
           globalState.updateAPILoader(true);
           if (searchType === searchTypes.address) {
             globalState.updateStep(allPages.wallet);
           } else if (searchType === searchTypes.transactionHash) {
             globalState.updateStep(allPages.transaction);
+          } else if (searchType === searchTypes.blockNumber) {
+            globalState.updateStep(allPages.block);
           }
         } catch (err) {
           console.log(err, 'updatePageDetail');

@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 import Transaction from './pages/Transaction';
 import { GlobalContext, useGlobalReducer } from './context/globalContext';
 import Wallet from './pages/Wallet';
+import Block from './pages/Block';
 import Layout from './pages/components/Layout';
 
 import Title from './ui_components/Title';
@@ -13,6 +14,7 @@ export const allPages = {
   home: 'home',
   transaction: 'transaction',
   wallet: 'wallet',
+  block: 'block',
 };
 
 function InjectMaster() {
@@ -25,6 +27,8 @@ function InjectMaster() {
         return <Transaction />;
       case allPages.wallet:
         return <Wallet />;
+      case allPages.block:
+        return <Block />;
       default:
         return <Home />;
     }

@@ -1,5 +1,5 @@
 import { chainServices } from './chains';
-import { isAddress, formatUnits } from 'ethers';
+import { isAddress, formatUnits, JsonRpcProvider } from 'ethers';
 import moment from 'moment';
 import { divide } from 'lodash';
 
@@ -12,13 +12,16 @@ const isValidTransactionHash = (hash) => {
 };
 
 const isValidBlockNumber = async (blockNumber, rpcUrl) => {
-  // const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
-  // try {
-  //   const block = await provider.getBlock(blockNumber);
-  //   return !!block;
-  // } catch (error) {
-  //   return false;
-  // }
+  const provider = new JsonRpcProvider(rpcUrl);
+  try {
+    const block = await provider.getBlock(blockNumber);
+    if (block?.hash) {
+      return true;
+    }
+    return false;
+  } catch (error) {
+    return false;
+  }
 };
 
 const searchTypes = {
@@ -27,11 +30,13 @@ const searchTypes = {
   blockNumber: 'blockNumber',
 };
 
-const getSearchType = (_search) => {
+const getSearchType = (_search, _chain) => {
   if (isValidEOAAddress(_search)) {
     return searchTypes.address;
   } else if (isValidTransactionHash(_search)) {
     return searchTypes.transactionHash;
+  } else if (isValidBlockNumber(_search, _chain.rpc)) {
+    return searchTypes.blockNumber;
   } else {
     return undefined;
   }
