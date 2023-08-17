@@ -41,7 +41,7 @@ const searchTypes = {
 
 const getSearchType = async (_search, _chain) => {
   if (isValidTransactionHash(_search)) {
-    return searchTypes.address;
+    return searchTypes.transactionHash;
   } else {
     const isValidAddress = await isValidEOAAddress(_search, _chain.rpc);
     if (isValidAddress) {
