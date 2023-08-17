@@ -15,6 +15,7 @@ const isValidEOAAddress = async (address, rpcUrl) => {
     return false;
   }
 };
+
 const isValidTransactionHash = (hash) => {
   const regex = /^0x([A-Fa-f0-9]{64})$/;
   return regex.test(hash);
@@ -23,7 +24,7 @@ const isValidTransactionHash = (hash) => {
 const isValidBlockNumber = async (blockNumber, rpcUrl) => {
   const provider = new JsonRpcProvider(rpcUrl);
   try {
-    const block = await provider.getBlock(blockNumber);
+    const block = await provider.getBlock(Number(blockNumber));
     if (block?.hash) {
       return true;
     }

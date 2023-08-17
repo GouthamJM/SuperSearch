@@ -3,7 +3,6 @@ import React from 'react';
 import { useGlobalContext } from '../context/globalContext';
 import TransactionDetail from './components/TransactionDetail';
 import { useTransactionDetail } from '../hooks/swr/useTransactionDetail';
-import { useEffect } from 'react';
 
 export default function Transaction() {
   const { state, updateAPILoader, updateError } = useGlobalContext();
@@ -11,17 +10,13 @@ export default function Transaction() {
     state.searchForm.chain.chain_id,
     state.searchForm.search,
     (_err) => {
-      updateError('No Transaction Found');
+      // updateError('No Transaction Found');
+    },
+    () => {
+      updateError('');
+      updateAPILoader(false);
     }
   );
-  useEffect(() => {
-    if (!transactionDeatilLoader) {
-      updateAPILoader(false);
-    } else {
-      updateAPILoader(true);
-    }
-  }, [transactionDeatilLoader]);
-  console.log(transactionDeatilLoader, transactionDetail, 'transactionDetail');
 
   return (
     <div>

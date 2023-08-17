@@ -33,15 +33,17 @@ import { getTransactionDetail } from '.';
     "log_events": []
 }v
 */
-function useTransactionDetail(chain_id, txn_hash, onError) {
+function useTransactionDetail(chain_id, txn_hash, onError, onSuccess) {
   const canFetch = chain_id && txn_hash ? { chain_id, txn_hash } : null;
   const { data, isValidating } = useSWR(canFetch, getTransactionDetail, {
     revalidateIfStale: false,
-    shouldRetryOnError: false,
+    shouldRetryOnError: true,
     revalidateOnFocus: false,
+    errorRetryCount: 20,
+    errorRetryInterval: 1000,
     onError,
+    onSuccess,
   });
-
   return { transactionDetail: data, transactionDeatilLoader: isValidating };
 }
 

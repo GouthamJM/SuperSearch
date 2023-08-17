@@ -34,6 +34,7 @@ const initValue = {
   },
   apiLoader: false,
   error: '',
+  accordion: false,
 };
 
 const actions = {
@@ -43,8 +44,10 @@ const actions = {
   resetSearchForm: 'resetSearchForm',
   updateAPILoader: 'updateAPILoader',
   updateError: 'updateError',
+  updateAccordion: 'updateAccordion',
 };
 export const GlobalContext = createContext(initValue);
+
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -60,6 +63,8 @@ const reducer = (state, action) => {
       return { ...state, apiLoader: action.payload };
     case actions.updateError:
       return { ...state, error: action.payload };
+    case actions.updateAccordion:
+      return { ...state, accordion: action.payload };
     default:
       return state;
   }
@@ -94,10 +99,12 @@ export function useGlobalReducer() {
         });
       },
       updatePageDetail: async function (search, chain) {
+        globalState.updateAccordion(true);
+        globalState.updateAPILoader(true);
         try {
           const searchType = await getSearchType(search, chain);
           globalState.updateSearchForm(search, chain, searchType);
-          globalState.updateAPILoader(true);
+      
           if (searchType === searchTypes.address) {
             globalState.updateStep(allPages.wallet);
           } else if (searchType === searchTypes.transactionHash) {
@@ -108,6 +115,12 @@ export function useGlobalReducer() {
         } catch (err) {
           console.log(err, 'updatePageDetail');
         }
+      },
+      updateAccordion: (payload) => {
+        dispatch({
+          type: actions.updateAccordion,
+          payload,
+        });
       },
       resetSearchForm: () => {
         dispatch({ type: actions.resetSearchForm });
@@ -127,6 +140,7 @@ export function useGlobalContext() {
     updateAPILoader,
     updatePageDetail,
     updateError,
+    updateAccordion,
   } = useContext(GlobalContext);
   return {
     state,
@@ -137,5 +151,6 @@ export function useGlobalContext() {
     updateAPILoader,
     updatePageDetail,
     updateError,
+    updateAccordion
   };
 }

@@ -86,14 +86,22 @@ const CHAIN_DATA = {
 };
 
 class Chains {
-  getAllChainsData = () => {
-    return [
+  constructor() {
+    this.chains = [
       CHAIN_DATA.ETHEREUM,
       CHAIN_DATA.POLYGON,
       CHAIN_DATA.OPTIMISM,
       CHAIN_DATA.BASE,
       CHAIN_DATA.ZORA,
     ];
+  }
+  getAllChainsData = () => {
+    return this.chains;
+  };
+  getChainById = (_chainId) => {
+    return this.chains.find(
+      (_item) => String(_item.chain_id) === String(_chainId)
+    );
   };
 }
 

@@ -9,7 +9,7 @@ function useWalletBalance(chain_id, wallet_address) {
       : null;
 
   const { data, isValidating } = useSWR(canFetch, getWalletBalance, {
-    revalidateIfStale: false,
+    revalidateIfStale: true,
     shouldRetryOnError: false,
     revalidateOnFocus: false,
   });
